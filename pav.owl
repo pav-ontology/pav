@@ -234,33 +234,40 @@
     <!-- Authoring -->  
     
 	<owl:ObjectProperty rdf:about="createdBy">
+		<rdfs:label xml:lang="en">Created By</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		createdBy - An entity primary responsible for making the resource.
 	  	</rdfs:comment>
 	</owl:ObjectProperty>
 	
     <owl:ObjectProperty rdf:about="contributedBy">
+    	<rdfs:label xml:lang="en">Contributed By</rdfs:label>
 	</owl:ObjectProperty>   
 	 
     <owl:ObjectProperty rdf:about="authoredBy">
+    	<rdfs:label xml:lang="en">Authored By</rdfs:label>
     	<rdfs:subPropertyOf rdf:resource="contributedBy"/>
 	</owl:ObjectProperty>  
 	
     <owl:ObjectProperty rdf:about="curatedBy">
+    	<rdfs:label xml:lang="en">Curated By</rdfs:label>
+    	<rdfs:subPropertyOf rdf:resource="contributedBy"/>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		curatedBy - An entity primary responsible for verifying the quality of the resource.
 	  	</rdfs:comment>
-      	<rdfs:subPropertyOf rdf:resource="contributedBy"/>
 	</owl:ObjectProperty>
 	
     <owl:ObjectProperty rdf:about="contributors">
+    	<rdfs:label xml:lang="en">Contributors</rdfs:label>
 	</owl:ObjectProperty>   
 	 
     <owl:ObjectProperty rdf:about="authors">
+    	<rdfs:label xml:lang="en">Authors</rdfs:label>
     	<rdfs:subPropertyOf rdf:resource="contributors"/>
 	</owl:ObjectProperty>  
 	
     <owl:ObjectProperty rdf:about="curators">
+    	<rdfs:label xml:lang="en">Curators</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		curators - A list of entities primary responsible for verifying the quality of the resource.
 	  	</rdfs:comment>
@@ -268,10 +275,12 @@
 	</owl:ObjectProperty>
 
     <owl:ObjectProperty rdf:about="submittedBy">
-	  <rdfs:comment rdf:datatype="&xsd;string">submittedBy - </rdfs:comment>
+    	<rdfs:label xml:lang="en">Submitted By</rdfs:label>
+	  	<rdfs:comment rdf:datatype="&xsd;string">submittedBy - </rdfs:comment>
 	</owl:ObjectProperty>	
 	
     <owl:ObjectProperty rdf:about="publishedBy">
+    	<rdfs:label xml:lang="en">Published By</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		publishedBy - An entity responsible for making the resource available.
 	  	</rdfs:comment>
@@ -281,12 +290,14 @@
     <!-- Data Import --> 
 
 	<owl:ObjectProperty rdf:about="importedFromSource">
+		<rdfs:label xml:lang="en">Imported From Source</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
 			Identify the original source of the imported information.
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="importedBy">
+		<rdfs:label xml:lang="en">Imported By</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		importedBy - An entity responsible for importing the data from an external source.
 	  		Usually a software entity.
@@ -296,6 +307,7 @@
 	<!-- Curation -->      
 	
    	<owl:ObjectProperty rdf:about="curates">
+   		<rdfs:label xml:lang="en">Curates</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		curates - 
 	  	</rdfs:comment>
@@ -304,6 +316,7 @@
 	</owl:ObjectProperty> 
 	
 	<owl:ObjectProperty rdf:about="hasCuration">
+		<rdfs:label xml:lang="en">Hae Curation</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		hasCuration - 
 	  	</rdfs:comment>
