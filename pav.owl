@@ -364,7 +364,6 @@
 	  		with equal rights) that created the previous resource. Same evolution path of the first resource.
 	  	</rdfs:comment>
 	  	<rdfs:subPropertyOf rdf:resource="derivedFrom"/>
-        <owl:inverseOf rdf:resource="evolvedInto"/>
 	</owl:ObjectProperty>
 	
 	<owl:SymmetricProperty rdf:about="variantOf">
