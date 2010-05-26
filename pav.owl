@@ -316,7 +316,7 @@
 	</owl:ObjectProperty> 
 	
 	<owl:ObjectProperty rdf:about="hasCuration">
-		<rdfs:label xml:lang="en">Hae Curation</rdfs:label>
+		<rdfs:label xml:lang="en">Has Curation</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
 	  		hasCuration - 
 	  	</rdfs:comment>
