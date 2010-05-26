@@ -367,16 +367,12 @@
         <owl:inverseOf rdf:resource="evolvedInto"/>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="variantOf">
+	<owl:SymmetricProperty rdf:about="variantOf">
 		<rdfs:label xml:lang="en">Variant Of</rdfs:label>
 	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  	    variantOf - The resource from which this entity is evolving from. 
-	  		This relationship is particularly useful when the goal is not to create a new version of a resource
-	  		but to create a different resource derived from the original that keeps its own identity and revision
-	  		path. The new resource is not intended to substitute the original one by the same agent (or somebody
-	  		with equal rights) that created the previous resource. Different evolution path of the first resource.
+	  	    variantOf - The relationship connects two entities that are two alternative evolutions
+	  	    of the same initial entity.    
 	  	</rdfs:comment>
-	  	<rdfs:subPropertyOf rdf:resource="derivedFrom"/>
-	</owl:ObjectProperty>
+	</owl:SymmetricProperty>
 	
 </rdf:RDF>
