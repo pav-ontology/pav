@@ -81,7 +81,6 @@
 	///////////////////////////////////////////////////////////////////////////////////////
 	 -->
 	<owl:Class rdf:about="Curation" rdfs:label="Curation">
-	
 		<rdfs:comment rdf:datatype="&xsd;string">
 		</rdfs:comment>
 		
@@ -110,6 +109,38 @@
 		</rdfs:subClassOf>
 	</owl:Class>
 	
+	<owl:Class rdf:about="SourceDocument" rdfs:label="Source Document">
+		<rdfs:comment rdf:datatype="&xsd;string">
+		</rdfs:comment>	
+	
+		<!-- retrieved from -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		
+		<!-- source accessed on -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
 	
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
