@@ -75,12 +75,12 @@
   	</rdf:Description>
 	
 	<!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // PAV Ontology Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	///////////////////////////////////////////////////////////////////////////////////////
+	//
+	// PAV Ontology Classes
+	//
+	///////////////////////////////////////////////////////////////////////////////////////
+	 -->
 	<owl:Class rdf:about="Curation" rdfs:label="Curation">
 	
 		<rdfs:comment rdf:datatype="&xsd;string">
@@ -113,13 +113,13 @@
 	</owl:Class>
 	
 	
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // PAV Ontology Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	<!-- 
+	///////////////////////////////////////////////////////////////////////////////////////
+	//
+	// PAV Ontology Properties
+	//
+	///////////////////////////////////////////////////////////////////////////////////////
+	 -->
      
 	<owl:DatatypeProperty rdf:about="createdOn">
 		<rdfs:comment rdf:datatype="&xsd;string">
@@ -128,35 +128,35 @@
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
 	
-    <owl:DatatypeProperty rdf:about="lastUpdateOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		lastUpdateOn - The date of the last update of the resource.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="lastUpdateOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			lastUpdateOn - The date of the last update of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
 	
-    <owl:DatatypeProperty rdf:about="submittedOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		submittedOn - Date of submission of the resource. Examples of resources to which a Date 
-	  		Submitted may be relevant are a thesis (submitted to a university department) or an article 
-	  		(submitted to a journal) or a discourse element in the case of swan scientific discourse.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="submittedOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			submittedOn - Date of submission of the resource. Examples of resources to which a Date 
+			Submitted may be relevant are a thesis (submitted to a university department) or an article 
+			(submitted to a journal) or a discourse element in the case of swan scientific discourse.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
 	
-    <owl:DatatypeProperty rdf:about="acceptedOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-            acceptedOn - Date of acceptance of the resource. Examples of resources to which a Date 
-            Accepted may be relevant are a thesis (accepted by a university department) or an article 
-            (accepted by a journal) or a discourse element in the case of swan scientific discourse.
-    	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="acceptedOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			acceptedOn - Date of acceptance of the resource. Examples of resources to which a Date 
+			Accepted may be relevant are a thesis (accepted by a university department) or an article 
+			(accepted by a journal) or a discourse element in the case of swan scientific discourse.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
-    <owl:DatatypeProperty rdf:about="publishedOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-            publishedOn - The date of publishing.</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="publishedOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			publishedOn - The date of publishing.</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
      
     <!-- Data Import --> 
