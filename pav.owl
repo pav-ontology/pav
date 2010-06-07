@@ -82,10 +82,10 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 	<owl:Class rdf:about="Curation" rdfs:label="Curation">
-    
+	
 		<rdfs:comment rdf:datatype="&xsd;string">
 		</rdfs:comment>
-  		
+		
 		<!-- created by -->
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -101,7 +101,7 @@
 				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-        
+	    
 		<!-- curates -->
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -109,8 +109,8 @@
 				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-
-    </owl:Class>
+	
+	</owl:Class>
 	
 	
     <!-- 
