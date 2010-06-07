@@ -26,7 +26,6 @@
     xmlns:foaf="&foaf;">
     
 	<owl:Ontology rdf:about="&pav;">
-
 		<rdf:type rdf:resource="&owl;Ontology"/>
 		<rdfs:label rdf:datatype="&xsd;string">Provenance, Authoring and Versioning v. 2.0</rdfs:label>
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
@@ -159,68 +158,68 @@
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
      
-    <!-- Data Import --> 
-    
-    <owl:DatatypeProperty rdf:about="importedOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		importedOn - The date of the import of the resource.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<!-- Data Import --> 
+	
+	<owl:DatatypeProperty rdf:about="importedOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			importedOn - The date of the import of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="importedFirstOn">
-      	<rdfs:subPropertyOf rdf:resource="importedOn"/>
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		lastImportedOn - The date of the first import of the resource. This property
-	  		is used when the history of the versions of the different imports is not stored.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="importedFirstOn">
+		<rdfs:subPropertyOf rdf:resource="importedOn"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			lastImportedOn - The date of the first import of the resource. This property
+			is used when the history of the versions of the different imports is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
-    <owl:DatatypeProperty rdf:about="importedLastOn">
-      	<rdfs:subPropertyOf rdf:resource="importedOn"/>
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		lastImportedOn - The date of the last import of the resource. This property
-	  		is used when the history of the versions of the different imports is not stored.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="importedLastOn">
+		<rdfs:subPropertyOf rdf:resource="importedOn"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			lastImportedOn - The date of the last import of the resource. This property
+			is used when the history of the versions of the different imports is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="importedWithId">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		sourceIdentifier - The unique identifier of the encoded information in the original source.
-	  	</rdfs:comment>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			sourceIdentifier - The unique identifier of the encoded information in the original source.
+		</rdfs:comment>
 	</owl:DatatypeProperty>
 	
 	<!-- Source access -->
 	
 	<owl:DatatypeProperty rdf:about="sourceAccessedOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		sourceAccessedOn - The date when the original source has been accessed to create the resource.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			sourceAccessedOn - The date when the original source has been accessed to create the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
-    <owl:DatatypeProperty rdf:about="sourceFirstAccessedOn">
-      	<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		sourceFirstAccessedOn - The date when the original source has been first accessed and verified.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="sourceFirstAccessedOn">
+		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			sourceFirstAccessedOn - The date when the original source has been first accessed and verified.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
-    <owl:DatatypeProperty rdf:about="sourceLastAccessedOn">
-      	<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		sourceLastAccessedOn - The date when the original source has been last accessed and verified.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="sourceLastAccessedOn">
+		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			sourceLastAccessedOn - The date when the original source has been last accessed and verified.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
      
 	<!-- Versioning -->
-    <owl:DatatypeProperty rdf:about="versionNumber">
-	  <rdfs:comment rdf:datatype="&xsd;string">version - The version of the resource.</rdfs:comment>
-      <rdfs:range rdf:resource="&xsd;string"/>
+	<owl:DatatypeProperty rdf:about="versionNumber">
+		<rdfs:comment rdf:datatype="&xsd;string">version - The version of the resource.</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>	
 
     <!-- 
