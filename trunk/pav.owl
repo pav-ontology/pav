@@ -221,15 +221,15 @@
 		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>	
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // PAV Ontology Relationships
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->	
-     
-    <!-- Authoring -->  
+	<!-- 
+	///////////////////////////////////////////////////////////////////////////////////////
+	//
+	// PAV Ontology Relationships
+	//
+	///////////////////////////////////////////////////////////////////////////////////////
+	 -->	
+	 
+	<!-- Authoring -->  
     
 	<owl:ObjectProperty rdf:about="createdBy">
 		<rdfs:label xml:lang="en">Created By</rdfs:label>
@@ -324,32 +324,32 @@
 	
 	<owl:TransitiveProperty rdf:about="earlierVersion">
 		<rdfs:label xml:lang="en">Earlier Version</rdfs:label>
-	  	<rdfs:comment rdf:datatype="&xsd;string">earlierVersion - An earlier version of the resource.</rdfs:comment>
-	  	<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#earlier_version"/>
-      	<owl:inverseOf rdf:resource="laterVersion"/>
+		<rdfs:comment rdf:datatype="&xsd;string">earlierVersion - An earlier version of the resource.</rdfs:comment>
+		<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#earlier_version"/>
+		<owl:inverseOf rdf:resource="laterVersion"/>
 	</owl:TransitiveProperty>
 	
 	<owl:ObjectProperty rdf:about="previousVersion">
 		<rdfs:label xml:lang="en">Previous Version</rdfs:label>
-	  	<rdfs:comment rdf:datatype="&xsd;string">previousVersion - The previous version of the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="earlierVersion"/>
-        <rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#previous_version"/>
-        <owl:inverseOf rdf:resource="nextVersion"/>
+		<rdfs:comment rdf:datatype="&xsd;string">previousVersion - The previous version of the resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="earlierVersion"/>
+		<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#previous_version"/>
+		<owl:inverseOf rdf:resource="nextVersion"/>
 	</owl:ObjectProperty>
 	
 	<owl:TransitiveProperty rdf:about="laterVersion">
 		<rdfs:label xml:lang="en">Later Version</rdfs:label>
-	  	<rdfs:comment rdf:datatype="&xsd;string">laterVersion - A later version of the resource.</rdfs:comment>
-	  	<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#later_version"/>
-      	<owl:inverseOf rdf:resource="earlierVersion"/>
+		<rdfs:comment rdf:datatype="&xsd;string">laterVersion - A later version of the resource.</rdfs:comment>
+		<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#later_version"/>
+		<owl:inverseOf rdf:resource="earlierVersion"/>
 	</owl:TransitiveProperty>
 	
 	<owl:ObjectProperty rdf:about="nextVersion">
 		<rdfs:label xml:lang="en">Next Version</rdfs:label>
-	  	<rdfs:comment rdf:datatype="&xsd;string">nextVersion - The next version of the resource.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="laterVersion"/>
-        <rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#next_version"/>
-        <owl:inverseOf rdf:resource="previousVersion"/>
+		<rdfs:comment rdf:datatype="&xsd;string">nextVersion - The next version of the resource.</rdfs:comment>
+		<rdfs:subPropertyOf rdf:resource="laterVersion"/>
+		<rdfs:seeAlso rdf:resource="http://rdfs.org/sioc/ns#next_version"/>
+		<owl:inverseOf rdf:resource="previousVersion"/>
 	</owl:ObjectProperty>
 	
 	<!-- Evolution-->
