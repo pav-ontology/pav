@@ -25,21 +25,21 @@
     xmlns:dct="&dct;"
     xmlns:foaf="&foaf;">
     
-    <owl:Ontology rdf:about="&pav;">
+	<owl:Ontology rdf:about="&pav;">
 
 		<rdf:type rdf:resource="&owl;Ontology"/>
-        <rdfs:label rdf:datatype="&xsd;string">Provenance, Authoring and Versioning v. 2.0</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
-    
-    	<dct:language>en</dct:language>
-    	<dct:title xml:lang="en">Provenance, Authoring and Versioning ontology</dct:title>
-        <dct:creator rdf:resource="http://www.paolociccarese.info/foaf.rdf#me" />
-        <dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
-
-        <dct:publisher rdf:resource="http://swan.mindinformatics.org" />
-        <dct:date rdf:datatype="&xsd;string">May 23, 2010</dct:date>
-        <dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
-    </owl:Ontology>
+		<rdfs:label rdf:datatype="&xsd;string">Provenance, Authoring and Versioning v. 2.0</rdfs:label>
+		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
+		
+		<dct:language>en</dct:language>
+		<dct:title xml:lang="en">Provenance, Authoring and Versioning ontology</dct:title>
+		<dct:creator rdf:resource="http://www.paolociccarese.info/foaf.rdf#me" />
+		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
+		
+		<dct:publisher rdf:resource="http://swan.mindinformatics.org" />
+		<dct:date rdf:datatype="&xsd;string">May 23, 2010</dct:date>
+		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
+	</owl:Ontology>
     
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
