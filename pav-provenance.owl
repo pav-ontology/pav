@@ -16,8 +16,8 @@
 
 ]>
 <rdf:RDF
-	xml:base="&pav;"
-	xmlns="&pav;"
+    xml:base="&pav;"
+    xmlns="&pav;"
     xmlns:rdfs="&rdfs;"
     xmlns:owl="&owl;"
     xmlns:rdf="&rdf;"
