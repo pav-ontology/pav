@@ -41,37 +41,37 @@
         <dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
     </owl:Ontology>
     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+	<!-- 
+	///////////////////////////////////////////////////////////////////////////////////////
+	//
+	// Annotation Properties
+	//
+	///////////////////////////////////////////////////////////////////////////////////////
+	 -->
 
   	<rdf:Description rdf:about="&dct;title">
-  	  	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;description">
-  	  	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;date">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
  	</rdf:Description>
   	<rdf:Description rdf:about="&dct;creator">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;format">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;language">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;publisher">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
   	<rdf:Description rdf:about="&dct;contributor">
-    	<rdf:type rdf:resource="&owl;AnnotationProperty"/>
+		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
 	
 	<!-- 
