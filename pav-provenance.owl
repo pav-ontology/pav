@@ -103,20 +103,11 @@
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
-
-	<owl:DatatypeProperty rdf:about="importedFirstOn">
-		<rdfs:subPropertyOf rdf:resource="importedOn"/>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			lastImportedOn - The date of the first import of the resource. This property
-			is used when the history of the versions of the different imports is not stored.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="importedLastOn">
+	<owl:DatatypeProperty rdf:about="lastRefreshedOn">
 		<rdfs:subPropertyOf rdf:resource="importedOn"/>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			lastImportedOn - The date of the last import of the resource. This property
+			lastRefreshedOn - The date of the last import of the resource. This property
 			is used when the history of the versions of the different imports is not stored.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
