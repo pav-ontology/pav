@@ -81,34 +81,34 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-	 <owl:Class rdf:about="Curation" rdfs:label="Curation">
+	<owl:Class rdf:about="Curation" rdfs:label="Curation">
     
-        <rdfs:comment rdf:datatype="&xsd;string">
-        </rdfs:comment>
+		<rdfs:comment rdf:datatype="&xsd;string">
+		</rdfs:comment>
   		
-        <!-- created by -->
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&pav;createdBy"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>	
+		<!-- created by -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;createdBy"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
 		
-        <!-- created on -->
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&pav;createdOn"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+		<!-- created on -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;createdOn"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
         
-        <!-- curates -->
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="curates"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+		<!-- curates -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="curates"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 
     </owl:Class>
 	
@@ -121,11 +121,11 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
      
-    <owl:DatatypeProperty rdf:about="createdOn">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		createdOn - The date of creation of the resource.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;dateTime"/>
+	<owl:DatatypeProperty rdf:about="createdOn">
+		<rdfs:comment rdf:datatype="&xsd;string">
+			createdOn - The date of creation of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
 	
     <owl:DatatypeProperty rdf:about="lastUpdateOn">
