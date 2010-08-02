@@ -241,15 +241,15 @@
 	<owl:ObjectProperty rdf:about="retrievedFrom">
 		<rdfs:label xml:lang="en">Retrieved From</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			The URI where a specific version of a resource has been retireved.
+			The URI where a resource has been retrieved at a specific time.
 		</rdfs:comment>
 	</owl:ObjectProperty>
 		
 	<!-- Data Import --> 
-	<owl:ObjectProperty rdf:about="importedFromSource">
-	 	<!-- publisher??? -->
+	<owl:ObjectProperty rdf:about="importedFrom">
+		<rdfs:label xml:lang="en">Imported From</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			retrievedFromSource - The original source of the encoded information (PubMed, UniProt...).
+			The original provider of the encoded information (PubMed, UniProt, Science Commons).
 		</rdfs:comment>
 	</owl:ObjectProperty>
 </rdf:RDF>
