@@ -12,7 +12,7 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 
     <!-- Main namespace -->
-    <!ENTITY pav "http://purl.org/swan/pav/provenance/" >
+    <!ENTITY pav "http://purl.org/swan/pav/" >
 
 ]>
 <rdf:RDF
@@ -76,52 +76,118 @@
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
 	//
+	// PAV Ontology Classes
+	//
+	///////////////////////////////////////////////////////////////////////////////////////
+	 -->
+	<owl:Class rdf:about="SourceDocument" rdfs:label="Source Document">
+		<rdfs:comment rdf:datatype="&xsd;string">
+		</rdfs:comment>	
+	
+		<!-- retrieved from -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		
+		<!-- source retrieved on -->
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedOn"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&pav;retrievedOn"/>
+				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>	
+	
+	<!-- 
+	///////////////////////////////////////////////////////////////////////////////////////
+	//
 	// PAV Ontology Provenance Properties
 	//
 	///////////////////////////////////////////////////////////////////////////////////////
 	 -->
-     
 	<owl:DatatypeProperty rdf:about="createdOn">
+		<rdfs:label xml:lang="en">Created On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			createdOn - The date of creation of the resource.
+			The date of creation of the resource.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
 	
 	<owl:DatatypeProperty rdf:about="lastUpdateOn">
+		<rdfs:label xml:lang="en">Last Updated On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			lastUpdateOn - The date of the last update of the resource.
+			The date of the last update of the resource. This property
+			is used when the history of the versions of the different imports is not stored.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
      
-	<!-- Data Import --> 
-	
-	<owl:DatatypeProperty rdf:about="importedOn">
+	<!-- Data Access --> 
+	<owl:DatatypeProperty rdf:about="retrievedOn">
+		<!-- Previously 'sourceAccessedOn' -->
+		<rdfs:label xml:lang="en">Retrieved On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			importedOn - The date of the import of the resource.
+			The date of the import of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="lastRetrievedOn">
+		<!-- Previously 'sourceLastAccessedOn' -->
+		<rdfs:label xml:lang="en">Retrieved On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of the import of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<!-- Data Import --> 
+	<owl:DatatypeProperty rdf:about="importedOn">
+		<rdfs:label xml:lang="en">Imported On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of the import of the resource.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="lastRefreshedOn">
+		<!-- Previously 'importedLastOn' -->
 		<rdfs:subPropertyOf rdf:resource="importedOn"/>
+		<rdfs:label xml:lang="en">Last Refreshed On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			lastRefreshedOn - The date of the last import of the resource. This property
+			The date of the last import of the resource. This property
 			is used when the history of the versions of the different imports is not stored.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="importedWithId">
+	<owl:DatatypeProperty rdf:about="externalId">
+		<!-- Previously 'importedWithId' -->
+		<!-- published with id??? -->
+		<rdfs:label xml:lang="en">External Id</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			sourceIdentifier - The unique identifier of the encoded information in the original source.
+			The unique identifier of the encoded information in the original source.
 		</rdfs:comment>
 	</owl:DatatypeProperty>
 	
 	<!-- Source access -->
-	
 	<owl:DatatypeProperty rdf:about="sourceAccessedOn">
+		<rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
 			sourceAccessedOn - The date when the original source has been accessed to create the resource.
 		</rdfs:comment>
@@ -129,6 +195,7 @@
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="sourceFirstAccessedOn">
+		<rdfs:label xml:lang="en">Source First Accessed On</rdfs:label>
 		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
 		<rdfs:comment rdf:datatype="&xsd;string">
 			sourceFirstAccessedOn - The date when the original source has been first accessed and verified.
@@ -137,9 +204,10 @@
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="sourceLastAccessedOn">
+		<rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
 		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			sourceLastAccessedOn - The date when the original source has been last accessed and verified.
+			The date when the original source has been last accessed and verified.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
@@ -153,29 +221,35 @@
 	 -->	
 	 
 	<!-- Data Creation -->  
-    
 	<owl:ObjectProperty rdf:about="createdBy">
 		<rdfs:label xml:lang="en">Created By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			createdBy - An entity primary responsible for making the resource.
+			An entity primary responsible for making the resource.
 		</rdfs:comment>
 	</owl:ObjectProperty>
     
 	<!-- Data Import --> 
-	
-	<owl:ObjectProperty rdf:about="importedFromSource">
-		<rdfs:label xml:lang="en">Imported From Source</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			Identify the original source of the imported information.
-		</rdfs:comment>
-	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="importedBy">
 		<rdfs:label xml:lang="en">Imported By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			importedBy - An entity responsible for importing the data from an external source.
+			An entity responsible for importing the data from an external source.
 			Usually a software entity.
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
+	<!-- Data Access --> 
+	<owl:ObjectProperty rdf:about="retrievedFrom">
+		<rdfs:label xml:lang="en">Retrieved From</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The URI where a specific version of a resource has been retireved.
+		</rdfs:comment>
+	</owl:ObjectProperty>
+		
+	<!-- Data Import --> 
+	<owl:ObjectProperty rdf:about="importedFromSource">
+	 	<!-- publisher??? -->
+		<rdfs:comment rdf:datatype="&xsd;string">
+			retrievedFromSource - The original source of the encoded information (PubMed, UniProt...).
+		</rdfs:comment>
+	</owl:ObjectProperty>
 </rdf:RDF>
