@@ -120,22 +120,9 @@
 	//
 	///////////////////////////////////////////////////////////////////////////////////////
 	 -->
-	<owl:DatatypeProperty rdf:about="createdOn">
-		<rdfs:label xml:lang="en">Created On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of creation of the resource.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>	
 	
-	<owl:DatatypeProperty rdf:about="lastUpdateOn">
-		<rdfs:label xml:lang="en">Last Updated On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of the last update of the resource. This property
-			is used when the history of the versions of the different imports is not stored.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>	
+	
+	
      
 	<!-- Data Access --> 
 	
@@ -204,23 +191,31 @@
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
 
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// PAV Ontology Provenance Relationships
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->	
 	 
-	<!-- Data Creation -->  
 	<owl:ObjectProperty rdf:about="createdBy">
 		<rdfs:label xml:lang="en">Created By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
 			An entity primary responsible for making the resource.
 		</rdfs:comment>
 	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="createdOn">
+		<rdfs:label xml:lang="en">Created On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of creation of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="lastUpdateOn">
+		<rdfs:label xml:lang="en">Last Updated On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of the last update of the resource. This property
+			is used when the history of the versions of the different imports is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>	
     
-	<!-- Data Import --> 
 	<owl:ObjectProperty rdf:about="importedBy">
 		<rdfs:label xml:lang="en">Imported By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
@@ -229,7 +224,6 @@
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
-	<!-- Data Access --> 
 	<owl:ObjectProperty rdf:about="retrievedFrom">
 		<rdfs:label xml:lang="en">Retrieved From</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
@@ -237,7 +231,6 @@
 		</rdfs:comment>
 	</owl:ObjectProperty>
 		 
-	<!-- Data Import --> 
 	<owl:ObjectProperty rdf:about="providedBy">
 		<rdfs:label xml:lang="en">Provided By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
