@@ -165,31 +165,7 @@
 	</owl:DatatypeProperty>
 	
 	<!-- Source access -->
-	<owl:DatatypeProperty rdf:about="sourceAccessedOn">
-		<rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			sourceAccessedOn - The date when the original source has been accessed to create the resource.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="sourceFirstAccessedOn">
-		<rdfs:label xml:lang="en">Source First Accessed On</rdfs:label>
-		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			sourceFirstAccessedOn - The date when the original source has been first accessed and verified.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="sourceLastAccessedOn">
-		<rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
-		<rdfs:subPropertyOf rdf:resource="sourceAccessedOn"/>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date when the original source has been last accessed and verified.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
+
 
 	 
 	 
@@ -233,6 +209,32 @@
 			The URI where a resource has been retrieved at a specific time.
 		</rdfs:comment>
 	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="sourceAccessedOn">
+		<rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			sourceAccessedOn - The date when the original source has been accessed to create the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="sourceFirstAccessedOn">
+		<rdfs:label xml:lang="en">Source First Accessed On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date when the original source has been first accessed and verified. This property
+			is used when the history of the versions of the different accesses is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="sourceLastAccessedOn">
+		<rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date when the original source has been last accessed and verified. This property
+			is used when the history of the versions of the different accesses is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
 		 
 	<owl:ObjectProperty rdf:about="providedBy">
 		<rdfs:label xml:lang="en">Provided By</rdfs:label>
