@@ -142,7 +142,7 @@
 		<!-- Previously 'sourceAccessedOn' -->
 		<rdfs:label xml:lang="en">Retrieved On</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of the import of the resource.
+			The date on which the resource has been retrieved.
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>
