@@ -192,6 +192,9 @@
 	</owl:DatatypeProperty>
 
 	 
+	 
+	 
+	 
 	<owl:ObjectProperty rdf:about="createdBy">
 		<rdfs:label xml:lang="en">Created By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
@@ -216,10 +219,10 @@
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
     
-	<owl:ObjectProperty rdf:about="importedBy">
-		<rdfs:label xml:lang="en">Imported By</rdfs:label>
+	<owl:ObjectProperty rdf:about="retrievedBy">
+		<rdfs:label xml:lang="en">Retrieved By</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
-			An entity responsible for importing the data from an external source.
+			An entity responsible for retrieving the data from an external source.
 			Usually a software entity.
 		</rdfs:comment>
 	</owl:ObjectProperty>
