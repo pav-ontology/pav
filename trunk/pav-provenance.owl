@@ -122,38 +122,8 @@
 	 -->
 	
 	
-	
-     
-	<!-- Data Access --> 
-	
-	<owl:DatatypeProperty rdf:about="lastRetrievedOn">
-		<!-- Previously 'sourceLastAccessedOn' -->
-		<rdfs:label xml:lang="en">Retrieved On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of the import of the resource.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
-	
 	<!-- Data Import --> 
-	<owl:DatatypeProperty rdf:about="importedOn">
-		<rdfs:label xml:lang="en">Imported On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of the import of the resource.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="lastRefreshedOn">
-		<!-- Previously 'importedLastOn' -->
-		<rdfs:subPropertyOf rdf:resource="importedOn"/>
-		<rdfs:label xml:lang="en">Last Refreshed On</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The date of the last import of the resource. This property
-			is used when the history of the versions of the different imports is not stored.
-		</rdfs:comment>
-		<rdfs:range rdf:resource="&xsd;dateTime"/>
-	</owl:DatatypeProperty>
+
 	
 	<owl:DatatypeProperty rdf:about="externalId">
 		<!-- Previously 'importedWithId' -->
@@ -194,6 +164,32 @@
 		</rdfs:comment>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 	</owl:DatatypeProperty>	
+	
+	<owl:ObjectProperty rdf:about="importedBy">
+		<rdfs:label xml:lang="en">Imported By</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			An entity responsible for importing the data.
+			Usually a software entity.
+		</rdfs:comment>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="importedOn">
+		<rdfs:label xml:lang="en">Imported On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of the import of the resource.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="lastRefreshedOn">
+		<!-- Previously 'importedLastOn' -->
+		<rdfs:label xml:lang="en">Last Refreshed On</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			The date of the last import of the resource. This property
+			is used when the history of the versions of the different imports is not stored.
+		</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
+	</owl:DatatypeProperty>
     
 	<owl:ObjectProperty rdf:about="retrievedBy">
 		<rdfs:label xml:lang="en">Retrieved By</rdfs:label>
