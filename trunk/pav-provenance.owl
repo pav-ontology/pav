@@ -101,13 +101,13 @@
 		<!-- source retrieved on -->
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;retrievedOn"/>
+				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
 				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;retrievedOn"/>
+				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
 				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
