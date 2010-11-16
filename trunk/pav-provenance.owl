@@ -12,7 +12,7 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 
     <!-- Main namespace -->
-    <!ENTITY pav "http://purl.org/swan/pav/" >
+    <!ENTITY pav "http://purl.org/pav/" >
 
 ]>
 <rdf:RDF
