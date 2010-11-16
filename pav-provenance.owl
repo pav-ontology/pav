@@ -11,6 +11,9 @@
     <!ENTITY dct  "http://dublincore.org/documents/dcmi-terms/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 
+	<!-- Main namespace -->
+    <!ENTITY ontology "http://purl.org/pav/" >
+
     <!-- Main namespace -->
     <!ENTITY pav "http://purl.org/pav/" >
 
@@ -25,7 +28,7 @@
     xmlns:dct="&dct;"
     xmlns:foaf="&foaf;">
     
-	<owl:Ontology rdf:about="&pav;">
+	<owl:Ontology rdf:about="&ontology;">
 		<rdf:type rdf:resource="&owl;Ontology"/>
 		<rdfs:label rdf:datatype="&xsd;string">Provenance v. 2.0</rdfs:label>
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
