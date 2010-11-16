@@ -11,8 +11,8 @@
     <!ENTITY dct  "http://dublincore.org/documents/dcmi-terms/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 
-	<!-- Main namespace -->
-    <!ENTITY ontology "http://purl.org/pav/provenance/" >
+	<!-- Ontology -->
+    <!ENTITY ontology "http://purl.org/pav/provenance/2.0/" >
 
     <!-- Main namespace -->
     <!ENTITY pav "http://purl.org/pav/" >
