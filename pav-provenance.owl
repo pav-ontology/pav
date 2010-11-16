@@ -233,4 +233,11 @@
 			provider might not coincide with the publisher.
 		</rdfs:comment>
 	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&pav;curates">
+        <owl:inverseOf rdf:resource="&pav;curatedBy" />
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&pav;curatedBy">
+    </owl:ObjectProperty>
 </rdf:RDF>
