@@ -113,6 +113,9 @@
 		</rdfs:subClassOf>
 	</owl:Class>	
 	
+	<owl:Class rdf:about="Curation" rdfs:label="Curation">
+	</owl:Class>
+	
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
 	//
