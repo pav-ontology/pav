@@ -1,2 +1,2 @@
- * [Homepage About]
+ * [Homepage Introduction]
  * [Versions]
