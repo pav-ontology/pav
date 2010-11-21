@@ -1,4 +1,4 @@
 The Provenance, Authoring and Versioning (PAV) ontology provides classes and relationships 
 for tracking data provenance for application that are heavily based on integration of data from different sources.
 
-The first versions of the ontology has been developed for the SWAN (Semantic Web Applications in Neuromedicine) project. The content of the AlzSWAN knowledge base is currently encoded with the v. 1.2 of the PAV ontology. The new version of the the ontology (v. 2.0) is extending the previous release to cover use cases related to the [http://code.google.com/p/annotation-ontology/ Annotation Ontology (AO)].
+The first versions of the ontology has been developed for the SWAN (Semantic Web Applications in Neuromedicine) project. The content of the [http://hypothesis.alzforum.org/swan/do!getHome.action AlzSWAN knowledge base] is currently encoded with the v. 1.2 of the PAV ontology. The new version of the the ontology (v. 2.0) is extending the previous release to cover use cases related to the [http://code.google.com/p/annotation-ontology/ Annotation Ontology (AO)].
