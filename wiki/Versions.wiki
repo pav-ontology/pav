@@ -1,6 +1,6 @@
 *PAV Ontology (Latest Version, now 2.0)*
 || PURL || Description ||
-|| http://purl.org/pav/ $ || Latest version of the PAV ontology.  ||
+|| http://purl.org/pav/ _$_ || Latest version of the PAV ontology.  ||
 || http://purl.org/pav/provenance/ || Latest version of the provenance module ||
 || http://purl.org/pav/authoring/ || Latest version of the authoring module ||
 
@@ -8,7 +8,7 @@ _$ This is the URI you want to use to import/access the latest version of the PA
 
 *PAV Ontology v. 2.0 (under development)*
 || PURL || Description ||
-|| http://purl.org/pav/2.0/ $$ || Version 2.0 of the PAV ontology.  ||
+|| http://purl.org/pav/2.0/ _$$_ || Version 2.0 of the PAV ontology.  ||
 || http://purl.org/pav/provenance/2.0/ || Version 2.0 of the provenance module ||
 || http://purl.org/pav/authoring/2.0/ || Version 2.0 of the authoring module ||
 
@@ -16,6 +16,6 @@ _$$ This is the URI you want to use to import/access the version 2.0 of the PAV 
 
 *PAV Ontology v. 1.2 (stable release)*
 || PURL || Description ||
-|| http://purl.org/pav/1.2/ $$$ || Version 1.2 of the PAV ontology ||
+|| http://purl.org/pav/1.2/ _$$$_ || Version 1.2 of the PAV ontology ||
 
 _$$$ This is the URI you want to use to import/access the version 1.2 of the PAV ontology._
