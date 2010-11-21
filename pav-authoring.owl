@@ -28,7 +28,6 @@
     xmlns:foaf="&foaf;">
     
 	<owl:Ontology rdf:about="&ontology;">
-		<rdf:type rdf:resource="&owl;Ontology"/>
 		<rdfs:label rdf:datatype="&xsd;string">Authoring v. 2.0</rdfs:label>
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
 		
