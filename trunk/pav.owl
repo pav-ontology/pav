@@ -37,6 +37,7 @@
 		
 		<dct:language>en</dct:language>
 		<dct:title xml:lang="en">Provenance, Authoring and Versioning ontology</dct:title>
+		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
 		<dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me" />
 		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
 		

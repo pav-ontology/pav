@@ -36,9 +36,10 @@
 		<dct:language>en</dct:language>
 		<dct:title xml:lang="en">Provenance ontology (part of PAV)</dct:title>
 		<dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me" />
+		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
 		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
 		
-		<dct:publisher rdf:resource="http://swan.mindinformatics.org" />
+		<dct:publisher rdf:datatype="&xsd;string">Massachusetts General Hospital</dct:publisher>
 		<dct:date rdf:datatype="&xsd;string">June 6, 2010</dct:date>
 		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
 	</owl:Ontology>
@@ -116,9 +117,6 @@
 		</rdfs:subClassOf>
 	</owl:Class>	
 	
-	<owl:Class rdf:about="Curation" rdfs:label="Curation">
-	</owl:Class>
-	
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -167,6 +165,13 @@
 		<rdfs:comment rdf:datatype="&xsd;string">
 			An entity responsible for importing the data.
 			Usually a software entity.
+		</rdfs:comment>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="importedFromSource">
+		<rdfs:label xml:lang="en">Imported From Source</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			Identify the original source of the imported information.
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
@@ -236,11 +241,4 @@
 			provider might not coincide with the publisher.
 		</rdfs:comment>
 	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&pav;curates">
-        <owl:inverseOf rdf:resource="&pav;curatedBy" />
-    </owl:ObjectProperty>
-    
-    <owl:ObjectProperty rdf:about="&pav;curatedBy">
-    </owl:ObjectProperty>
 </rdf:RDF>
