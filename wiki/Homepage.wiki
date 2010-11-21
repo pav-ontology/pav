@@ -1,4 +1,4 @@
-*PAV Ontology (Latest Version)*
+*PAV Ontology (Latest Version, now 2.0)*
 || PURL || Description ||
 || http://purl.org/pav/ || Latest version of the PAV ontology ||
 || http://purl.org/pav/provenance/ || Latest version of the provenance module ||
