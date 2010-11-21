@@ -1,2 +1,2 @@
 The Provenance, Authoring and Versioning (PAV) ontology provides classes and relationships 
-for tracking data provenance in those application that are heavily based on integration of data from different sources.
+for tracking data provenance for application that are heavily based on integration of data from different sources.
