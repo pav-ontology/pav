@@ -3,3 +3,9 @@
 || http://purl.org/pav/ || Latest version of the PAV ontology ||
 || http://purl.org/pav/provenance/ || Latest version of the provenance module ||
 || http://purl.org/pav/authoring/ || Latest version of the authoring module ||
+
+*PAV Ontology v. 2.0 PURLs*
+|| PURL || Description ||
+|| http://purl.org/pav/2.0/ || Version 2.0 of the PAV ontology ||
+|| http://purl.org/pav/provenance/2.0/ || Version 2.0 of the provenance module ||
+|| http://purl.org/pav/authoring/2.0/ || Version 2.0 of the authoring module ||
