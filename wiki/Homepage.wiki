@@ -6,7 +6,7 @@
 
 *PAV Ontology v. 1.2 PURLs (stable release)*
 || PURL || Description ||
-|| http://purl.org/pav/1.2// || Version 1.2 of the PAV ontology ||
+|| http://purl.org/pav/1.2/ || Version 1.2 of the PAV ontology ||
 || http://purl.org/pav/provenance/1.2/ || Version 1.2 of the provenance module ||
 || http://purl.org/pav/authoring/1.2/ || Version 1.2 of the authoring module ||
 
