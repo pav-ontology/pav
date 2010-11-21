@@ -16,4 +16,6 @@ $$ This is the URI you want to use to import/access the version 2.0 of the PAV o
 
 *PAV Ontology v. 1.2 (stable release)*
 || PURL || Description ||
-|| http://purl.org/pav/1.2/ || Version 1.2 of the PAV ontology ||
+|| http://purl.org/pav/1.2/ $$$ || Version 1.2 of the PAV ontology ||
+
+$$$ This is the URI you want to use to import/access the version 1.2 of the PAV ontology.
