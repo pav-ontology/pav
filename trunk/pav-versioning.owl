@@ -12,7 +12,7 @@
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 
 	<!-- Ontology -->
-    <!ENTITY ontology "http://purl.org/pav/provenance/2.0/" >
+    <!ENTITY ontology "http://purl.org/pav/versioning/2.0/" >
 
     <!-- Main namespace -->
     <!ENTITY pav "http://purl.org/pav/" >
