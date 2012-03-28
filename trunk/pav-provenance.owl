@@ -193,4 +193,11 @@
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
+	<owl:ObjectProperty rdf:about="createdAt">
+		<rdfs:label xml:lang="en">Created At</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			Allows to declare the geo-location of the agent that created the annotation.
+		</rdfs:comment>
+	</owl:ObjectProperty>
+	
 </rdf:RDF>
