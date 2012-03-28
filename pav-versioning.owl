@@ -29,7 +29,7 @@
     xmlns:foaf="&foaf;">
     
 	<owl:Ontology rdf:about="&ontology;">
-		<rdfs:label rdf:datatype="&xsd;string">Provenance v. 2.0</rdfs:label>
+		<rdfs:label rdf:datatype="&xsd;string">Versioning v. 2.0</rdfs:label>
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
 		
 		<dct:language>en</dct:language>
