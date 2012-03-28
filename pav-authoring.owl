@@ -38,8 +38,7 @@
 		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
 		<dct:contributor rdf:datatype="&xsd;string">Marco Ocana</dct:contributor>
 		
-		<dct:publisher rdf:resource="http://swan.mindinformatics.org" />
-		<dct:date rdf:datatype="&xsd;string">June 19, 2010</dct:date>
+		<dct:date rdf:datatype="&xsd;string">March 28, 2012</dct:date>
 		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
 	</owl:Ontology>
     
