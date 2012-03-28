@@ -37,9 +37,10 @@
 		<dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me" />
 		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
 		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
+		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
+		<dct:contributor rdf:datatype="&xsd;string">Marco Ocana</dct:contributor>
 		
-		<dct:publisher rdf:datatype="&xsd;string">Massachusetts General Hospital</dct:publisher>
-		<dct:date rdf:datatype="&xsd;string">June 6, 2010</dct:date>
+		<dct:date rdf:datatype="&xsd;string">March 28, 2012</dct:date>
 		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
 	</owl:Ontology>
     
@@ -76,46 +77,7 @@
 		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
 	
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// PAV Ontology Classes
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->
-	<owl:Class rdf:about="SourceDocument" rdfs:label="Source Document">
-		<rdfs:comment rdf:datatype="&xsd;string">
-		</rdfs:comment>	
-	
-		<!-- retrieved from -->
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;retrievedFrom"/>
-				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		
-		<!-- source retrieved on -->
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&pav;sourceAccessedOn"/>
-				<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-	</owl:Class>	
-	
+
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -240,4 +202,5 @@
 			provider might not coincide with the publisher.
 		</rdfs:comment>
 	</owl:ObjectProperty>
+	
 </rdf:RDF>
