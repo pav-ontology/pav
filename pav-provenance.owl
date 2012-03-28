@@ -86,16 +86,6 @@
 	///////////////////////////////////////////////////////////////////////////////////////
 	 -->
 	
-	<!-- Data Import --> 
-	<owl:DatatypeProperty rdf:about="externalId">
-		<!-- Previously 'importedWithId' -->
-		<!-- published with id??? -->
-		<rdfs:label xml:lang="en">External Id</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-			The unique identifier of the encoded information in the original source.
-		</rdfs:comment>
-	</owl:DatatypeProperty>
-	
 	<!-- Source access -->
 	<owl:ObjectProperty rdf:about="createdBy">
 		<rdfs:label xml:lang="en">Created By</rdfs:label>
@@ -129,8 +119,8 @@
 		</rdfs:comment>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="importedFromSource">
-		<rdfs:label xml:lang="en">Imported From Source</rdfs:label>
+	<owl:ObjectProperty rdf:about="importedFrom">
+		<rdfs:label xml:lang="en">Imported From</rdfs:label>
 		<rdfs:comment rdf:datatype="&xsd;string">
 			Identify the original source of the imported information.
 		</rdfs:comment>
