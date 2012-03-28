@@ -33,6 +33,7 @@
 		
 		<owl:imports rdf:resource="http://purl.org/pav/provenance/2.0/"/>
 		<owl:imports rdf:resource="http://purl.org/pav/authoring/2.0/"/>
+		<owl:imports rdf:resource="http://purl.org/pav/versioning/2.0/"/>
 		
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
 		

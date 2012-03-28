@@ -33,8 +33,8 @@
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
 		
 		<dct:language>en</dct:language>
-		<dct:title xml:lang="en">Provenance ontology (part of PAV)</dct:title>
-		<dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me" />
+		<dct:title xml:lang="en">Versioning ontology (part of PAV)</dct:title>
+		<dct:creator rdf:resource="http://www.paolociccarese.info/" />
 		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
 		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
 		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
