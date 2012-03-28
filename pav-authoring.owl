@@ -31,12 +31,12 @@
 		<rdfs:label rdf:datatype="&xsd;string">Authoring v. 2.0</rdfs:label>
 		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
 		
-		<owl:imports rdf:resource="http://purl.org/pav/provenance/2.0/"/>
-		
 		<dct:language>en</dct:language>
 		<dct:title xml:lang="en">Authoring ontology (part of PAV)</dct:title>
 		<dct:creator rdf:resource="http://www.paolociccarese.info/foaf.rdf#me" />
 		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
+		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
+		<dct:contributor rdf:datatype="&xsd;string">Marco Ocana</dct:contributor>
 		
 		<dct:publisher rdf:resource="http://swan.mindinformatics.org" />
 		<dct:date rdf:datatype="&xsd;string">June 19, 2010</dct:date>
@@ -75,52 +75,6 @@
   	<rdf:Description rdf:about="&dct;contributor">
 		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
   	</rdf:Description>
-	
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// PAV Ontology Classes
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->
-	<owl:Class rdf:about="Curation" rdfs:label="(pav-authoring) Curation">
-        <rdfs:comment rdf:datatype="&xsd;string">
-        	This allows to express judgment on an existing piece of knowledge.
-        </rdfs:comment>
-        
-        <!-- created by -->
-        <rdfs:subClassOf>
-            <owl:Restriction>                <owl:onProperty rdf:resource="&pav;createdBy"/>                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>            </owl:Restriction>
-        </rdfs:subClassOf>	
-		
-        <!-- created on -->
-        <rdfs:subClassOf>
-            <owl:Restriction>                <owl:onProperty rdf:resource="&pav;createdOn"/>                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>            </owl:Restriction>
-        </rdfs:subClassOf>
-        
-       	<rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="curates"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="curatedBy"/>
-                <owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        
-        <!-- status -->
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="status"/>
-                <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>	
-
-    </owl:Class>
 	 
 	<!-- 
 	///////////////////////////////////////////////////////////////////////////////////////
@@ -132,11 +86,17 @@
 	 
 	<owl:ObjectProperty rdf:about="contributedBy">
 		<rdfs:label xml:lang="en">Contributed By</rdfs:label>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			contributedBy - 
+		</rdfs:comment>
 	</owl:ObjectProperty>   
 	 
 	<owl:ObjectProperty rdf:about="authoredBy">
 		<rdfs:label xml:lang="en">Authored By</rdfs:label>
 		<rdfs:subPropertyOf rdf:resource="contributedBy"/>
+		<rdfs:comment rdf:datatype="&xsd;string">
+			authoredBy - 
+		</rdfs:comment>
 	</owl:ObjectProperty>  
 	
 	<owl:ObjectProperty rdf:about="curatedBy">
