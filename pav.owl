@@ -1,84 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
-<!-- Created by Paolo Ciccarese http://www.hcklab.org/people/pc/ on May 22nd, 2010 -->
 
 <!DOCTYPE rdf:RDF [
-    <!-- Other namespaces -->
-    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY dct  "http://dublincore.org/documents/dcmi-terms/" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
-
-	<!-- Ontology -->
-    <!ENTITY ontology "http://purl.org/pav/2.0/" >
-
-    <!-- Main namespace -->
-    <!ENTITY pav "http://purl.org/pav/" >
-
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
-<rdf:RDF
-	xml:base="&pav;"
-    xmlns:rdfs="&rdfs;"
-    xmlns:owl="&owl;"
-    xmlns:rdf="&rdf;"
-    xmlns:xsd="&xsd;"
-    xmlns:dct="&dct;"
-    xmlns:foaf="&foaf;">
-    
-	<owl:Ontology rdf:about="&ontology;">
-		<rdf:type rdf:resource="&owl;Ontology"/>
-		<rdfs:label rdf:datatype="&xsd;string">Provenance, Authoring and Versioning v. 2.0</rdfs:label>
-		
-		<owl:imports rdf:resource="http://purl.org/pav/provenance/2.0/"/>
-		<owl:imports rdf:resource="http://purl.org/pav/authoring/2.0/"/>
-		<owl:imports rdf:resource="http://purl.org/pav/versioning/2.0/"/>
-		
-		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
-		
-		<dct:language>en</dct:language>
-		<dct:title xml:lang="en">Provenance, Authoring and Versioning ontology</dct:title>
-		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
-		<dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me" />
-		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
-		
-		<dct:publisher rdf:resource="http://swan.mindinformatics.org" />
-		<dct:date rdf:datatype="&xsd;string">May 23, 2010</dct:date>
-		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
-	</owl:Ontology>
-    
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// Annotation Properties
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->
 
-  	<rdf:Description rdf:about="&dct;title">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;description">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;date">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
- 	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;creator">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;format">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;language">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;publisher">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;contributor">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-	
+
+<rdf:RDF xmlns="http://purl.org/pav/2.0/"
+     xml:base="http://purl.org/pav/2.0/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/pav/2.0/">
+        <rdfs:label rdf:datatype="&xsd;string">Provenance, Authoring and Versioning</rdfs:label>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
+        <dct:date rdf:datatype="&xsd;dateTime">2010-05-23</dct:date>
+        <dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
+        <dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
+        <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
+        <dct:title xml:lang="en">Provenance, Authoring and Versioning ontology</dct:title>
+        <dct:language>en</dct:language>
+        <rdfs:comment xml:lang="en">Note that this ontology uses owl:import to integrate its content from 3 submodules for provenance, authoring and versioning. These modules can be used independently, but are all using the same namespace, http://purl.org/pav/</rdfs:comment>
+        <dct:publisher rdf:resource="http://swan.mindinformatics.org"/>
+        <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+        <owl:imports rdf:resource="http://purl.org/pav/authoring/2.0/"/>
+        <owl:imports rdf:resource="http://purl.org/pav/provenance/2.0/"/>
+        <owl:imports rdf:resource="http://purl.org/pav/versioning/2.0/"/>
+        <owl:priorVersion rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
+        <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dct;creator"/>
+    <owl:AnnotationProperty rdf:about="&dct;description"/>
+    <owl:AnnotationProperty rdf:about="&dct;format"/>
+    <owl:AnnotationProperty rdf:about="&dct;language"/>
+    <owl:AnnotationProperty rdf:about="&dct;date"/>
+    <owl:AnnotationProperty rdf:about="&dct;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dct;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dct;title"/>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

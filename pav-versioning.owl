@@ -1,99 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
-<!-- Created by Paolo Ciccarese http://www.hcklab.org/people/pc/ on May 22nd, 2010 -->
 
 <!DOCTYPE rdf:RDF [
-    <!-- Other namespaces -->
-    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY dct  "http://dublincore.org/documents/dcmi-terms/" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
-
-	<!-- Ontology -->
-    <!ENTITY ontology "http://purl.org/pav/versioning/2.0/" >
-
-    <!-- Main namespace -->
-    <!ENTITY pav "http://purl.org/pav/" >
-
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
-<rdf:RDF
-    xml:base="&pav;"
-    xmlns="&pav;"
-    xmlns:rdfs="&rdfs;"
-    xmlns:owl="&owl;"
-    xmlns:rdf="&rdf;"
-    xmlns:xsd="&xsd;"
-    xmlns:dct="&dct;"
-    xmlns:foaf="&foaf;">
-    
-	<owl:Ontology rdf:about="&ontology;">
-		<rdfs:label rdf:datatype="&xsd;string">Versioning v. 2.0</rdfs:label>
-		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
-		
-		<dct:language>en</dct:language>
-		<dct:title xml:lang="en">Versioning ontology (part of PAV)</dct:title>
-		<dct:creator rdf:resource="http://www.paolociccarese.info/" />
-		<dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
-		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
-		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
-		<dct:contributor rdf:datatype="&xsd;string">Marco Ocana</dct:contributor>
-		
-		<dct:date rdf:datatype="&xsd;string">March 28, 2012</dct:date>
-		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
-	</owl:Ontology>
-    
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// Annotation Properties
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->
 
-  	<rdf:Description rdf:about="&dct;title">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;description">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;date">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
- 	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;creator">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;format">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;language">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;publisher">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;contributor">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	
-  	<owl:DatatypeProperty rdf:about="versionNumber">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		version - The version of the resource.
-	  	</rdfs:comment>
-      	<rdfs:range rdf:resource="&xsd;string"/>
-	</owl:DatatypeProperty>	
-	
-	<owl:ObjectProperty rdf:about="previousVersion">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		previousVersion - The previous version of the resource.
-	  	</rdfs:comment>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="derivedFrom">
-	  	<rdfs:comment rdf:datatype="&xsd;string">
-	  		derivedFrom - The previous version of the resource.
-	  	</rdfs:comment>
-	</owl:ObjectProperty>
-  	
+
+<rdf:RDF xmlns="http://purl.org/pav/"
+     xml:base="http://purl.org/pav/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/pav/versioning/2.0/">
+        <rdfs:label xml:lang="en">PAV Versioning</rdfs:label>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
+        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28</dct:issued>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-03-30</dct:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
+        <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
+        <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
+        <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
+        <dct:language>en</dct:language>
+        <dct:title xml:lang="en">PAV Versioning ontology module</dct:title>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/2.0/"/>
+        <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
+        <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dct;creator"/>
+    <owl:AnnotationProperty rdf:about="&dct;description"/>
+    <owl:AnnotationProperty rdf:about="&dct;format"/>
+    <owl:AnnotationProperty rdf:about="&dct;date"/>
+    <owl:AnnotationProperty rdf:about="&dct;language"/>
+    <owl:AnnotationProperty rdf:about="&dct;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dct;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dct;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pav/derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/derivedFrom">
+        <rdfs:comment xml:lang="en">Derived from a different resource. Derivation conserns itself with derived knowledge. If this resource has the same content as the other resource, but has simply been transcribed to fit a different model (like XML -&gt; RDF or SQL -&gt; CVS), use pav:importedFrom. If the content has been further refined or modified, use pav:derivedFrom.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/previousVersion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/previousVersion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/previousVersion">
+        <rdfs:comment xml:lang="en">The previous version of a resource in a lineage. For instance a news article updated to correct factual information would point to the previous version of the article with pav:previousVersion. If however the content has significantly changed so that the two resources no longer share lineage (say a new news article that talks about the same facts), they should be related using pav:derivedFrom.
+
+A version number of this resource can be provided using pav:versionNumber.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/derivedFrom"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/versionNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pav/versionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/versionNumber">
+        <rdfs:comment rdf:datatype="&xsd;string">The version number of a resource. This is a freetext string, typical values are &quot;1.5&quot; or &quot;21&quot;. The URI identifying the previous version can be provided using prov:previousVersion.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/previousVersion"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
