@@ -1,122 +1,182 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 
-<!-- Created by Paolo Ciccarese http://www.hcklab.org/people/pc/ on June 19nd, 2010 -->
 
 <!DOCTYPE rdf:RDF [
-    <!-- Other namespaces -->
-    <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdf  "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY dct "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY dct  "http://dublincore.org/documents/dcmi-terms/" >
-    <!ENTITY foaf "http://xmlns.com/foaf/0.1/">
-
-	<!-- Ontology -->
-    <!ENTITY ontology "http://purl.org/pav/authoring/2.0/" >
-
-    <!-- Main namespace -->
-    <!ENTITY pav "http://purl.org/pav/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
-<rdf:RDF
-    xml:base="&pav;"
-    xmlns="&pav;"
-    xmlns:rdfs="&rdfs;"
-    xmlns:owl="&owl;"
-    xmlns:rdf="&rdf;"
-    xmlns:xsd="&xsd;"
-    xmlns:dct="&dct;"
-    xmlns:foaf="&foaf;">
-    
-	<owl:Ontology rdf:about="&ontology;">
-		<rdfs:label rdf:datatype="&xsd;string">Authoring v. 2.0</rdfs:label>
-		<owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>    
-		
-		<dct:language>en</dct:language>
-		<dct:title xml:lang="en">Authoring ontology (part of PAV)</dct:title>
-		<dct:creator rdf:resource="http://www.paolociccarese.info/" />
-		<dct:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dct:contributor>
-		<dct:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dct:contributor>
-		<dct:contributor rdf:datatype="&xsd;string">Marco Ocana</dct:contributor>
-		
-		<dct:date rdf:datatype="&xsd;string">March 28, 2012</dct:date>
-		<dct:format rdf:datatype="&xsd;string">rdf/xml</dct:format>
-	</owl:Ontology>
-    
-	<!-- 
-	///////////////////////////////////////////////////////////////////////////////////////
-	//
-	// Annotation Properties
-	//
-	///////////////////////////////////////////////////////////////////////////////////////
-	 -->
 
-  	<rdf:Description rdf:about="&dct;title">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;description">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;date">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
- 	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;creator">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;format">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;language">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;publisher">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-  	<rdf:Description rdf:about="&dct;contributor">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
-  	</rdf:Description>
-	 
-<!-- 
-///////////////////////////////////////////////////////////////////////////////////////
-//
-// PAV Ontology Authoring Properties
-//
-///////////////////////////////////////////////////////////////////////////////////////
-In PAV we distinguish between authors that originate or give existence to the work
-that is expressed in the digital resource (authoredBy), i.e. the authors of a scientific
-publication or of a novel scientific hypothesis; and curators (curatedBy), content
-specialists responsible for shaping the expression in an appropriate format. Contributors
-(superproperty contributedBy) covers both authors and curators, but can also identify
-agents that generically provide some help in conceiving the resource or in the expressed
-knowledge creation/extraction.
--->	 
-	 
-	<owl:ObjectProperty rdf:about="contributedBy">
-		<rdfs:label xml:lang="en">Contributed By</rdfs:label>
-		<rdfs:comment rdf:datatype="&xsd;string">
-contributedBy - identifies any agent that provided any sort of help in conceiving the work 
-that is expressed by the digital artifact.
-		</rdfs:comment>
-	</owl:ObjectProperty>   
-	 
-	<owl:ObjectProperty rdf:about="authoredBy">
-		<rdfs:label xml:lang="en">Authored By</rdfs:label>
-		<rdfs:subPropertyOf rdf:resource="contributedBy"/>
-		<rdfs:comment rdf:datatype="&xsd;string">
-authoredBy - identifies any agent that originated or gave existence to the work
-that is expressed by the digital resource.
-		</rdfs:comment>
-	</owl:ObjectProperty>  
-	
-	<owl:ObjectProperty rdf:about="curatedBy">
-		<rdfs:label xml:lang="en">Curated By</rdfs:label>
-		<rdfs:subPropertyOf rdf:resource="contributedBy"/>
-		<rdfs:comment rdf:datatype="&xsd;string">
-curatedBy - The agent specialists responsible for shaping the expression in an appropriate format.
-Often the primary responsible for ensuring the quality of the representation.
-		</rdfs:comment>
-	</owl:ObjectProperty>
-		
-	<owl:ObjectProperty rdf:about="&pav;curates">
-        <owl:inverseOf rdf:resource="&pav;curatedBy" />
-    </owl:ObjectProperty>	 
+
+<rdf:RDF xmlns="http://purl.org/pav/"
+     xml:base="http://purl.org/pav/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/pav/authoring/2.0/">
+        <rdfs:label xml:lang="en">PAV Authoring</rdfs:label>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
+        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28</dct:issued>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-03-30</dct:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
+        <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
+        <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
+        <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
+        <dct:title xml:lang="en">PAV Authoring ontology ontology</dct:title>
+        <dct:language>en</dct:language>
+        <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
+        <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dct;creator"/>
+    <owl:AnnotationProperty rdf:about="&dct;description"/>
+    <owl:AnnotationProperty rdf:about="&dct;format"/>
+    <owl:AnnotationProperty rdf:about="&dct;language"/>
+    <owl:AnnotationProperty rdf:about="&dct;date"/>
+    <owl:AnnotationProperty rdf:about="&dct;publisher"/>
+    <owl:AnnotationProperty rdf:about="&dct;contributor"/>
+    <owl:AnnotationProperty rdf:about="&dct;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pav/authoredBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/authoredBy">
+        <rdfs:label xml:lang="en">Authored by</rdfs:label>
+        <rdfs:comment xml:lang="en">An agent that originated or gave existence to the work that is expressed by the digital resource.
+
+The author of the content of a resource is different from the creator of that digital resource (although they are often the same). See pav:createdBy for a discussion.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedBy"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/contributedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/contributedBy">
+        <rdfs:label xml:lang="en">Contributed by</rdfs:label>
+        <rdfs:comment xml:lang="en">An agent that provided any sort of help in conceiving the work that is expressed by the digital artifact.
+
+The date of contribution can be expressed using pav:contributedOn - note however that there is no relationship in PAV identifying which contributor contributed when or what, such lineage should rather be expressed using a process-centric model such as OPM or PROV.
+
+Note that as pav:contributedBy identifies only agents that contributed to the work, and not agents that made the digital artifact, it is more precise than dct:contributor. See pav:createdBy for a discussion.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/curatedBy">
+        <rdfs:label xml:lang="en">Curated by</rdfs:label>
+        <rdfs:comment xml:lang="en">An agent specialist responsible for shaping the expression in an appropriate format. Often the primary agent responsible for ensuring the quality of the representation.
+
+The curator is different from the creator of the digital resource (although they are often the same), see pav:createdBy for a discussion.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedBy"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/curates -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/curates">
+        <owl:inverseOf rdf:resource="http://purl.org/pav/curatedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pav/authoredOn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/authoredOn">
+        <rdfs:comment xml:lang="en">The date this resource was authored.
+
+pav:authoredBy gives the authoring agent.
+
+Note that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/authoredBy"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedOn"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdOn"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/contributedOn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/contributedOn">
+        <rdfs:comment xml:lang="en">The date this resource was contributed to.
+
+pav:contributedBy provides the agent that contributed.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/contributedBy"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/pav/curatedOn -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/curatedOn">
+        <rdfs:comment xml:lang="en">The date this resource was curated. 
+
+pav:curatedBy gives the agents that performed the curation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/pav/contributedOn"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/curatedBy"/>
+    </owl:DatatypeProperty>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
