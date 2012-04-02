@@ -24,8 +24,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/versioning/2.0/">
         <rdfs:label xml:lang="en">PAV Versioning</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
-        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28</dct:issued>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-03-30</dct:modified>
+        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-04-02T15:48:00+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -50,8 +50,8 @@
     <owl:AnnotationProperty rdf:about="&dct;creator"/>
     <owl:AnnotationProperty rdf:about="&dct;description"/>
     <owl:AnnotationProperty rdf:about="&dct;format"/>
-    <owl:AnnotationProperty rdf:about="&dct;date"/>
     <owl:AnnotationProperty rdf:about="&dct;language"/>
+    <owl:AnnotationProperty rdf:about="&dct;date"/>
     <owl:AnnotationProperty rdf:about="&dct;publisher"/>
     <owl:AnnotationProperty rdf:about="&dct;contributor"/>
     <owl:AnnotationProperty rdf:about="&dct;title"/>
@@ -95,7 +95,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/pav/previousVersion">
         <rdfs:comment xml:lang="en">The previous version of a resource in a lineage. For instance a news article updated to correct factual information would point to the previous version of the article with pav:previousVersion. If however the content has significantly changed so that the two resources no longer share lineage (say a new news article that talks about the same facts), they should be related using pav:derivedFrom.
 
-A version number of this resource can be provided using pav:versionNumber.</rdfs:comment>
+A version number of this resource can be provided using the data property pav:version.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/pav/derivedFrom"/>
         <rdfs:seeAlso rdf:resource="http://purl.org/pav/versionNumber"/>
     </owl:ObjectProperty>
@@ -113,9 +113,9 @@ A version number of this resource can be provided using pav:versionNumber.</rdfs
     
 
 
-    <!-- http://purl.org/pav/versionNumber -->
+    <!-- http://purl.org/pav/version -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/versionNumber">
+    <owl:DatatypeProperty rdf:about="http://purl.org/pav/version">
         <rdfs:comment rdf:datatype="&xsd;string">The version number of a resource. This is a freetext string, typical values are &quot;1.5&quot; or &quot;21&quot;. The URI identifying the previous version can be provided using prov:previousVersion.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/pav/previousVersion"/>
         <rdfs:range rdf:resource="&xsd;string"/>
