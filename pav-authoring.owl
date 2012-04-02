@@ -24,8 +24,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/authoring/2.0/">
         <rdfs:label xml:lang="en">PAV Authoring</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
-        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28</dct:issued>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-03-30</dct:modified>
+        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-04-02T15:48:00+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -38,23 +38,6 @@
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:AnnotationProperty rdf:about="&dct;creator"/>
-    <owl:AnnotationProperty rdf:about="&dct;description"/>
-    <owl:AnnotationProperty rdf:about="&dct;format"/>
-    <owl:AnnotationProperty rdf:about="&dct;language"/>
-    <owl:AnnotationProperty rdf:about="&dct;date"/>
-    <owl:AnnotationProperty rdf:about="&dct;publisher"/>
-    <owl:AnnotationProperty rdf:about="&dct;contributor"/>
-    <owl:AnnotationProperty rdf:about="&dct;title"/>
-    
 
 
     <!-- 
