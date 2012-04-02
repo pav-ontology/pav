@@ -24,8 +24,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/provenance/2.0/">
         <rdfs:label xml:lang="en">PAV Provenance</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
-        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28</dct:issued>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-03-30</dct:modified>
+        <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28T00:00:00</dct:issued>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-04-02T15:48:00+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
         <dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
@@ -50,8 +50,8 @@
     <owl:AnnotationProperty rdf:about="&dct;creator"/>
     <owl:AnnotationProperty rdf:about="&dct;description"/>
     <owl:AnnotationProperty rdf:about="&dct;format"/>
-    <owl:AnnotationProperty rdf:about="&dct;language"/>
     <owl:AnnotationProperty rdf:about="&dct;date"/>
+    <owl:AnnotationProperty rdf:about="&dct;language"/>
     <owl:AnnotationProperty rdf:about="&dct;publisher"/>
     <owl:AnnotationProperty rdf:about="&dct;contributor"/>
     <owl:AnnotationProperty rdf:about="&dct;title"/>
@@ -203,6 +203,25 @@ The time of the retrieval should be indicated using pav:retrievedOn. The agent m
     
 
 
+    <!-- http://purl.org/pav/sourceAccessedAt -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/sourceAccessedAt">
+        <rdfs:comment xml:lang="en">A source which was accessed (but not retrieved or imported).</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedFrom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/pav/sourceAccessedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/pav/sourceAccessedBy">
+        <rdfs:comment xml:lang="en">The agent who accessed the source</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/sourceAccessedAt"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -263,6 +282,7 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.org/pav/retrievedOn">
         <rdfs:comment xml:lang="en">The date this resource was retrieved. </rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedFrom"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
 
@@ -271,21 +291,8 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/pav/sourceAccessedOn">
         <rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">sourceAccessedOn - The date when the original source has been accessed to create the resource.
-		</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/sourceFirstAccessedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/sourceFirstAccessedOn">
-        <rdfs:label xml:lang="en">Source First Accessed On</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">
-			The date when the original source has been first accessed and verified. This property
-			is used when the history of the versions of the different accesses is not stored.
-		</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date when the original source has been accessed to create the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdAt"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -295,10 +302,8 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://purl.org/pav/sourceLastAccessedOn">
         <rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">
-			The date when the original source has been last accessed and verified. This property
-			is used when the history of the versions of the different accesses is not stored.
-		</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date when the original source has been last accessed and verified.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdAt"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
 </rdf:RDF>
