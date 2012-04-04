@@ -7,6 +7,7 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY provenance "http://purl.org/pav/provenance/2.0/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
@@ -15,6 +16,7 @@
 <rdf:RDF xmlns="http://purl.org/pav/"
      xml:base="http://purl.org/pav/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:provenance="http://purl.org/pav/provenance/2.0/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dct="http://purl.org/dc/terms/"
@@ -22,10 +24,10 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://purl.org/pav/provenance/2.0/">
-        <rdfs:label xml:lang="en">PAV Provenance</rdfs:label>
+        <rdfs:label xml:lang="en">PAV Provenance module</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.0</owl:versionInfo>
         <dct:issued rdf:datatype="&xsd;dateTime">2012-03-28T00:00:00</dct:issued>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-04-02T15:48:00+01:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-04-04T15:48:00+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Paolo Ciccarese</dc:contributor>
         <dct:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dct:creator>
@@ -33,6 +35,10 @@
         <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
         <dct:language>en</dct:language>
         <dct:title xml:lang="en">PAV Provenance ontology module</dct:title>
+        <rdfs:comment xml:lang="en">This ontology module has been superseeded by the single ontology http://purl.org/pav/2.0/
+</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://purl.org/pav/2.0/"/>
+        <owl:imports rdf:resource="http://purl.org/pav/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
     </owl:Ontology>
@@ -56,256 +62,6 @@
     <owl:AnnotationProperty rdf:about="&dct;contributor"/>
     <owl:AnnotationProperty rdf:about="&dct;title"/>
     
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/pav/createdAt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/createdAt">
-        <rdfs:label xml:lang="en">Created at</rdfs:label>
-        <rdfs:comment xml:lang="en">The geo-location of the agent that created the annotation.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/createdBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/createdBy">
-        <rdfs:label xml:lang="en">Created by</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity primary responsible for making the digital artifact.
-
-This property is distinct from pav:authoredBy, which identifies who authored the knowledge expressed by this resource, and pav:curatedBy, which identifies who curated the knowledge into its current form. 
-
-pav:createdBy is therefore more specific than dct:createdBy - which might or might not be interpreted to cover these creator.
-
-For instance, the author wrote &#39;this species has bigger wings than normal&#39; in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as &#39;locus perculus has wingspan &gt; 0.5m&#39;. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).
-
-A different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:curatedBy can indicate the editor who made the article conform to the news paper&#39;s style. pav:createdBy can indicate who put the article on the web site.
-
-The software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.
-
-The date the digital resource was created can be indicated with pav:createdOn.
-
-The location the agent was when creating the digital resource can be made using pav:createdAt.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/authoredBy"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdAt"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdOn"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/curatedBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/createdWith -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/createdWith">
-        <rdfs:label xml:lang="en">Created with</rdfs:label>
-        <rdfs:comment xml:lang="en">The software/tool used by the creator when making the digital resource. 
-
-For instance: Protege, Wordpress, LibreOffice.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/importedBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/importedBy">
-        <rdfs:label xml:lang="en">Imported by</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity responsible for importing the data. 
-
-The importer is usually a software entity which has done the transcription from the original source.
-
-See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/importedFrom -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/importedFrom">
-        <rdfs:label xml:lang="en">Imported From</rdfs:label>
-        <rdfs:comment xml:lang="en">The original source of the imported information. 
-
-Import means that the content has been preserved, but transcribed somehow, for instance to fit a different model. Examples of import are when the original was JSON and the current resource is RDF, or where the original was an document scan, and this resource is the text found through OCR. 
-
-The difference between prov:derivedFrom and prov:importedFrom is that the imported resource conveys the same knowledge/content as the original, while a derived resource has somehow modified that knowledge to convey something else.
-
-If the resource has been copied verbatim from the original (e.g. downloaded), use pav:retrievedFrom.
-
-To indicate which agent(s) performed the import, use pav:importedBy. Use pav:importedOn to indicate when it happened.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/derivedFrom"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedBy"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedOn"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/providedBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/providedBy">
-        <rdfs:label xml:lang="en">Provided by</rdfs:label>
-        <rdfs:comment xml:lang="en">The provider of the encoded information (PubMed, UniProt, Science Commons). The provider might not coincide with the dct:publisher.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="&dct;publisher"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/retrievedBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/retrievedBy">
-        <rdfs:label xml:lang="en">Retrieved by</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity responsible for retrieving the data from an external source. 
-
-The importer is usually a software entity which has done the retrieval from the original source without performing any transcription.
-
-See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/retrievedFrom -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/retrievedFrom">
-        <rdfs:label xml:lang="en">Retrieved from</rdfs:label>
-        <rdfs:comment xml:lang="en">The URI where a resource has been retrieved from.
-
-Retrieval indicates that this resource has the same representation as the original resource. If the resource has been somewhat transformed, use pav:importedFrom instead.
-
-The time of the retrieval should be indicated using pav:retrievedOn. The agent may be indicated with pav:retrievedBy.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedBy"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedOn"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/sourceAccessedAt -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/sourceAccessedAt">
-        <rdfs:comment xml:lang="en">A source which was accessed (but not retrieved or imported).</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedFrom"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/pav/sourceAccessedBy -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/pav/sourceAccessedBy">
-        <rdfs:comment xml:lang="en">The agent who accessed the source</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/sourceAccessedAt"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/pav/createdOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/createdOn">
-        <rdfs:label xml:lang="en">Created On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of creation of the resource.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdBy"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/importedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/importedOn">
-        <rdfs:label xml:lang="en">Imported On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date this resource was imported.
-
-See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/importedFrom"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/lastRefreshedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/lastRefreshedOn">
-        <rdfs:label xml:lang="en">Last Refreshed On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of the last import of the resource. This property is used if this version has been updated due to a re-import, rather than the import creating new resources related using pav:previousVersion.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/lastUpdateOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/lastUpdateOn">
-        <rdfs:label xml:lang="en">Last Updated On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/retrievedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/retrievedOn">
-        <rdfs:comment xml:lang="en">The date this resource was retrieved. </rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/retrievedFrom"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/sourceAccessedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/sourceAccessedOn">
-        <rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date when the original source has been accessed to create the resource.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdAt"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/pav/sourceLastAccessedOn -->
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/pav/sourceLastAccessedOn">
-        <rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date when the original source has been last accessed and verified.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://purl.org/pav/createdAt"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
 </rdf:RDF>
 
 
