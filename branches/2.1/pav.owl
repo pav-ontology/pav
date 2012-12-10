@@ -53,7 +53,7 @@
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
-        <owl:imports rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
+        <owl:imports rdf:resource="1.2/pav.owl"/>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
