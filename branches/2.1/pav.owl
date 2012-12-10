@@ -14,6 +14,7 @@
     <!ENTITY provenance "http://purl.org/pav/provenance/2.0/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY pav1 "http://swan.mindinformatics.org/ontologies/1.2/pav/" >
 ]>
 
 
@@ -24,9 +25,10 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:versioning="&pav;versioning/2.0/"
      xmlns:provenance="&pav;provenance/2.0/"
+     xmlns:pav1="http://swan.mindinformatics.org/ontologies/1.2/pav/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:authoring="&pav;authoring/2.0/"
      xmlns:pav="http://purl.org/pav/"
+     xmlns:authoring="&pav;authoring/2.0/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -34,13 +36,13 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1</owl:versionInfo>
-        <dct:issued rdf:datatype="&xsd;dateTime">2012-11-28T15:21:00+00:00</dct:issued>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-11-28T15:21:00+00:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2012-12-10T16:54:00+00:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
         <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
         <dct:language rdf:datatype="&xsd;language">en</dct:language>
+        <dct:issued rdf:datatype="&xsd;dateTime">notyet</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
@@ -51,6 +53,7 @@
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
+        <owl:imports rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
@@ -68,10 +71,11 @@
 
     <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="&dct;creator"/>
+    <owl:AnnotationProperty rdf:about="&owl;equivalentProperty"/>
     <owl:AnnotationProperty rdf:about="&dct;description"/>
     <owl:AnnotationProperty rdf:about="&dct;format"/>
-    <owl:AnnotationProperty rdf:about="&dct;language"/>
     <owl:AnnotationProperty rdf:about="&dct;date"/>
+    <owl:AnnotationProperty rdf:about="&dct;language"/>
     <owl:AnnotationProperty rdf:about="&dct;publisher"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
     <owl:AnnotationProperty rdf:about="&dct;contributor"/>
@@ -110,6 +114,7 @@
 The author of the content of a resource is different from the creator of that digital resource (although they are often the same). See pav:createdBy for a discussion.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;authoredBy"/>
     </owl:ObjectProperty>
     
 
@@ -123,6 +128,7 @@ The author of the content of a resource is different from the creator of that di
 The date of contribution can be expressed using pav:contributedOn - note however that there is no relationship in PAV identifying which contributor contributed when or what, such lineage should rather be expressed using a process-centric model such as OPM or PROV.
 
 Note that as pav:contributedBy identifies only agents that contributed to the work, and not agents that made the digital artifact, it is more precise than dct:contributor. See pav:createdBy for a discussion.</rdfs:comment>
+        <owl:equivalentProperty rdf:resource="&pav1;contributedBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
@@ -146,7 +152,7 @@ Note that as pav:contributedBy identifies only agents that contributed to the wo
 
 This property is distinct from pav:authoredBy, which identifies who authored the knowledge expressed by this resource, and pav:curatedBy, which identifies who curated the knowledge into its current form. 
 
-pav:createdBy is therefore more specific than dct:createdBy - which might or might not be interpreted to cover these creator.
+pav:createdBy is more specific than dct:createdBy - which might or might not be interpreted to cover this creator.
 
 For instance, the author wrote &apos;this species has bigger wings than normal&apos; in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as &apos;locus perculus has wingspan &gt; 0.5m&apos;. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).
 
@@ -161,6 +167,8 @@ The location the agent was when creating the digital resource can be made using 
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;createdBy"/>
+        <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
 
@@ -187,6 +195,7 @@ For instance: Protege, Wordpress, LibreOffice.</rdfs:comment>
 The curator is different from the creator of the digital resource (although they are often the same), see pav:createdBy for a discussion.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;curatedBy"/>
     </owl:ObjectProperty>
     
 
@@ -194,6 +203,9 @@ The curator is different from the creator of the digital resource (although they
     <!-- http://purl.org/pav/curates -->
 
     <owl:ObjectProperty rdf:about="&pav;curates">
+        <rdfs:label xml:lang="en">Curates</rdfs:label>
+        <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
+        <rdfs:comment xml:lang="en">Provided for backwards compatibility with PAV 1.2 only. Use instead the inverse pav:curatedBy.</rdfs:comment>
         <owl:inverseOf rdf:resource="&pav;curatedBy"/>
     </owl:ObjectProperty>
     
@@ -202,6 +214,7 @@ The curator is different from the creator of the digital resource (although they
     <!-- http://purl.org/pav/derivedFrom -->
 
     <owl:ObjectProperty rdf:about="&pav;derivedFrom">
+        <rdfs:label xml:lang="en">Derived from</rdfs:label>
         <rdfs:comment xml:lang="en">Derived from a different resource. Derivation conserns itself with derived knowledge. If this resource has the same content as the other resource, but has simply been transcribed to fit a different model (like XML -&gt; RDF or SQL -&gt; CVS), use pav:importedFrom. If the content has been further refined or modified, use pav:derivedFrom.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
@@ -220,6 +233,8 @@ The importer is usually a software entity which has done the transcription from 
 
 See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
+        <owl:equivalentProperty rdf:resource="&pav1;importedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
 
@@ -227,12 +242,12 @@ See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:
     <!-- http://purl.org/pav/importedFrom -->
 
     <owl:ObjectProperty rdf:about="&pav;importedFrom">
-        <rdfs:label xml:lang="en">Imported From</rdfs:label>
+        <rdfs:label xml:lang="en">Imported from</rdfs:label>
         <rdfs:comment xml:lang="en">The original source of the imported information. 
 
 Import means that the content has been preserved, but transcribed somehow, for instance to fit a different model. Examples of import are when the original was JSON and the current resource is RDF, or where the original was an document scan, and this resource is the text found through OCR. 
 
-The difference between prov:derivedFrom and prov:importedFrom is that the imported resource conveys the same knowledge/content as the original, while a derived resource has somehow modified that knowledge to convey something else.
+The difference between pav:derivedFrom and pav:importedFrom is that the imported resource conveys the same knowledge/content as the original, while a derived resource has somehow modified that knowledge to convey something else.
 
 If the resource has been copied verbatim from the original (e.g. downloaded), use pav:retrievedFrom.
 
@@ -241,6 +256,7 @@ To indicate which agent(s) performed the import, use pav:importedBy. Use pav:imp
         <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
+        <owl:equivalentProperty rdf:resource="&pav1;importedFromSource"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
     </owl:ObjectProperty>
     
@@ -249,11 +265,13 @@ To indicate which agent(s) performed the import, use pav:importedBy. Use pav:imp
     <!-- http://purl.org/pav/previousVersion -->
 
     <owl:ObjectProperty rdf:about="&pav;previousVersion">
+        <rdfs:label xml:lang="en">Previous version</rdfs:label>
         <rdfs:comment xml:lang="en">The previous version of a resource in a lineage. For instance a news article updated to correct factual information would point to the previous version of the article with pav:previousVersion. If however the content has significantly changed so that the two resources no longer share lineage (say a new news article that talks about the same facts), they should be related using pav:derivedFrom.
 
 A version number of this resource can be provided using the data property pav:version.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;derivedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;version"/>
+        <owl:equivalentProperty rdf:resource="&pav1;previousVersion"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasRevisionOf"/>
     </owl:ObjectProperty>
     
@@ -279,6 +297,7 @@ The importer is usually a software entity which has done the retrieval from the 
 
 See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
 
@@ -313,6 +332,7 @@ The time of the retrieval should be indicated using pav:retrievedOn. The agent m
     <!-- http://purl.org/pav/sourceAccessedBy -->
 
     <owl:ObjectProperty rdf:about="&pav;sourceAccessedBy">
+        <rdfs:label xml:lang="en">Source accessed by</rdfs:label>
         <rdfs:comment xml:lang="en">The agent who accessed the source</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
     </owl:ObjectProperty>
@@ -333,6 +353,7 @@ The time of the retrieval should be indicated using pav:retrievedOn. The agent m
     <!-- http://purl.org/pav/authoredOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;authoredOn">
+        <rdfs:label xml:lang="en">Authored on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was authored.
 
 pav:authoredBy gives the authoring agent.
@@ -349,6 +370,7 @@ Note that pav:authoredOn is different from pav:createdOn, although they are ofte
     <!-- http://purl.org/pav/contributedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;contributedOn">
+        <rdfs:label xml:lang="en">Contributed on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was contributed to.
 
 pav:contributedBy provides the agent that contributed.</rdfs:comment>
@@ -364,6 +386,7 @@ pav:contributedBy provides the agent that contributed.</rdfs:comment>
         <rdfs:label xml:lang="en">Created On</rdfs:label>
         <rdfs:comment xml:lang="en">The date of creation of the resource.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;createdOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -372,6 +395,7 @@ pav:contributedBy provides the agent that contributed.</rdfs:comment>
     <!-- http://purl.org/pav/curatedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;curatedOn">
+        <rdfs:label xml:lang="en">Curated on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was curated. 
 
 pav:curatedBy gives the agents that performed the curation.</rdfs:comment>
@@ -384,11 +408,13 @@ pav:curatedBy gives the agents that performed the curation.</rdfs:comment>
     <!-- http://purl.org/pav/importedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;importedOn">
-        <rdfs:label xml:lang="en">Imported On</rdfs:label>
+        <rdfs:label xml:lang="en">Imported on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was imported.
 
 See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
+        <owl:equivalentProperty rdf:resource="&pav1;importedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -397,9 +423,13 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/lastRefreshedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;lastRefreshedOn">
-        <rdfs:label xml:lang="en">Last Refreshed On</rdfs:label>
+        <rdfs:label xml:lang="en">Last refreshed on</rdfs:label>
         <rdfs:comment xml:lang="en">The date of the last import of the resource. This property is used if this version has been updated due to a re-import, rather than the import creating new resources related using pav:previousVersion.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
+        <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;importedOn"/>
+        <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
+        <owl:equivalentProperty rdf:resource="&pav1;importedLastOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -408,9 +438,11 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/lastUpdateOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;lastUpdateOn">
-        <rdfs:label xml:lang="en">Last Updated On</rdfs:label>
+        <rdfs:label xml:lang="en">Last updated on</rdfs:label>
         <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
+        <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
+        <owl:equivalentProperty rdf:resource="&pav1;lastUpdateOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -419,7 +451,9 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/retrievedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;retrievedOn">
+        <rdfs:label xml:lang="en">Retrieved on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was retrieved. </rdfs:comment>
+        <rdfs:seeAlso rdf:resource="&pav;retrievedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
@@ -429,9 +463,13 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/sourceAccessedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;sourceAccessedOn">
-        <rdfs:label xml:lang="en">Source Accessed On</rdfs:label>
+        <rdfs:label xml:lang="en">Source accessed on</rdfs:label>
         <rdfs:comment xml:lang="en">The date when the original source has been accessed to create the resource.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
+        <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
+        <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;sourceAccessedOn"/>
+        <owl:equivalentProperty rdf:resource="&pav1;sourceFirstAccessedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -440,9 +478,12 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/sourceLastAccessedOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;sourceLastAccessedOn">
-        <rdfs:label xml:lang="en">Source Last Accessed On</rdfs:label>
+        <rdfs:label xml:lang="en">Source last accessed on</rdfs:label>
         <rdfs:comment xml:lang="en">The date when the original source has been last accessed and verified.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
+        <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
+        <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
+        <owl:equivalentProperty rdf:resource="&pav1;sourceLastAccessedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
     
@@ -451,13 +492,15 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     <!-- http://purl.org/pav/version -->
 
     <owl:DatatypeProperty rdf:about="&pav;version">
+        <rdfs:label xml:lang="en">Version</rdfs:label>
         <rdfs:comment rdf:datatype="&xsd;string">The version number of a resource. This is a freetext string, typical values are &quot;1.5&quot; or &quot;21&quot;. The URI identifying the previous version can be provided using prov:previousVersion.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
+        <owl:equivalentProperty rdf:resource="&pav1;versionNumber"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
 
