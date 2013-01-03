@@ -36,7 +36,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2012-12-10T16:54:00+00:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-01-03T09:45:00+00:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -45,6 +45,8 @@
         <dct:issued rdf:datatype="&xsd;dateTime">notyet</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+        <rdfs:seeAlso rdf:resource="&prov;" />
+        <rdfs:seeAlso rdf:resource="&pav1;" />
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:priorVersion rdf:resource="&pav;2.0/"/>
         <owl:versionIRI rdf:resource="&pav;2.1/"/>
@@ -53,44 +55,9 @@
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
-        <owl:imports rdf:resource="1.2/pav.owl"/>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:AnnotationProperty rdf:about="&dc;creator"/>
-    <owl:AnnotationProperty rdf:about="&dct;creator"/>
-    <owl:AnnotationProperty rdf:about="&owl;equivalentProperty"/>
-    <owl:AnnotationProperty rdf:about="&dct;description"/>
-    <owl:AnnotationProperty rdf:about="&dct;format"/>
-    <owl:AnnotationProperty rdf:about="&dct;date"/>
-    <owl:AnnotationProperty rdf:about="&dct;language"/>
-    <owl:AnnotationProperty rdf:about="&dct;publisher"/>
-    <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&dct;contributor"/>
-    <owl:AnnotationProperty rdf:about="&dct;title"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -103,7 +70,6 @@
      -->
 
     
-
 
     <!-- http://purl.org/pav/authoredBy -->
 
@@ -498,6 +464,8 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
         <owl:equivalentProperty rdf:resource="&pav1;versionNumber"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
+    
+
 </rdf:RDF>
 
 
