@@ -36,7 +36,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-01-09T12:21:00+01:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-01-09T12:29:35+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -44,6 +44,18 @@
         <dct:language rdf:datatype="&xsd;language">en</dct:language>
         <dct:issued rdf:datatype="&xsd;dateTime">notyet</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
+        <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
+
+This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.</rdfs:comment>
+        <dc:description xml:lang="en">PAV supplies terms for distinguishing between the different roles of the agents contributing content in current web based systems: contributors, authors, curators and digital artifact creators. The ontology also provides terms for tracking provenance of digital entities that are published on the web and then accessed, transformed and consumed. In order to support broader interoperability, PAV specializes the general purpose W3C PROV provenance model (PROV-O).
+
+PAV distinguishes between the data related to the digital artifact - named Provenance - and those related to the actual knowledge creation and therefore to the intellectual property aspects – named Authoring. The Versioning axis describes the evolution of digital entities in time. 
+
+Thus PAV defines the authors that originate or give existence to the work that is expressed in the digital resource (pav:authoredBy); curators (pav:curatedBy), content specialists responsible for shaping the expression in an appropriate format. Contributors (super-property pav:contributedBy) can identify agents that provided some help in conceiving the resource or in the expressed knowledge creation/extraction.
+
+These provenance aspects can be detailed with dates using pav:createdOn, pav:authoredOn, etc. Further details about the creation activities, such as different authors contributing specific parts of the resource at different dates are out of scope for PAV and should be defined using vocabularies like PROV-O and additional intermediate entities to describe the different states. 
+
+The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
@@ -54,16 +66,35 @@
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
-        <owl:incompatibleWith>
-            <rdf:Description rdf:about="http://swan.mindinformatics.org/ontologies/1.2/pav.owl">
-                <owl:versionIRI rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl" />
-                <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
-            </rdf:Description>
-        </owl:incompatibleWith>
+        <owl:imports rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
+        <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
 
@@ -76,6 +107,7 @@
      -->
 
     
+
 
     <!-- http://purl.org/pav/authoredBy -->
 
@@ -312,6 +344,48 @@ The time of the retrieval should be indicated using pav:retrievedOn. The agent m
     
 
 
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/authoredBy -->
+
+    <rdf:Description rdf:about="&pav1;authoredBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/contributedBy -->
+
+    <rdf:Description rdf:about="&pav1;contributedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy -->
+
+    <rdf:Description rdf:about="&pav1;createdBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/curatedBy -->
+
+    <rdf:Description rdf:about="&pav1;curatedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedBy -->
+
+    <rdf:Description rdf:about="&pav1;importedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedFromSource -->
+
+    <rdf:Description rdf:about="&pav1;importedFromSource"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/previousVersion -->
+
+    <rdf:Description rdf:about="&pav1;previousVersion"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -473,6 +547,52 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn -->
+
+    <rdf:Description rdf:about="&pav1;createdOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedLastOn -->
+
+    <rdf:Description rdf:about="&pav1;importedLastOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn -->
+
+    <rdf:Description rdf:about="&pav1;importedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn -->
+
+    <rdf:Description rdf:about="&pav1;lastUpdateOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceFirstAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceFirstAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceLastAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceLastAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/versionNumber -->
+
+    <rdf:Description rdf:about="&pav1;versionNumber"/>
 </rdf:RDF>
 
 
