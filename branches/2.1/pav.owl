@@ -34,9 +34,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://purl.org/pav/">
-        <rdfs:label xml:lang="en">Provenance, Authoring and Versioning</rdfs:label>
+        <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-01-03T09:45:00+00:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-01-09T12:21:00+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -45,19 +45,24 @@
         <dct:issued rdf:datatype="&xsd;dateTime">notyet</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
-        <rdfs:seeAlso rdf:resource="&prov;" />
-        <rdfs:seeAlso rdf:resource="&pav1;" />
+        <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:priorVersion rdf:resource="&pav;2.0/"/>
         <owl:versionIRI rdf:resource="&pav;2.1/"/>
-        <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl" />
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
+        <owl:incompatibleWith>
+            <rdf:Description rdf:about="http://swan.mindinformatics.org/ontologies/1.2/pav.owl">
+                <owl:versionIRI rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl" />
+                <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
+            </rdf:Description>
+        </owl:incompatibleWith>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
     </owl:Ontology>
     
 
