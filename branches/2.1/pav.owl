@@ -50,6 +50,7 @@
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:priorVersion rdf:resource="&pav;2.0/"/>
         <owl:versionIRI rdf:resource="&pav;2.1/"/>
+        <owl:backwardCompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl" />
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
