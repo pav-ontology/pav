@@ -59,6 +59,10 @@ For resources based on other resources, PAV allows specification of direct retri
 
 The creation of the digital representation, for instance an RDF graph, can in many cases be different from the authorship of the knowledge, and in PAV this digital creation is specified using pav:createdBy, pav:createdWith and pav:createdOn. 
 
+PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptions of the defined terms. Note that PROV-O is not imported directly by this ontology as PAV can be used independent of PROV. PAV 2 is based on PAV 1.2 but in a new namespace ( http://purl.org/pav/ ). Terms compatible with 1.2 are indicated in this ontology using owl:equivalentProperty. 
+
+The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.0/ can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
+
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
