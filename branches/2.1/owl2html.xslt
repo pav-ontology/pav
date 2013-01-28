@@ -54,7 +54,7 @@ automatically created using XSLT. To see the
     <xsl:for-each select="//owl:ObjectProperty">
        <dt>
            <em><xsl:value-of select="rdfs:label" /></em>
- &nbsp; 
+
            <code><xsl:value-of select="@rdf:about" /></code>
       </dt>
        <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
