@@ -40,7 +40,7 @@
     </xsl:for-each>    
   
    </dl>
-   <p>Please see the <a href="prov.html">documentation for 
+   <p>Please see the <a href="pav.html">documentation for 
 <xsl:value-of select="rdf:RDF/owl:Ontology/dct:title"/>
 </a>.</p>
 
