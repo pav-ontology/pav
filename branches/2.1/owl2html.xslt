@@ -54,7 +54,7 @@ automatically created using XSLT. To see the
     <xsl:for-each select="//owl:ObjectProperty">
        <dt>
            <em><xsl:value-of select="rdfs:label" /></em>
-           <span> </span>
+           &#xa0;
            <code><xsl:value-of select="@rdf:about" /></code>
       </dt>
        <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
@@ -66,7 +66,7 @@ automatically created using XSLT. To see the
   <dl>
     <xsl:for-each select="//owl:DatatypeProperty">
        <dt><code><xsl:value-of select="@rdf:about" /></code> 
-           <span> </span>
+           &#xa0;
            <em><xsl:value-of select="rdfs:label" /></em></dt>
        <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
     </xsl:for-each>
