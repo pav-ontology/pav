@@ -65,7 +65,8 @@ automatically created using XSLT. To see the
   <h3>Defined data type properties</h3>
   <dl>
     <xsl:for-each select="//owl:DatatypeProperty">
-       <dt><code><xsl:value-of select="@rdf:about" /></code> &nbsp; 
+       <dt><code><xsl:value-of select="@rdf:about" /></code> 
+
            <em><xsl:value-of select="rdfs:label" /></em></dt>
        <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
     </xsl:for-each>
