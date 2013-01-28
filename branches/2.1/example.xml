@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="owl2html.xslt"?>
+
+<rdf:RDF xmlns="http://example.com/ontology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://example.com/ontology/">
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-01-09T12:29:35+01:00</dct:modified>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tha Creator</dc:creator>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe</dc:contributor>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-09T12:29:35+01:00</dct:issued>
+        <dct:title xml:lang="en">This is the title</dct:title>
+    </owl:Ontology>
+    
+
+    <owl:ObjectProperty rdf:about="http://example.com/ontology/property1">
+        <rdfs:label xml:lang="en">First property</rdfs:label>
+        <rdfs:comment xml:lang="en">Provides the very first object property</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <owl:DatatypeProperty rdf:about="http://example.com/ontology/property2">
+        <rdfs:label xml:lang="en">Second property</rdfs:label>
+         <rdfs:comment xml:lang="en">This is a data type property</rdfs:comment>
+    </owl:DatatypeProperty>
+</rdf:RDF>
