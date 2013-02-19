@@ -32,8 +32,9 @@ SKOS above)"""@en ;
         <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#> ;
     pav:sourceAccessedOn "2013-02-19T11:55:27+0000"^^xsd:dateTime ;
     pav:createdBy <http://soiland-reyes.com/stian/#me> ;
-    pav:authoredOn "2013-02-19T14:15:04+0000"^^xsd:dateTime ;
-    pav:version "0.1.0" .
+    pav:authoredOn "2013-02-19T16:21:00+0000"^^xsd:dateTime ;
+    pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r125/branches/2.1/mapping/dcterms.ttl> ;
+    pav:version "0.2.0" .
 
 dct:creator skos:inScheme dct: .
 dct:created skos:inScheme dct: .
@@ -73,11 +74,7 @@ pav:curatedOn skos:inScheme pav: .
 
 pav:contributedBy skos:inScheme pav: ;
                   skos:closeMatch dct:contributor ;
-                  skos:note """Close match to dct:contributor 
-due its the common usage to mean someone who added to the Work of the resource
-(usually not just the digital representation), but not skos:exactMatch
-as purely representational contributions would only be covered by
-pav:createdBy."""@en .
+                  skos:note """Close match due its the common usage to mean someone who added to the Work of the resource (usually not just the digital representation), but not skos:exactMatch as purely representational contributions represented with dct:contributor should be mapped to pav:createdBy.  """@en .
 
 pav:contributedOn skos:inScheme pav: ;
                   skos:broadMatch dct:date .
@@ -126,17 +123,19 @@ pav:retrievedOn skos:inScheme pav: ;
 
 pav:importedFrom skos:inScheme pav: ;
                  skos:broadMatch dct:source ;
-                 skos:note """Import is a specific form of derivation
-in whole, i.e. skos:broadMatch dct:source."""@en ;
-                 skos:closeMatch dct:isFormatOf ;
-                 skos:note """The resulting resource is substantially
-the same as the source, but in another format, so has close match
-dct:isFormatOf. """@en .
+                 skos:note """Imported is a specialization of 'being
+derived from the related resource in whole'. """@en ;
+                 skos:broadMatch dct:isFormatOf ;
+                 skos:note """The resulting resource 'is substantially
+the same as the source, but in another format'. However pav:importedFrom
+also implies provenance of a directed transformation from the original,
+at a given time and performed by an agent, and hence pav:importedFrom
+has a broad match dct:isFormatOf"""@en . 
 
 pav:importedBy skos:inScheme pav: ;
-               skos:closeMatch dct:creator ;
-               skos:note """The agent importing is essentially the
-creator of the new resource, hence has close match dct:creator. """@en ;
+               skos:broadMatch dct:creator ;
+               skos:note """The agent importing is essentially a
+specialized creator of the new resource, hence has broad match dct:creator. """@en ;
                skos:broadMatch dct:contributor ;
                skos:note """The agent importing has done a
 transformation, so she is somewhat (skos:broadMatch) a dct:contributor"""@en .
@@ -201,14 +200,14 @@ resource is derived, but pav:derivedFrom is more specific
 (skos:broadMatch) than dct:source, as it requires further contributions
 to the content, and does not cover say pav:importedFrom or
 pav:retrievedFrom."""@en ;
-                skos:closeMatch dct:isVersionOf ;
-                skos:note """pav:derivedFrom does point to a resource of
-which the described resource is a edition, or adaptation., and so is a
-close match to dct:isVersionOf.  The pav:derivedFrom does require such
-contributions to be in the form of content and not just representation,
-which corresponds closely to dct:isFormatOf comment 'Changes in version
-imply substantive changes in content rather than differences in
-format.'"""@en .
+                skos:narrowMatch dct:isVersionOf ;
+                skos:note """pav:derivedFrom do point to a resource of
+which the ‘described resource is a version, edition, or adaptation’, but
+also allow further derivations. and so has a narrow match
+dct:isVersionOf.  The pav:derivedFrom does require such contributions to
+be in the form of content and not just representation, which corresponds
+closely to dct:isFormatOf comment 'Changes in version imply substantive
+changes in content rather than differences in format.'"""@en .
 
 pav:lastUpdateOn skos:inScheme pav: ;
                  skos:broadMatch dct:modified ;
