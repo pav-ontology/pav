@@ -304,7 +304,7 @@ A version number of this resource can be provided using the data property pav:ve
 
     <owl:ObjectProperty rdf:about="&pav;providedBy">
         <rdfs:label xml:lang="en">Provided by</rdfs:label>
-        <rdfs:comment xml:lang="en">The provider of the encoded information (PubMed, UniProt, Science Commons). The provider might not coincide with the dct:publisher.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The original provider of the encoded information (e.g. PubMed, UniProt, Science Commons). The provider might not coincide with the dct:publisher, which would describe the current publisher of the resource, for instance because it was retrieved, imported or derived from a resource published by the original provider. </rdfs:comment>
         <rdfs:seeAlso rdf:resource="&dct;publisher"/>
     </owl:ObjectProperty>
     
