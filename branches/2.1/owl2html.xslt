@@ -40,9 +40,9 @@
     </xsl:for-each>    
   
    </dl>
-   <p>Please see the <a href="pav.html">documentation for 
+   <p><strong>Please see the <a href="pav.html">documentation for 
 <xsl:value-of select="rdf:RDF/owl:Ontology/dct:title"/>
-</a>.</p>
+</a>.</strong></p>
 
    <p>This HTML is meant to show a simple browser introduction to the ontology and has been 
 automatically created using XSLT. To see the
