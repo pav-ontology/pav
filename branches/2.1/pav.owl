@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="owl2html.xslt"?>
 
 
 <!DOCTYPE rdf:RDF [
@@ -9,26 +10,20 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY authoring "http://purl.org/pav/authoring/2.0/" >
-    <!ENTITY versioning "http://purl.org/pav/versioning/2.0/" >
-    <!ENTITY provenance "http://purl.org/pav/provenance/2.0/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY pav1 "http://swan.mindinformatics.org/ontologies/1.2/pav/" >
 ]>
 
 
-<rdf:RDF xmlns="&pav;2.0/"
-     xml:base="&pav;2.0/"
+<rdf:RDF xmlns="&pav;"
+     xml:base="&pav;"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:versioning="&pav;versioning/2.0/"
-     xmlns:provenance="&pav;provenance/2.0/"
      xmlns:pav1="http://swan.mindinformatics.org/ontologies/1.2/pav/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:pav="http://purl.org/pav/"
-     xmlns:authoring="&pav;authoring/2.0/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -36,7 +31,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.0</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTimeStamp">2013-02-12T11:17:00+00:00</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTimeStamp">2013-02-27T15:25:35+0000</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -61,12 +56,15 @@ The creation of the digital representation, for instance an RDF graph, can in ma
 
 PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptions of the defined terms. Note that PROV-O is not imported directly by this ontology as PAV can be used independent of PROV. PAV 2 is based on PAV 1.2 but in a new namespace ( http://purl.org/pav/ ). Terms compatible with 1.2 are indicated in this ontology using owl:equivalentProperty. 
 
-The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.0/ can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
+The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
+        <!--
+        -->
         <owl:imports rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         <owl:versionIRI rdf:resource="&pav;2.1"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
@@ -80,7 +78,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <dct:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
     </owl:Ontology>
     
