@@ -31,7 +31,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.0</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTimeStamp">2013-02-27T15:25:35+0000</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-02-27T15:25:35Z</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
