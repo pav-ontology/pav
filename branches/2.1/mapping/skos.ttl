@@ -25,9 +25,9 @@ just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
     pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
     pav:derivedFrom <http://purl.org/pav/2.1> ;
     pav:sourceAccessedAt <http://purl.org/pav/2.1> ;
-    pav:sourceAccessedOn "2013-02-19T11:55:27+0000"^^xsd:dateTime ;
+    pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
     pav:createdBy <http://soiland-reyes.com/stian/#me> ;
-    pav:authoredOn "2013-02-19T14:41:36+0000"^^xsd:dateTime ;
+    pav:authoredOn "2013-02-19T14:41:36+00:00"^^xsd:dateTime ;
     pav:version "0.1.0" .
 
 pav:authoredBy skos:inScheme pav: ;

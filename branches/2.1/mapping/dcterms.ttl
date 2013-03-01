@@ -30,9 +30,9 @@ SKOS above)"""@en ;
     pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
     pav:sourceAccessedAt <http://purl.org/pav/2.1>, dct:, 
         <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#> ;
-    pav:sourceAccessedOn "2013-02-19T11:55:27+0000"^^xsd:dateTime ;
+    pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
     pav:createdBy <http://soiland-reyes.com/stian/#me> ;
-    pav:authoredOn "2013-02-19T16:21:00+0000"^^xsd:dateTime ;
+    pav:authoredOn "2013-02-19T16:21:00+00:00"^^xsd:dateTime ;
     pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r125/branches/2.1/mapping/dcterms.ttl> ;
     pav:version "0.2.0" .
 
