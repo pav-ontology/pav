@@ -9,21 +9,26 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <> a owl:Ontology ;
-   owl:imports pav:2.1, <http://www.w3.org/2004/02/skos/core>, prov:, 
+   owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov:, 
                <http://purl.org/pav/mapping/skos> ;
    rdfs:comment """Depend on imported SKOS bindings"""@en ;
    dct:isFormatOf <http://purl.org/pav/mapping/dcterms> ;
    prov:specializationOf <http://purl.org/pav/mapping/dcterms> ; 
    # PROV-AQ self-declaring provenance
-   prov:hasProvenance <> ;
-   prov:hasAnchor <http://purl.org/pav/mapping/dcterms> .
+   prov:has_provenance <> ;
+   prov:has_anchor <http://purl.org/pav/mapping/dcterms> .
 
 <http://purl.org/pav/mapping/dcterms> a void:Linkset ;
     rdfs:label "SKOS mapping of PAV to Dublin Core terms"@en ; 
+    dct:title "SKOS mapping of PAV to Dublin Core terms"@en ; 
     dct:subject pav: ;
+    dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
     void:subjectsTarget pav: ;
     void:objectsTarget dct: ;
     void:linkPredicate skos:mappingRelation ;
+    dct:comment """Although link predicate is skos:mappingRelation the
+mapping is done using its subproperties (hence the OWL import of
+SKOS above)"""@en ;
     rdfs:comment """Although link predicate is skos:mappingRelation the
 mapping is done using its subproperties (hence the OWL import of
 SKOS above)"""@en ;
@@ -33,8 +38,9 @@ SKOS above)"""@en ;
     pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
     pav:createdBy <http://soiland-reyes.com/stian/#me> ;
     pav:authoredOn "2013-02-19T16:21:00+00:00"^^xsd:dateTime ;
+    pav:createdOn "2013-03-01T13:54:00+00:00"^^xsd:dateTime ;
     pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r125/branches/2.1/mapping/dcterms.ttl> ;
-    pav:version "0.2.0" .
+    pav:version "0.2.1" .
 
 dct:creator skos:inScheme dct: .
 dct:created skos:inScheme dct: .

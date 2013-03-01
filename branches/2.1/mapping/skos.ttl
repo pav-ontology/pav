@@ -9,17 +9,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <> a owl:Ontology ;
-   owl:imports pav:2.1, <http://www.w3.org/2004/02/skos/core>, prov: ;
+   owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov: ;
    dct:isFormatOf <http://purl.org/pav/mapping/skos> ;
    prov:specializationOf <http://purl.org/pav/mapping/skos> ; 
    # PROV-AQ self-declaring provenance
-   prov:hasProvenance <> ;
-   prov:hasAnchor <http://purl.org/pav/mapping/skos> .
+   prov:has_provenance <> ;
+   prov:has_anchor <http://purl.org/pav/mapping/skos> .
 
 <http://purl.org/pav/mapping/skos> a void:Dataset ;
     rdfs:label "SKOS relations internal to PAV"@en ; 
+    dct:title "SKOS relations internal to PAV"@en ; 
     dct:subject pav: ;
     rdfs:comment """Internal SKOS relations between PAV concept, in
+particular as needed by other SKOS mappings.  Note that this is
+just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
+    dct:description """Internal SKOS relations between PAV concept, in
 particular as needed by other SKOS mappings.  Note that this is
 just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
     pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
@@ -28,7 +32,8 @@ just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
     pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
     pav:createdBy <http://soiland-reyes.com/stian/#me> ;
     pav:authoredOn "2013-02-19T14:41:36+00:00"^^xsd:dateTime ;
-    pav:version "0.1.0" .
+    pav:createdOn "2013-03-01T13:53:00+00:00"^^xsd:dateTime ;
+    pav:version "0.1.1" .
 
 pav:authoredBy skos:inScheme pav: ;
                skos:broader pav:contributedBy ;
