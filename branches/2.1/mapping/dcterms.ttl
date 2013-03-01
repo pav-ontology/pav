@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <> a owl:Ontology ;
-   owl:imports pav:, <http://www.w3.org/2004/02/skos/core>, prov:, 
+   owl:imports pav:2.1, <http://www.w3.org/2004/02/skos/core>, prov:, 
                <http://purl.org/pav/mapping/skos> ;
    rdfs:comment """Depend on imported SKOS bindings"""@en ;
    dct:isFormatOf <http://purl.org/pav/mapping/dcterms> ;
