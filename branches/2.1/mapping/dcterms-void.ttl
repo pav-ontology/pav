@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <#> .
+
+# This metadata file
+<> a owl:Ontology, void:DatasetDescription, prov:Bundle ;
+   owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov:, 
+               <http://purl.org/pav/mapping/skos> ;
+   dct:title "VOID description of PAV-DCT SKOS mapping"@en ; 
+   # Provenance is right here (right below, in fact!)
+   prov:has_provenance <> ;
+   # Provenance about the description 
+   pav:createdBy <http://soiland-reyes.com/stian/#me> ;
+   pav:createdOn "2013-03-01T13:57:00+00:00"^^xsd:dateTime ;
+   pav:lastUpdateOn "2013-03-01T14:55:00+00:00"^^xsd:dateTime ;
+   foaf:primaryTopic :linkset .
+
+<http://purl.org/pav/mapping/dcterms> prov:specializationOf :linkset .
+
+:linkset a void:Linkset, prov:Entity ;
+    rdfs:label "SKOS mapping of PAV to Dublin Core terms"@en ; 
+    dct:title "SKOS mapping of PAV to Dublin Core terms"@en ; 
+    dct:description """A loose mapping between the two ontologies PAV
+and DC Terms.  See comments in PAV ontology for why DC Terms don't map
+directly to PAV using OWL."""@en;
+    dct:subject pav:, dct: ;
+    dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    # Linkset from PAV to Dublin Core
+    void:subjectsTarget pav: ;
+    void:objectsTarget dct: ;
+    # using skos:mappingRelation (subproperties)
+    void:linkPredicate skos:mappingRelation ;
+    rdfs:comment """Although void:linkPredicate is skos:mappingRelation the
+mapping is done using its subproperties ,hence the OWL import of
+SKOS above. An OWL reasoner might have to be run first."""@en ;
+    prov:alternateOf <http://purl.org/pav/mapping/dcterms> ;
+    void:dataDump <http://purl.org/pav/mapping/dcterms> ;
+    # Provenance of the linkset (ie. the data dump)
+    prov:has_provenance <> ;
+    pav:createdBy <http://soiland-reyes.com/stian/#me> ;
+    pav:createdOn "2013-03-01T13:57:00+00:00"^^xsd:dateTime ;
+    pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
+    pav:authoredOn "2013-02-19T16:21:00+00:00"^^xsd:dateTime ;
+    pav:sourceAccessedAt <http://purl.org/pav/2.1>, dct:, 
+        <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#> ;
+    pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
+    pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r126/branches/2.1/mapping/dcterms.ttl> ;
+    pav:version "0.2.1" .
+
+

@@ -7,40 +7,31 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<> a owl:Ontology ;
+# This file
+<> a owl:Ontology, prov:Entity ;
    owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov:, 
                <http://purl.org/pav/mapping/skos> ;
    rdfs:comment """Depend on imported SKOS bindings"""@en ;
    dct:isFormatOf <http://purl.org/pav/mapping/dcterms> ;
+   foaf:primaryTopic <http://purl.org/pav/mapping/dcterms> ;
    prov:specializationOf <http://purl.org/pav/mapping/dcterms> ; 
-   # PROV-AQ self-declaring provenance
-   prov:has_provenance <> ;
-   prov:has_anchor <http://purl.org/pav/mapping/dcterms> .
+   void:inDataset <dcterms-void.ttl#linkset> ;
+   prov:specializationOf <dcterms-void.ttl#linkset> ;
+   ## For detailed provenance, see:
+   prov:has_provenance <dcterms-void.ttl> ;
+   prov:has_anchor <dcterms-void.ttl#linkset> .
 
-<http://purl.org/pav/mapping/dcterms> a void:Linkset ;
+# PURL identifies the mapping in general
+<http://purl.org/pav/mapping/dcterms> a prov:Entity ;
+    prov:has_provenance <dcterms-void.ttl> ;
     rdfs:label "SKOS mapping of PAV to Dublin Core terms"@en ; 
-    dct:title "SKOS mapping of PAV to Dublin Core terms"@en ; 
-    dct:description """A loose mapping between the two ontologies PAV
-and DC Terms.  See comments in PAV ontology for why DC Terms don't map
-directly to PAV using OWL."""@en;
-    dct:subject pav: ;
-    dct:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-    void:subjectsTarget pav: ;
-    void:objectsTarget dct: ;
-    void:linkPredicate skos:mappingRelation ;
-    rdfs:comment """Although link predicate is skos:mappingRelation the
-mapping is done using its subproperties (hence the OWL import of
-SKOS above)"""@en ;
-    pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
-    pav:sourceAccessedAt <http://purl.org/pav/2.1>, dct:, 
-        <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=terms#> ;
-    pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
-    pav:createdBy <http://soiland-reyes.com/stian/#me> ;
-    pav:authoredOn "2013-02-19T16:21:00+00:00"^^xsd:dateTime ;
-    pav:createdOn "2013-03-01T13:57:00+00:00"^^xsd:dateTime ;
-    pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r125/branches/2.1/mapping/dcterms.ttl> ;
+
+    pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r126/branches/2.1/mapping/dcterms.ttl> ;
     pav:version "0.2.1" .
+
+## DCT concepts
 
 dct:creator skos:inScheme dct: .
 dct:created skos:inScheme dct: .
@@ -57,6 +48,8 @@ dct:isVersionOf skos:inScheme dct: .
 dct:modified skos:inScheme dct: .
 dct:publisher skos:inScheme dct: .
 
+
+## The actual SKOS mapping
 
 pav:authoredBy skos:inScheme pav: ;
                # TODO: Move internal PAV relations elsewhere
