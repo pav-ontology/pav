@@ -7,7 +7,7 @@ The latest version is always available from the PAV namespace:
 
 PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, we consider that:
 * The major number (2.x.x) will increase if a change is breaking (such as removing or renaming a term). This will typically mean a new namespace.
-* The minor number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term or a widened description)
+* The minor number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term)
 * The patch number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
 
@@ -35,7 +35,7 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 || http://purl.org/pav/ || http://purl.org/pav/2.1 ||
 
 Changes since v2.1.0:
- * Link to overview diagram
+ * Link to [http://pav-ontology.googlecode.com/svn/tags/2.1.1/images/pav-overview-755px.png overview diagram]
  * Modified descriptions for [http://pav-ontology.googlecode.com/svn/tags/2.1.1/pav.html#http://purl.org/pav/importedFrom pav:importedFrom] to clarify that the translated knowledge does not need to be complete
  * Elaborated pav:createdWith, pav:derivedFrom, pav:importedBy, pav:retrievedBy
  * A [http://www.w3.org/TR/skos-primer/ SKOS] mapping for: [http://purl.org/pav/mapping/dcterms dcterms]; uses  [http://purl.org/pav/mapping/skos PAV in SKOS]. This mapping is also described as a [http://pav-ontology.googlecode.com/svn/trunk/mapping/dcterms-void.ttl VoID dataset].
@@ -46,11 +46,14 @@ Changes since v2.1.0:
 || http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl ||
 
 Changes since v2.0: 
- * Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is imported by PAV, so you may also want to import <http://www.w3.org/ns/prov#> to activate this.
- * Descriptions are elaborated with examples and relationships to each other
+ * Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is not imported by PAV, so you may import <http://www.w3.org/ns/prov#>, for instance to get the inferred domains and ranges from PROV.
+ * Includes introduction about PAV ontology
+ * Descriptions of properties are elaborated with examples and relationships to each other
  * [http://purl.org/pav/html HTML representation] of ontology (made using [http://www.essepuntato.it/lode/ LODE])
- * OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above documentation
-
+ * OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above HTML documentation
+ * Backward compatibility with PAV 1.2 terms indicated using owl:equivalentProperty (Note that the ontology itself is owl:incompatibleWith because several PAV 1 properties have changed names or are organized in a flatter hierarchy).
+* pav:curates marked as deprecated, use its inverse pav:curatedBy
+* owl:versionIRI does now does NOT end in a / - this is to avoid confusion between the versionIRI and the namespace (which stays unchanged).
 
 
 == PAV ontology v2.0 (Previous release) ==
@@ -58,8 +61,15 @@ Changes since v2.0:
 || Namespace || VersionIRI ||
 || http://purl.org/pav/ || http://purl.org/pav/2.0/ ||
 
+* Initial release independent from SWAN
+* 
+
 
 == PAV Ontology v1.2 (deprecated) ==
 
 || Namespace || VersionIRI ||
 || http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ ||
+
+* Final version of PAV module from AlzSWAN project
+
+Note that the original namespace no longer resolves, use http://purl.org/pav/1.2/ to import PAV 1.2.
