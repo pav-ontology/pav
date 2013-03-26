@@ -29,6 +29,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://purl.org/pav/">
+        <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.1</owl:versionInfo>
         <dct:modified rdf:datatype="&xsd;dateTime">2013-03-26T14:49:00Z</dct:modified>
