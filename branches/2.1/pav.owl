@@ -37,10 +37,7 @@
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
         <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
         <dct:language rdf:datatype="&xsd;language">en</dct:language>
-<!--
-        <dct:issued rdf:datatype="&xsd;dateTime">2013-03-27T12:00:00Z</dct:issued>
--->
-        <dct:issued>notyet</dct:issued>
+        <dct:issued rdf:datatype="&xsd;dateTime">2013-03-27T16:03:24Z</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
 
@@ -66,9 +63,9 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <!--
-        -->
         <owl:imports rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+        -->
         <owl:versionIRI rdf:resource="&pav;2.1"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
@@ -365,46 +362,6 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     
 
 
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/authoredBy -->
-
-    <rdf:Description rdf:about="&pav1;authoredBy"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/contributedBy -->
-
-    <rdf:Description rdf:about="&pav1;contributedBy"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy -->
-
-    <rdf:Description rdf:about="&pav1;createdBy"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/curatedBy -->
-
-    <rdf:Description rdf:about="&pav1;curatedBy"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedBy -->
-
-    <rdf:Description rdf:about="&pav1;importedBy"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedFromSource -->
-
-    <rdf:Description rdf:about="&pav1;importedFromSource"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/previousVersion -->
-
-    <rdf:Description rdf:about="&pav1;previousVersion"/>
-    
 
 
     <!-- 
@@ -586,51 +543,6 @@ This property can be useful together with pav:lastRefreshedOn or pav:lastUpdateO
     
 
 
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn -->
-
-    <rdf:Description rdf:about="&pav1;createdOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedLastOn -->
-
-    <rdf:Description rdf:about="&pav1;importedLastOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn -->
-
-    <rdf:Description rdf:about="&pav1;importedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn -->
-
-    <rdf:Description rdf:about="&pav1;lastUpdateOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceFirstAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceFirstAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceLastAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceLastAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/versionNumber -->
-
-    <rdf:Description rdf:about="&pav1;versionNumber"/>
 </rdf:RDF>
 
 
