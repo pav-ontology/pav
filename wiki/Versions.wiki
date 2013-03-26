@@ -35,10 +35,10 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 || http://purl.org/pav/ || http://purl.org/pav/2.1 ||
 
 Changes since v2.1.0:
-* Link to overview diagram
-* Modified descriptions for [http://pav-ontology.googlecode.com/svn/tags/2.1.1/pav.html#http://purl.org/pav/importedFrom pav:importedFrom] to clarify that the translated knowledge does not need to be complete
-* Elaborated pav:createdWith, pav:derivedFrom, pav:importedBy, pav:retrievedBy
-* A [http://www.w3.org/TR/skos-primer/ SKOS] mapping for: [http://purl.org/pav/mapping/dcterms dcterms]; uses  [http://purl.org/pav/mapping/skos PAV in SKOS]. This mapping is also described as a [http://pav-ontology.googlecode.com/svn/trunk/mapping/dcterms-void.ttl VoID dataset].
+ * Link to overview diagram
+ * Modified descriptions for [http://pav-ontology.googlecode.com/svn/tags/2.1.1/pav.html#http://purl.org/pav/importedFrom pav:importedFrom] to clarify that the translated knowledge does not need to be complete
+ * Elaborated pav:createdWith, pav:derivedFrom, pav:importedBy, pav:retrievedBy
+ * A [http://www.w3.org/TR/skos-primer/ SKOS] mapping for: [http://purl.org/pav/mapping/dcterms dcterms]; uses  [http://purl.org/pav/mapping/skos PAV in SKOS]. This mapping is also described as a [http://pav-ontology.googlecode.com/svn/trunk/mapping/dcterms-void.ttl VoID dataset].
 
 == PAV ontology v2.1.0 (Internal release) ==
 
@@ -46,11 +46,10 @@ Changes since v2.1.0:
 || http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl ||
 
 Changes since v2.0: 
-* Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is imported by PAV, so you may also want to import <http://www.w3.org/ns/prov#> to activate this.
-* Descriptions are elaborated with examples and relationships to each other
-
-* [http://purl.org/pav/html HTML representation] of ontology (made using [http://www.essepuntato.it/lode/ LODE])
-* OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above documentation
+ * Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is imported by PAV, so you may also want to import <http://www.w3.org/ns/prov#> to activate this.
+ * Descriptions are elaborated with examples and relationships to each other
+ * [http://purl.org/pav/html HTML representation] of ontology (made using [http://www.essepuntato.it/lode/ LODE])
+ * OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above documentation
 
 
 
