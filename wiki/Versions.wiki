@@ -1,21 +1,66 @@
-*PAV Ontology (Latest Version, now 2.0)*
-|| PURL || Description ||
-|| http://purl.org/pav/ _$_ || Latest version of the PAV ontology.  ||
-|| http://purl.org/pav/provenance/ || Latest version of the provenance module ||
-|| http://purl.org/pav/authoring/ || Latest version of the authoring module ||
+The latest version is always available from the PAV namespace:
 
-_$ This is the URI you want to use to import/access the latest version of the PAV ontology._
+|| Namespace || 
+|| http://purl.org/pav/ ||
 
-*PAV Ontology v. 2.0 (under development)*
-|| PURL || Description ||
-|| http://purl.org/pav/2.0/ _$$_ || Version 2.0 of the PAV ontology.  ||
-|| http://purl.org/pav/provenance/2.0/ || Version 2.0 of the provenance module ||
-|| http://purl.org/pav/authoring/2.0/ || Version 2.0 of the authoring module ||
+== Versioning ===
 
-_$$ This is the URI you want to use to import/access the version 2.0 of the PAV ontology._
+PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, we consider that:
+* The major number (2.x.x) will increase if a change is breaking (such as removing or renaming a term). This will typically mean a new namespace.
+* The minor number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term or a widened description)
+* The patch number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
-*PAV Ontology v. 1.2 (stable release)*
-|| PURL || Description ||
-|| http://purl.org/pav/1.2/ _$$$_ || Version 1.2 of the PAV ontology ||
 
-_$$$ This is the URI you want to use to import/access the version 1.2 of the PAV ontology._
+You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI from below. Note that the versionIRIs always points to the latest patch version (ie. http://purl.org/pav/2.1 will serve 2.1.1).
+
+See the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
+
+== Example of import ==
+
+Please note that the namespace is always http://purl.org/pav/ no matter which version of PAV 2.x is used.
+
+{{{
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pav: <http://purl.org/pav/> .
+<> a owl:Ontology ;
+    # Lock down import to 2.1
+    owl:imports <http://purl.org/pav/2.1> .
+}}}
+
+
+
+== PAV ontology v2.1.1 (Latest release) ==
+
+|| Namespace || VersionIRI ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1 ||
+
+Changes since v2.1.0:
+* Link to overview diagram
+* Modified descriptions for [http://pav-ontology.googlecode.com/svn/tags/2.1.1/pav.html#http://purl.org/pav/importedFrom pav:importedFrom] to clarify that the translated knowledge does not need to be complete
+* Elaborated pav:createdWith, pav:derivedFrom, pav:importedBy, pav:retrievedBy
+* A [http://www.w3.org/TR/skos-primer/ SKOS] mapping for: [http://purl.org/pav/mapping/dcterms dcterms]; uses  [http://purl.org/pav/mapping/skos PAV in SKOS]. This mapping is also described as a [http://pav-ontology.googlecode.com/svn/trunk/mapping/dcterms-void.ttl VoID dataset].
+
+== PAV ontology v2.1.0 (Internal release) ==
+
+|| Namespace || VersionIRI ||
+|| http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl ||
+
+Changes since v2.0: 
+* Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is imported by PAV, so you may also want to import <http://www.w3.org/ns/prov#> to activate this.
+* Descriptions are elaborated with examples and relationships to each other
+
+* [http://purl.org/pav/html HTML representation] of ontology (made using [http://www.essepuntato.it/lode/ LODE])
+* OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above documentation
+
+
+
+== PAV ontology v2.0 (Previous release) ==
+
+|| Namespace || VersionIRI ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.0/ ||
+
+
+== PAV Ontology v1.2 (deprecated) ==
+
+|| Namespace || VersionIRI ||
+|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ ||
