@@ -48,16 +48,36 @@
 automatically created using XSLT. To see the
       source OWL as RDF/XML, either use "Save As" or "View Source".
    </p>
+
+   <!--
+  <h3>Defined classes</h3>
+  <dl>
+    <xsl:for-each select="//owl:Class">
+       <dt>
+           <em>
+               <a href="pav.html#{@rdf:about}">
+                   <xsl:value-of select="rdfs:label" />
+               </a>
+           </em>
+           &#xa0;
+           <code><xsl:value-of select="@rdf:about" /></code>
+      </dt>
+    </xsl:for-each>
+  </dl>
+  -->
   
   <h3>Defined object properties</h3>
   <dl>
     <xsl:for-each select="//owl:ObjectProperty">
        <dt>
-           <em><xsl:value-of select="rdfs:label" /></em>
+           <em>
+               <a href="pav.html#{@rdf:about}">
+                   <xsl:value-of select="rdfs:label" />
+               </a>
+           </em>
            &#xa0;
            <code><xsl:value-of select="@rdf:about" /></code>
       </dt>
-       <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
     </xsl:for-each>
   </dl>
 
@@ -65,10 +85,15 @@ automatically created using XSLT. To see the
   <h3>Defined data type properties</h3>
   <dl>
     <xsl:for-each select="//owl:DatatypeProperty">
-       <dt><code><xsl:value-of select="@rdf:about" /></code> 
+        <dt>
+           <em>
+               <a href="pav.html#{@rdf:about}">
+                   <xsl:value-of select="rdfs:label" />
+               </a>
+           </em>
            &#xa0;
-           <em><xsl:value-of select="rdfs:label" /></em></dt>
-       <dd><small><xsl:value-of select="rdfs:comment" /></small></dd>
+           <code><xsl:value-of select="@rdf:about" /></code>
+       </dt>
     </xsl:for-each>
   </dl>
 
