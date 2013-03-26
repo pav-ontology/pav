@@ -31,7 +31,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-03-26T11:46:00Z</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-03-26T14:49:00Z</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -62,6 +62,8 @@ PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptio
 The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
+        <dc:description rdf:resource="http://dwellonit.svn.sourceforge.net/svnroot/dwellonit/EARMARK/earmark.png"/>
+        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.png" />
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <!--
