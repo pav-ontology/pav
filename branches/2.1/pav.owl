@@ -62,7 +62,7 @@ PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptio
 The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
-	<dc:description rdf:resource="images/pav-overview.png" />
+	<dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1//images/pav-overview.png" />
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <!--
