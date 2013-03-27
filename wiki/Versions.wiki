@@ -37,7 +37,7 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 == PAV ontology v2.1.1 (2013-03-26) ==
 
 || *Namespace* || *VersionIRI* || *Documentation* ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.1 || http://purl.org/pav/html ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1.0 || http://purl.org/pav/2.1.0/html ||
 
 Changes since v2.1.0:
  * Link to [http://pav-ontology.googlecode.com/svn/tags/2.1.1/images/pav-overview-755px.png overview diagram]
