@@ -6,9 +6,9 @@ The latest version is always available from the PAV namespace:
 == Versioning ===
 
 PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, we consider that:
-* The major number (2.x.x) will increase if a change is breaking (such as removing or renaming a term). This will typically mean a new namespace.
-* The minor number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term)
-* The patch number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
+ * The major number (2.x.x) will increase if a change is breaking (such as removing or renaming a term). This will typically mean a new namespace.
+ * The minor number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term)
+ * The patch number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
 
 You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI from below. Note that the versionIRIs always points to the latest patch version (ie. http://purl.org/pav/2.1 will serve 2.1.1).
