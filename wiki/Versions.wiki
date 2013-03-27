@@ -17,7 +17,7 @@ PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, w
  * The _patch_ number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
 
-You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI, in order to lock down the  version. Note that the versionIRI stated in the OWL file always return to the latest patch version (ie. http://purl.org/pav/2.1 will serve 2.1.1) - the idea being that for most cases you would want patch updates.
+You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI, in order to lock down the  version. Note that the versionIRI stated in the OWL file always return to the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
 
 Browse the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
 
