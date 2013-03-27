@@ -1,4 +1,4 @@
-The OWL ontology of PAV is always available from the PAV namespace:
+The OWL ontology of PAV is always available from the *PAV namespace*:
 
 || *Namespace* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/html ||
