@@ -1,9 +1,9 @@
-The latest OWL ontology of PAV is always available from the PAV namespace:
+The OWL ontology of PAV is always available from the PAV namespace:
 
 || *Namespace* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/html ||
 
-Latest version (v2.1):
+*Latest version* (v2.1):
 
 || *Namespace* || *VersionIRI* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/2.1 || http://purl.org/pav/2.1/html ||
