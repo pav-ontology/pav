@@ -43,7 +43,7 @@ Changes since v2.1.0:
 == PAV ontology v2.1.0 (2013-02-27) ==
 
 || *Namespace* || *VersionIRI* || *Documentation* ||
-|| http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.html ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1.0 || http://purl.org/pav/2.1.0/html ||
 
 Changes since v2.0: 
  * Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is not imported by PAV, so you may import <http://www.w3.org/ns/prov#>, for instance to get the inferred domains and ranges from PROV.
@@ -59,7 +59,7 @@ Changes since v2.0:
 == PAV ontology v2.0 (2012-04-04) ==
 
 || *Namespace* || *VersionIRI* || *Documentation* ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.0/ || http://www.essepuntato.it/lode/http://purl.org/pav/2.0/ ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.0/ || http://purl.org/pav/2.0/html ||
 
  * Initial release independent from SWAN
  * New namespace http://purl.org/pav/
@@ -72,7 +72,7 @@ Note that during development of PAV 2.0, the ontology was split into three modul
 
 == PAV Ontology v1.2 (2009-01-13) ==
 || *Namespace* || *VersionIRI* || *Documentation* ||
-|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || || http://www.essepuntato.it/lode/owlapi/http://purl.org/pav/1.2/ ||
+|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || || http://purl.org/pav/1.2/html ||
 
  * PAV module from the [https://code.google.com/p/swan-ontology/ SWAN ontology] 1.2
 
