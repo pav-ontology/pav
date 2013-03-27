@@ -52,8 +52,8 @@ Changes since v2.0:
  * [http://purl.org/pav/html HTML representation] of ontology (made using [http://www.essepuntato.it/lode/ LODE])
  * OWL-file includes a little [http://pav-ontology.googlecode.com/svn/trunk/owl2html.xslt XSLT stylesheet] so that accessing http://purl.org/pav/ in a browser will give links to the above HTML documentation
  * Backward compatibility with PAV 1.2 terms indicated using owl:equivalentProperty (Note that the ontology itself is owl:incompatibleWith because several PAV 1 properties have changed names or are organized in a flatter hierarchy).
-* pav:curates marked as deprecated, use its inverse pav:curatedBy
-* owl:versionIRI does now does NOT end in a / - this is to avoid confusion between the versionIRI and the namespace (which stays unchanged).
+ * pav:curates marked as deprecated, use its inverse pav:curatedBy
+ * owl:versionIRI does now does NOT end in a / - this is to avoid confusion between the versionIRI and the namespace (which stays unchanged).
 
 
 == PAV ontology v2.0 (Previous release) ==
