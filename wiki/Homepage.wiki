@@ -5,7 +5,7 @@ PAV is a lightweight ontology for tracking *Provenance, Authoring and Versioning
 {{{
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix pav: <http://purl.org/pav/> .
-@prefix : <#> .
+@prefix : <http://example.com/page2#> .
 
 <http://example.com/page2> 
    pav:authoredBy :alice ;
