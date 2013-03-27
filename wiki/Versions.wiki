@@ -72,7 +72,7 @@ Note that during development of PAV 2.0, the ontology was split into three modul
 
 == PAV Ontology v1.2 (2009-01-13) ==
 || *Namespace* || *VersionIRI* || *Documentation* ||
-|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || || http://purl.org/pav/1.2/html ||
+|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || http://purl.org/pav/1.2/html ||
 
  * PAV module from the [https://code.google.com/p/swan-ontology/ SWAN ontology] 1.2
 
