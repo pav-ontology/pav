@@ -61,8 +61,13 @@ Changes since v2.0:
 || Namespace || VersionIRI ||
 || http://purl.org/pav/ || http://purl.org/pav/2.0/ ||
 
-* Initial release independent from SWAN
-* 
+ * Initial release independent from SWAN
+ * New namespace http://purl.org/pav/
+ * Terms removed: acceptedOn, authors, contributors, curators, importedFirstOn, importedLastOn, importedWithId, lastUpdateBy, publishedBy, publishedOn, sourceFirstAccessedOn, submittedBy, submittedOn
+ * Terms renamed:  importedFromSource->importedFrom, versionNumber->version
+ * Terms added: authoredOn, contributedOn, createdAt, createdWith, curatedOn, curates, derivedFrom, lastRefreshedOn, providedBy, retrievedBy, retrievedFrom, retrievedOn, sourceAccessedBy
+
+Note that during development of PAV 2.0, the ontology was split into three modules (with a common namespace): [http://purl.org/pav/provenance/2.0/ provenance] [http://purl.org/pav/authoring/2.0/ authoring] and [http://pav-ontology.googlecode.com/svn/trunk/pav-versioning.owl versioning] - but these modules were later merged to the single PAV ontology. For backward compatibility, these module versionIRIs now simply import the whole PAV ontology.
 
 
 == PAV Ontology v1.2 (deprecated) ==
@@ -70,6 +75,6 @@ Changes since v2.0:
 || Namespace || VersionIRI ||
 || http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ ||
 
-* Final version of PAV module from AlzSWAN project
+ * Final version of PAV module from AlzSWAN project
 
-Note that the original namespace no longer resolves, use http://purl.org/pav/1.2/ to import PAV 1.2.
+Note that the original namespace no longer resolves, use http://purl.org/pav/1.2/ if you need to import PAV 1.2.
