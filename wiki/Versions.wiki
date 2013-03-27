@@ -1,6 +1,6 @@
-The latest version is always available from the PAV namespace:
+The latest OWL ontology of PAV is always available from the PAV namespace:
 
-|| Namespace || 
+|| *Namespace* || 
 || http://purl.org/pav/ ||
 
 == Versioning ===
@@ -13,7 +13,7 @@ PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, w
 
 You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI from below, in order to lock down the minor version. Note that the versionIRIs always points to the latest patch version (ie. http://purl.org/pav/2.1 will serve 2.1.1).
 
-See the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
+Browse the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
 
 == Example of import ==
 
@@ -31,8 +31,8 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 
 == PAV ontology v2.1.1 (2013-03-26) ==
 
-|| Namespace || VersionIRI ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.1 ||
+|| *Namespace* || *VersionIRI* || *Documentation* ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1 || http://purl.org/pav/html ||
 
 Changes since v2.1.0:
  * Link to [http://pav-ontology.googlecode.com/svn/tags/2.1.1/images/pav-overview-755px.png overview diagram]
@@ -42,8 +42,8 @@ Changes since v2.1.0:
 
 == PAV ontology v2.1.0 (2013-02-27) ==
 
-|| Namespace || VersionIRI ||
-|| http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl ||
+|| *Namespace* || *VersionIRI* || *Documentation* ||
+|| http://purl.org/pav/ || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl || http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.html ||
 
 Changes since v2.0: 
  * Sub-property mapping to [http://www.w3.org/TR/prov-o/ PROV-O]. Note that PROV-O is not imported by PAV, so you may import <http://www.w3.org/ns/prov#>, for instance to get the inferred domains and ranges from PROV.
@@ -58,8 +58,8 @@ Changes since v2.0:
 
 == PAV ontology v2.0 (2012-04-04) ==
 
-|| Namespace || VersionIRI ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.0/ ||
+|| *Namespace* || *VersionIRI* || *Documentation* ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.0/ || http://www.essepuntato.it/lode/http://purl.org/pav/2.0/ ||
 
  * Initial release independent from SWAN
  * New namespace http://purl.org/pav/
@@ -71,8 +71,8 @@ Note that during development of PAV 2.0, the ontology was split into three modul
 
 
 == PAV Ontology v1.2 (2009-01-13) ==
-|| Namespace || VersionIRI ||
-|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ ||
+|| *Namespace* || *VersionIRI* || *Documentation* ||
+|| http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || || http://www.essepuntato.it/lode/owlapi/http://purl.org/pav/1.2/ ||
 
  * PAV module from the [https://code.google.com/p/swan-ontology/ SWAN ontology] 1.2
 
