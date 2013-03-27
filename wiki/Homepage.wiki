@@ -1,16 +1,33 @@
-PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
+PAV is a lightweight ontology for tracking *Provenance, Authoring and Versioning*. PAV specializes the W3C provenance ontology [http://www.w3.org/TR/prov-o/ PROV-O] in order to describe authorship, curation and digital creation of online resources.
 
-This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.
+== Quick start ==
+
+{{{
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix : <#> .
+
+<http://example.com/page2> 
+   pav:authoredBy :alice ;
+   pav:curatedBy :bob ;
+   pav:createdBy :charlie ;
+   pav:authoredOn "2012-12-24T15:15:15+0100"^^xsd:dateTime ;
+   pav:importedOn "2013-03-27T10:06:17+0000"^^xsd:dateTime ;
+   pav:importedFrom <http://example.com/data2> .
+}}}
+
+* Ontology: http://purl.org/pav
+* Documentation: http://purl.org/pav/html
 
 == Overview ==
 
 [http://pav-ontology.googlecode.com/svn/tags/2.1.1/images/pav-overview-755px.png]
 
-PAV supplies terms for distinguishing between the different roles of the agents contributing content in current web based systems: contributors, authors, curators and digital artifact creators. The ontology also provides terms for tracking provenance of digital entities that are published on the web and then accessed, transformed and consumed. In order to support broader interoperability, PAV specializes the general purpose W3C PROV provenance model (PROV-O).
+PAV supplies terms for distinguishing between the different roles of the agents contributing content in current web based systems: contributors, authors, curators and digital artifact creators. The ontology also provides terms for tracking provenance of digital entities that are published on the web and then accessed, transformed and consumed. In order to support broader interoperability, PAV specializes the general purpose [http://www.w3.org/TR/prov-o/ W3C PROV provenance model (PROV-O)].
 
-PAV distinguishes between the data related to the digital artifact - named Provenance - and those related to the actual knowledge creation and therefore to the intellectual property aspects – named Authoring. The Versioning axis describes the evolution of digital entities in time.
+PAV distinguishes between the data related to the digital artifact - named _Provenance_ - and those related to the actual knowledge creation and therefore to the intellectual property aspects – named _Authoring_. The _Versioning axis describes the evolution of digital entities in time.
 
-Using PAV, descriptions can define the Authors that originate or gave existence to the work that is expressed in the digital resource (pav:authoredBy); curators (pav:curatedBy) who are content specialists responsible for shaping the expression in an appropriate format, and contributors (super-property pav:contributedBy) that provided some help in conceiving the resource or in the expressed knowledge creation/extraction.
+Using PAV, descriptions can define the Authors that originate or gave existence to the work that is expressed in the digital resource ([http://purl.org/pav/html#http://purl.org/pav/authoredBy pav:authoredBy]); curators (pav:curatedBy) who are content specialists responsible for shaping the expression in an appropriate format, and contributors (super-property pav:contributedBy) that provided some help in conceiving the resource or in the expressed knowledge creation/extraction.
 
 These provenance aspects can be detailed with dates using pav:curatedOn, pav:authoredOn, etc. Further details about the creation activities, such as different authors contributing specific parts of the resource at different dates are out of scope for PAV and should be defined using vocabularies like PROV-O and additional intermediate entities to describe the different states.
 
