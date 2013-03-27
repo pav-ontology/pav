@@ -16,8 +16,8 @@ PAV is a lightweight ontology for tracking *Provenance, Authoring and Versioning
    pav:importedFrom <http://example.com/data2> .
 }}}
 
-* Ontology: http://purl.org/pav
-* Documentation: http://purl.org/pav/html
+ * [http://purl.org/pav Ontology: http://purl.org/pav]
+ * [http://purl.org/pav/html Documentation: http://purl.org/pav/html]
 
 == Overview ==
 
