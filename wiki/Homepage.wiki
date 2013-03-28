@@ -47,6 +47,6 @@ The ontology IRI http://purl.org/pav/ always resolve to the latest version of PA
 
 == Ontology ==
 
- * [http://purl.org/pav Namespace and OWL ontology]: http://purl.org/pav
-
+ * Namespace: http://purl.org/pav
+ * [http://purl.org/pav OWL ontology]
  * [http://purl.org/pav/html Ontology documentation]
