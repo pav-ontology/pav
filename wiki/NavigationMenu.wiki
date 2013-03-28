@@ -1,2 +1,4 @@
  * [Homepage Introduction]
- * [Versions Versions History]
+ * [http://purl.org/pav Ontology]
+   * [Versions Version History] 
+   * [http://purl.org/pav/html Documentation]
