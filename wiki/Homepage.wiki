@@ -11,8 +11,8 @@ PAV is a lightweight ontology for tracking *Provenance, Authoring and Versioning
    pav:authoredBy :alice ;
    pav:curatedBy :bob ;
    pav:createdBy :charlie ;
-   pav:authoredOn "2012-12-24T15:15:15+0100"^^xsd:dateTime ;
-   pav:importedOn "2013-03-27T10:06:17+0000"^^xsd:dateTime ;
+   pav:authoredOn "2012-12-24T15:15:15Z"^^xsd:dateTime ;
+   pav:importedOn "2013-03-27T10:06:17Z"^^xsd:dateTime ;
    pav:importedFrom <http://example.com/data2> .
 }}}
 
