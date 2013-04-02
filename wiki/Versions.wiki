@@ -15,9 +15,6 @@ PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, w
  * The _minor_ number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term)
  * The _patch_ number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
-
-You may want to *owl:imports* either the namespace, to always get the latest version, or a particular versionIRI, in order to lock down the  version. Note that the versionIRI stated in the OWL file always return to the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
-
 Browse the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
 
 == Example of import ==
@@ -31,6 +28,14 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
     # Lock down import to 2.1
     owl:imports <http://purl.org/pav/2.1> .
 }}}
+
+
+You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version, or a particular versionIRI, as above, in order to lock down the version. 
+
+_Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RDF/XML, but with {{{Content-Type: application/xml}}} in order to present a human-readable version (by XSLT) for browsers accessing the namespace URI. Some OWL tools might not accept this media type, in such cases the versionIRI like http://purl.org/pav/2.1 should be used instead, which present return the ontology with {{{Content-Type: application/rdf+xml}}}_
+
+
+The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
 
 
 
