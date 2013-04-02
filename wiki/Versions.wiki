@@ -80,5 +80,3 @@ Note that during development of PAV 2.0, the ontology was split into three modul
 || http://swan.mindinformatics.org/ontologies/1.2/pav/ || http://purl.org/pav/1.2/ || http://purl.org/pav/1.2/html ||
 
  * PAV module from the [https://code.google.com/p/swan-ontology/ SWAN ontology] 1.2
-
-In case the original namespace no longer resolves, use http://purl.org/pav/1.2/ if you need to import PAV 1.2.
