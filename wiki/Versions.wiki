@@ -32,7 +32,7 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 
 You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version, or a particular versionIRI, as above, in order to lock down the version. 
 
-_Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RDF/XML, but with {{{Content-Type: application/xml}}} in order to present a human-readable version (by XSLT) for browsers accessing the namespace URI. Some OWL tools might not accept this media type, in such cases the versionIRI like http://purl.org/pav/2.1 should be used instead, which present return the ontology with {{{Content-Type: application/rdf+xml}}}_
+_Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RDF/XML, but with {{{Content-Type: application/xml}}} in order to present a human-readable version (by XSLT) for browsers accessing the namespace URI. Some OWL tools might not accept this media type, in such cases the versionIRI like http://purl.org/pav/2.1 should be used instead, which return the ontology with {{{Content-Type: application/rdf+xml}}}_
 
 
 The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
