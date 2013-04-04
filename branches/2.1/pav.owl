@@ -401,7 +401,7 @@ Note that pav:authoredOn is different from pav:createdOn, although they are ofte
 
 pav:contributedBy provides the agent(s) that contributed.
         
-The value is of type xsd:dateTime, for instance <code>"2013-03-26T14:49:00+01:00"^^xsd:dateTime</code>. The timezone information (Z for GMT, +01:00 for GMT+1, etc) SHOULD be included unless unknown. If the time is unknown, use <code>00:00:00Z</code>. If the day/month is not known, use <code>01-01</code>, for instance, if we only know "September 1983", then use <code>"1983-09-1T00:00:00Z"^^xsd:dateTime</code>.
+The value is of type xsd:dateTime, for instance <code>"2013-03-26T14:49:00+01:00"^^xsd:dateTime</code>. The timezone information (Z for GMT, +01:00 for GMT+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use <code>00:00:00Z</code>. If the day/month is not known, use <code>01-01</code>, for instance, if we only know "September 1983", then use <code>"1983-09-1T00:00:00Z"^^xsd:dateTime</code>.
         </rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;contributedBy"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
