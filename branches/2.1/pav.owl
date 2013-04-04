@@ -31,8 +31,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.1.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-03-26T14:49:00Z</dct:modified>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.1.2-SNAPSHOT</owl:versionInfo>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-04-04T10:11:02+01:00</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
