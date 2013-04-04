@@ -384,7 +384,9 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
 
 pav:authoredBy gives the authoring agent.
 
-Note that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.</rdfs:comment>
+Note that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;authoredBy"/>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
@@ -401,8 +403,7 @@ Note that pav:authoredOn is different from pav:createdOn, although they are ofte
 
 pav:contributedBy provides the agent(s) that contributed.
         
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is not known, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.
-        </rdfs:comment>
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;contributedBy"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
@@ -416,7 +417,8 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
         <rdfs:comment xml:lang="en">The date of creation of the resource.
 
 pav:createdBy provides the agent(s) that created the resource.
-</rdfs:comment>
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -430,7 +432,9 @@ pav:createdBy provides the agent(s) that created the resource.
         <rdfs:label xml:lang="en">Curated on</rdfs:label>
         <rdfs:comment xml:lang="en">The date this resource was curated. 
 
-pav:curatedBy gives the agent(s) that performed the curation.</rdfs:comment>
+pav:curatedBy gives the agent(s) that performed the curation.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
     </owl:DatatypeProperty>
@@ -449,7 +453,9 @@ If the source is later reimported, this should be indicated with pav:lastRefresh
 
 The source of the import should be given with pav:importedFrom. The agent that performed the import should be given with pav:importedBy.
 
-See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
+See pav:importedFrom for a discussion about import vs. retrieval.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedOn"/>
@@ -462,7 +468,9 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="&pav;lastRefreshedOn">
         <rdfs:label xml:lang="en">Last refreshed on</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of the last re-import of the resource. This property is used in addition to pav:importedOn if this version has been updated due to a re-import. If the re-import created a new resource rather than refreshing an existing, then pav:importedOn should be used together with pav:previousVersion.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date of the last re-import of the resource. This property is used in addition to pav:importedOn if this version has been updated due to a re-import. If the re-import created a new resource rather than refreshing an existing resource, then instead use pav:importedOn together with pav:previousVersion.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;importedOn"/>
@@ -477,7 +485,9 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="&pav;lastUpdateOn">
         <rdfs:label xml:lang="en">Last updated on</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <owl:equivalentProperty rdf:resource="&pav1;lastUpdateOn"/>
@@ -493,7 +503,8 @@ See pav:importedFrom for a discussion about import vs. retrieval.</rdfs:comment>
         <rdfs:comment xml:lang="en">The date the source for this resource was retrieved. 
 
 The source that was retrieved should be indicated with pav:retrievedFrom. The agent that performed the retrieval may be specified with pav:retrievedBy.
-</rdfs:comment>
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;retrievedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -507,7 +518,9 @@ The source that was retrieved should be indicated with pav:retrievedFrom. The ag
         <rdfs:label xml:lang="en">Source accessed on</rdfs:label>
         <rdfs:comment xml:lang="en">The resource is related to a source which was originally accessed or consulted on the given date as part of creating or authoring the resource. The source(s) should be specified using pav:sourceAccessedAt. If the source is subsequently checked again (say to verify validity), this should be indicated with pav:sourceLastAccessedOn.
 
-In the case multiple sources being accessed at different times or by different agents, PAV does not distinguish who accessed when what. If such details are required, they may be provided by additionally using prov:qualifiedInfluence.</rdfs:comment>
+In the case multiple sources being accessed at different times or by different agents, PAV does not distinguish who accessed when what. If such details are required, they may be provided by additionally using prov:qualifiedInfluence.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
@@ -525,7 +538,9 @@ In the case multiple sources being accessed at different times or by different a
         <rdfs:label xml:lang="en">Source last accessed on</rdfs:label>
         <rdfs:comment xml:lang="en">The resource is related to a source which was last accessed or consulted on the given date. The source(s) should be specified using pav:sourceAccessedAt. Usage of this property indicates that the source has been checked previously, which the initial time should be indicated with pav:sourceAccessedOn.
 
-This property can be useful together with pav:lastRefreshedOn or pav:lastUpdateOn in order to indicate a re-import or update, but could also be used alone, for instance when a source was simply verified and no further action was taken for the resource,</rdfs:comment>
+This property can be useful together with pav:lastRefreshedOn or pav:lastUpdateOn in order to indicate a re-import or update, but could also be used alone, for instance when a source was simply verified and no further action was taken for the resource.
+
+The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
