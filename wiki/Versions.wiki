@@ -38,11 +38,19 @@ _Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RD
 The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
 
 
+== PAV ontology v2.1.2 (2013-08-16) ==
+
+|| *Namespace* || *OWL* || *Documentation* ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1.2 || http://purl.org/pav/2.1.2/html ||
+
+Changes since v2.1.1:
+ * Misspelling in [http://pav-ontology.googlecode.com/svn/tags/2.1.2/pav.html#d4e148 description of pav:createdBy] - dct:createdBy changed to dct:creator
+
 
 == PAV ontology v2.1.1 (2013-03-26) ==
 
 || *Namespace* || *OWL* || *Documentation* ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.1.0 || http://purl.org/pav/2.1.0/html ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.1.1 || http://purl.org/pav/2.1.1/html ||
 
 Changes since v2.1.0:
  * Link to [http://pav-ontology.googlecode.com/svn/tags/2.1.1/images/pav-overview-755px.png overview diagram]
