@@ -31,8 +31,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.1.1</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-03-26T14:49:00Z</dct:modified>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.1.2</owl:versionInfo>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-16T12:09:00Z</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
@@ -153,7 +153,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
 
 This property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form. 
 
-pav:createdBy is more specific than dct:createdBy - which might or might not be interpreted to cover this creator.
+pav:createdBy is more specific than dct:creator - which might or might not be interpreted to cover this creator.
 
 For instance, the author wrote &apos;this species has bigger wings than normal&apos; in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as &apos;locus perculus has wingspan &gt; 0.5m&apos;. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).
 
