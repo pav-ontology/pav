@@ -193,7 +193,6 @@ The author of the content of a resource may be different from the creator of the
 The date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using activity-centric provenance vocabularies, for instance with prov:wasGeneratedBy and prov:qualifiedAssocation.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;authoredOn"/>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;authoredBy"/>
     </owl:ObjectProperty>
@@ -214,7 +213,6 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:seeAlso rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;contributedBy"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
@@ -255,7 +253,6 @@ The location the agent was at when creating the digital resource can be made usi
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
     </owl:ObjectProperty>
     
 
