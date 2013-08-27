@@ -31,14 +31,14 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.1.3-SNAPSHOT</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-16T12:09:00Z</dct:modified>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.2.0-SNAPSHOT</owl:versionInfo>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-27T15:23:00Z</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
         <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
         <dct:language rdf:datatype="&xsd;language">en</dct:language>
-        <dct:issued rdf:datatype="&xsd;dateTime">2013-03-27T16:03:24Z</dct:issued>
+        <dct:issued rdf:datatype="&xsd;dateTime">2013-xx-xxTxx:xx:xxZ</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
 
@@ -61,16 +61,18 @@ The ontology IRI http://purl.org/pav/ always resolve to the latest version of PA
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg" />
+        <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions" />
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <!--
-        <owl:imports rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
         -->
-        <owl:versionIRI rdf:resource="&pav;2.1"/>
+        <owl:imports rdf:resource="http://purl.org/pav/1.2/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <owl:versionIRI rdf:resource="&pav;2.2"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
+        <owl:priorVersion rdf:resource="&pav;2.1"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
-        <owl:priorVersion rdf:resource="&pav;2.0/"/>
+        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
@@ -81,6 +83,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
         <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:seeAlso rdf:resource="http://arxiv.org/abs/1304.7224"/>
     </owl:Ontology>
     
 
