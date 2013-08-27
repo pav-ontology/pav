@@ -1,12 +1,11 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="owl2html.xslt"?>
 
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY pav "http://purl.org/pav/" >
-    <!ENTITY dct "http://purl.org/dc/terms/" >
-    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY dcterms "http://purl.org/dc/terms/" >
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -16,30 +15,29 @@
 ]>
 
 
-<rdf:RDF xmlns="&pav;"
-     xml:base="&pav;"
+<rdf:RDF xmlns="http://purl.org/pav"
+     xml:base="http://purl.org/pav"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:pav1="http://swan.mindinformatics.org/ontologies/1.2/pav/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:pav="http://purl.org/pav/"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/pav/">
-        <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.1.3-SNAPSHOT</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-16T12:09:00Z</dct:modified>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.2.0-SNAPSHOT</owl:versionInfo>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-27T15:23:00Z</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-xx-xxTxx:xx:xxZ</dcterms:issued>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
-        <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
-        <dct:language rdf:datatype="&xsd;language">en</dct:language>
-        <dct:issued rdf:datatype="&xsd;dateTime">2013-03-27T16:03:24Z</dct:issued>
-        <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
+        <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
+        <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
+        <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
 
 This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.</rdfs:comment>
@@ -60,29 +58,91 @@ PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptio
 The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
-        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg" />
+        <rdfs:seeAlso rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
-        <!--
-        <owl:imports rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
-        -->
-        <owl:versionIRI rdf:resource="&pav;2.1"/>
+        <owl:priorVersion rdf:resource="&pav;2.1"/>
+        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
+        <owl:versionIRI rdf:resource="&pav;2.2"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
+        <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
+        <owl:imports rdf:resource="&pav;1.2/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
-        <owl:priorVersion rdf:resource="&pav;2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <dct:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
-        <dct:publisher rdf:resource="http://swan.mindinformatics.org/"/>
+        <dcterms:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
+        <dcterms:publisher rdf:resource="http://swan.mindinformatics.org/"/>
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
-        <dct:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <dct:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
-        <dct:creator rdf:resource="http://www.paolociccarese.info/"/>
+        <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
+        <dcterms:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
+        <dcterms:creator rdf:resource="http://www.paolociccarese.info/"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
     
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <rdf:Description rdf:about="&dcterms;contributor">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;creator">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;description">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;hasVersion">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;issued">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;modified">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
 
 
     
@@ -99,6 +159,29 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service.</dcterms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="&dcterms;creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/pav/authoredBy -->
 
     <owl:ObjectProperty rdf:about="&pav;authoredBy">
@@ -110,6 +193,7 @@ The author of the content of a resource may be different from the creator of the
 The date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using activity-centric provenance vocabularies, for instance with prov:wasGeneratedBy and prov:qualifiedAssocation.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;authoredOn"/>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;authoredBy"/>
     </owl:ObjectProperty>
@@ -130,6 +214,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:seeAlso rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;contributedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
@@ -170,6 +255,7 @@ The location the agent was at when creating the digital resource can be made usi
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
     </owl:ObjectProperty>
     
 
@@ -208,7 +294,7 @@ The date of curating can be expressed using pav:curatedOn - note however in the 
     <owl:ObjectProperty rdf:about="&pav;curates">
         <rdfs:label xml:lang="en">Curates</rdfs:label>
         <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
-        <rdfs:comment xml:lang="en">Provided for backwards compatibility with PAV 1.2 only. Use instead the inverse pav:curatedBy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Provided for backwards compatibility. Use instead the inverse pav:curatedBy.</rdfs:comment>
         <owl:inverseOf rdf:resource="&pav;curatedBy"/>
     </owl:ObjectProperty>
     
@@ -295,7 +381,7 @@ A version number of this resource can be provided using the data property pav:ve
         <rdfs:comment xml:lang="en">The original provider of the encoded information (e.g. PubMed, UniProt, Science Commons).
 
 The provider might not coincide with the dct:publisher, which would describe the current publisher of the resource. For instance if the resource was retrieved, imported or derived from a source, that source was published by the original provider. pav:providedBy provides a shortcut to indicate the original provider on the new resource.  </rdfs:comment>
-        <rdfs:seeAlso rdf:resource="&dct;publisher"/>
+        <rdfs:seeAlso rdf:resource="&dcterms;publisher"/>
     </owl:ObjectProperty>
     
 
@@ -363,6 +449,46 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     
 
 
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/authoredBy -->
+
+    <rdf:Description rdf:about="&pav1;authoredBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/contributedBy -->
+
+    <rdf:Description rdf:about="&pav1;contributedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy -->
+
+    <rdf:Description rdf:about="&pav1;createdBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/curatedBy -->
+
+    <rdf:Description rdf:about="&pav1;curatedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedBy -->
+
+    <rdf:Description rdf:about="&pav1;importedBy"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedFromSource -->
+
+    <rdf:Description rdf:about="&pav1;importedFromSource"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/previousVersion -->
+
+    <rdf:Description rdf:about="&pav1;previousVersion"/>
+    
 
 
     <!-- 
@@ -386,7 +512,7 @@ pav:authoredBy gives the authoring agent.
 
 Note that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;authoredBy"/>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
@@ -403,7 +529,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 pav:contributedBy provides the agent(s) that contributed.
         
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;contributedBy"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
     </owl:DatatypeProperty>
@@ -418,7 +544,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 pav:createdBy provides the agent(s) that created the resource.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -434,7 +560,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 pav:curatedBy gives the agent(s) that performed the curation.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
     </owl:DatatypeProperty>
@@ -455,7 +581,7 @@ The source of the import should be given with pav:importedFrom. The agent that p
 
 See pav:importedFrom for a discussion about import vs. retrieval.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedOn"/>
@@ -470,7 +596,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
         <rdfs:label xml:lang="en">Last refreshed on</rdfs:label>
         <rdfs:comment xml:lang="en">The date of the last re-import of the resource. This property is used in addition to pav:importedOn if this version has been updated due to a re-import. If the re-import created a new resource rather than refreshing an existing resource, then instead use pav:importedOn together with pav:previousVersion.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;importedOn"/>
@@ -487,7 +613,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
         <rdfs:label xml:lang="en">Last updated on</rdfs:label>
         <rdfs:comment xml:lang="en">The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <owl:equivalentProperty rdf:resource="&pav1;lastUpdateOn"/>
@@ -504,7 +630,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 The source that was retrieved should be indicated with pav:retrievedFrom. The agent that performed the retrieval may be specified with pav:retrievedBy.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;retrievedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
@@ -520,7 +646,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 In the case multiple sources being accessed at different times or by different agents, PAV does not distinguish who accessed when what. If such details are required, they may be provided by additionally using prov:qualifiedInfluence.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
@@ -540,7 +666,7 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 This property can be useful together with pav:lastRefreshedOn or pav:lastUpdateOn in order to indicate a re-import or update, but could also be used alone, for instance when a source was simply verified and no further action was taken for the resource.
 
-The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use "1983-09-01T00:00:00Z"^^xsd:dateTime.</rdfs:comment>
+The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
@@ -566,5 +692,5 @@ The value is of type xsd:dateTime, for instance "2013-03-26T14:49:00+01:00"^^xsd
 
 
 
-<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
