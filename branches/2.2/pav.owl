@@ -72,12 +72,9 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <dcterms:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
         <dcterms:publisher rdf:resource="http://swan.mindinformatics.org/"/>
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <dcterms:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
-        <dcterms:creator rdf:resource="http://www.paolociccarese.info/"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
@@ -96,17 +93,12 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
-
-    <rdf:Description rdf:about="&dcterms;contributor">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="&dcterms;creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     
@@ -144,10 +136,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
-
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -176,8 +164,8 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <rdfs:label xml:lang="en">Creator</rdfs:label>
         <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
         <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
     </owl:ObjectProperty>
     
 
@@ -191,9 +179,9 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
 The author of the content of a resource may be different from the creator of the resource representation (although they are often the same). See pav:createdBy for a discussion.
 
 The date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using activity-centric provenance vocabularies, for instance with prov:wasGeneratedBy and prov:qualifiedAssocation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
         <rdfs:seeAlso rdf:resource="&pav;authoredOn"/>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;authoredBy"/>
     </owl:ObjectProperty>
@@ -211,10 +199,10 @@ The agent provided any sort of help in conceiving the work that is expressed by 
 Note that as pav:contributedBy identifies only agents that contributed to the work, knowledge or intellectual property, and not agents that made the digital artifact or representation (pav:createdBy), thus this property can be considered more precise than dct:contributor. See pav:createdBy for a discussion.
 
 The date of contribution can be expressed using pav:contributedOn - note however in the case of multiple contributors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using activity-centric provenance vocabularies, for instance with prov:wasGeneratedBy and prov:qualifiedAssocation.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
         <rdfs:seeAlso rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;contributedBy"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
     </owl:ObjectProperty>
     
@@ -223,7 +211,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
     <!-- http://purl.org/pav/createdAt -->
 
     <owl:ObjectProperty rdf:about="&pav;createdAt">
-        <rdfs:label xml:lang="en">Created at</rdfs:label>
+        <rdfs:label xml:lang="en">Representation created at</rdfs:label>
         <rdfs:comment xml:lang="en">The geo-location of the agents when creating the resource (pav:createdBy). For instance  a photographer takes a picture of the Eiffel Tower while standing in front of it.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
     </owl:ObjectProperty>
@@ -233,7 +221,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
     <!-- http://purl.org/pav/createdBy -->
 
     <owl:ObjectProperty rdf:about="&pav;createdBy">
-        <rdfs:label xml:lang="en">Created by</rdfs:label>
+        <rdfs:label xml:lang="en">Representation created by</rdfs:label>
         <rdfs:comment xml:lang="en">An agent primary responsible for making the digital artifact or resource representation.
 
 This property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form. 
@@ -249,13 +237,13 @@ The software tool used by the creator to make the digital resource (say Protege,
 The date the digital resource was created can be indicated with pav:createdOn.
 
 The location the agent was at when creating the digital resource can be made using pav:createdAt.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
         <rdfs:seeAlso rdf:resource="&pav;authoredBy"/>
         <rdfs:seeAlso rdf:resource="&pav;createdAt"/>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
-        <rdfs:subPropertyOf rdf:resource="&dcterms;creator"/>
     </owl:ObjectProperty>
     
 
@@ -539,10 +527,10 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     <!-- http://purl.org/pav/createdOn -->
 
     <owl:DatatypeProperty rdf:about="&pav;createdOn">
-        <rdfs:label xml:lang="en">Created On</rdfs:label>
-        <rdfs:comment xml:lang="en">The date of creation of the resource.
+        <rdfs:label xml:lang="en">Representation created on</rdfs:label>
+        <rdfs:comment xml:lang="en">The date of creation of the resource representation.
 
-pav:createdBy provides the agent(s) that created the resource.
+pav:createdBy provides the agent(s) that created the resource representation.
 
 The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
@@ -688,6 +676,90 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
     
 
 
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn -->
+
+    <rdf:Description rdf:about="&pav1;createdOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedLastOn -->
+
+    <rdf:Description rdf:about="&pav1;importedLastOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn -->
+
+    <rdf:Description rdf:about="&pav1;importedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn -->
+
+    <rdf:Description rdf:about="&pav1;lastUpdateOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceFirstAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceFirstAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceLastAccessedOn -->
+
+    <rdf:Description rdf:about="&pav1;sourceLastAccessedOn"/>
+    
+
+
+    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/versionNumber -->
+
+    <rdf:Description rdf:about="&pav1;versionNumber"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/pav/ -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/pav/">
+        <dcterms:contributor rdf:resource="http://soiland-reyes.com/stian/#me"/>
+        <dcterms:creator rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
+        <dcterms:creator rdf:resource="http://www.paolociccarese.info/"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://soiland-reyes.com/stian/#me -->
+
+    <owl:NamedIndividual rdf:about="http://soiland-reyes.com/stian/#me"/>
+    
+
+
+    <!-- http://www.hcklab.org/foaf.rdf#me -->
+
+    <owl:NamedIndividual rdf:about="http://www.hcklab.org/foaf.rdf#me"/>
+    
+
+
+    <!-- http://www.paolociccarese.info/ -->
+
+    <owl:NamedIndividual rdf:about="http://www.paolociccarese.info/"/>
 </rdf:RDF>
 
 
