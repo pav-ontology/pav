@@ -80,3 +80,6 @@ ul.toc, ol.toc {
   pre { speak-punctuation: code } 
 }
 
+body {
+  background-image: url(http://lode.sourceforge.net/img/LODELogo.png);
+}
