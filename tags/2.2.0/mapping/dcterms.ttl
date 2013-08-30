@@ -1,0 +1,229 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# This file
+<> a owl:Ontology, prov:Entity ;
+   owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov:, 
+               <http://purl.org/pav/mapping/skos> ;
+   rdfs:comment """Depend on imported SKOS bindings"""@en ;
+   dct:isFormatOf <http://purl.org/pav/mapping/dcterms> ;
+   foaf:primaryTopic <http://purl.org/pav/mapping/dcterms> ;
+   prov:specializationOf <http://purl.org/pav/mapping/dcterms> ; 
+   void:inDataset <dcterms-void.ttl#linkset> ;
+   prov:specializationOf <dcterms-void.ttl#linkset> ;
+   ## For detailed provenance, see:
+   prov:has_provenance <dcterms-void.ttl> ;
+   prov:has_anchor <dcterms-void.ttl#linkset> .
+
+# PURL identifies the mapping in general
+<http://purl.org/pav/mapping/dcterms> a prov:Entity ;
+    prov:has_provenance <dcterms-void.ttl> ;
+    rdfs:label "SKOS mapping of PAV to Dublin Core terms"@en ; 
+
+    pav:previousVersion <http://pav-ontology.googlecode.com/svn-history/r126/branches/2.1/mapping/dcterms.ttl> ;
+    pav:version "0.2.1" .
+
+## DCT concepts
+
+dct:creator skos:inScheme dct: .
+dct:created skos:inScheme dct: .
+dct:contributor skos:inScheme dct: .
+dct:date skos:inScheme dct: .
+dct:spatial skos:inScheme dct: .
+dct:source skos:inScheme dct: .
+dct:isFormatOf skos:inScheme dct: .
+dct:modified skos:inScheme dct: .
+dct:references skos:inScheme dct: .
+dct:contributor skos:inScheme dct: .
+dct:replaces skos:inScheme dct: .
+dct:isVersionOf skos:inScheme dct: .
+dct:modified skos:inScheme dct: .
+dct:publisher skos:inScheme dct: .
+
+
+## The actual SKOS mapping
+
+pav:authoredBy skos:inScheme pav: ;
+               # TODO: Move internal PAV relations elsewhere
+               skos:broadMatch dct:creator ;
+               skos:note """Broad match to dct:creator due to the common
+usage of dct:creator to mean the creator of the Work rather than just
+the creator of the particular resource. Creating the representation
+of a resource is in PAV covered instead by pav:createdBy,
+but would in DC Terms also be covered by dct:creator,
+therefore this is not a skos:closeMatch."""@en .
+
+pav:authoredOn skos:inScheme pav: ;
+               skos:broadMatch dct:created .
+
+pav:curatedBy skos:inScheme pav: ;
+              skos:note """DC Terms has no concept of curators, but 
+pav:curatedBy would (having broader pav:contributedBy) have an
+implied broad match to dct:contributor"""@en .              
+
+pav:curatedOn skos:inScheme pav: .
+
+pav:contributedBy skos:inScheme pav: ;
+                  skos:closeMatch dct:contributor ;
+                  skos:note """Close match due its the common usage to mean someone who added to the Work of the resource (usually not just the digital representation), but not skos:exactMatch as purely representational contributions represented with dct:contributor should be mapped to pav:createdBy.  """@en .
+
+pav:contributedOn skos:inScheme pav: ;
+                  skos:broadMatch dct:date .
+
+pav:createdBy skos:inScheme pav: ;
+              skos:broadMatch dct:creator ;
+              skos:note """A PAV creator is a particular kind of DC
+Terms creator which made the digital representation of the
+resource. """@en .
+
+pav:createdOn skos:inScheme pav: ;
+              skos:broadMatch dct:created .
+
+pav:createdWith skos:inScheme pav: ;
+                skos:relatedMatch dct:creator ;
+                skos:note """Software agents used by a person is not
+normally described by DC Terms, but it would be related to the
+dct:creator"""@en.
+
+pav:createdAt skos:inScheme pav: ;
+              skos:relatedMatch dct:spatial ;
+              skos:note """pav:createdAt specifies the location of the
+pav:createdBy agent when creating the resource, while dct:spatial specifies the
+location of the resource (which presumably at some point
+was at that location). Therefore this is a skos:relatedMatch."""@en .
+
+pav:retrievedFrom skos:inScheme pav: ;
+                  skos:broadMatch dct:source ;
+                  skos:note """Retrieval is a specific form of
+derivation in whole, as covered by dct:source. As retrieval is
+generally byte-wise equal, the resulting resource is not a
+dct:isFormatOf the source."""@en .
+
+pav:retrievedBy skos:inScheme pav: ;
+                skos:relatedMatch dct:creator ;
+                skos:note """The agent retrieving is essentially
+the creator of the new resource.  However, common use of DC Terms
+would in this case acknowledge the original dct:creator rather than
+the downloader, therefore only a skos:relatedMatch to dct:creator."""@en
+.
+
+pav:retrievedOn skos:inScheme pav: ;
+                skos:relatedMatch dct:created ;
+                skos:broadMatch dct:date .
+
+
+pav:importedFrom skos:inScheme pav: ;
+                 skos:broadMatch dct:source ;
+                 skos:note """Imported is a specialization of 'being
+derived from the related resource in whole'. """@en ;
+                 skos:broadMatch dct:isFormatOf ;
+                 skos:note """The resulting resource 'is substantially
+the same as the source, but in another format'. However pav:importedFrom
+also implies provenance of a directed transformation from the original,
+at a given time and performed by an agent, and hence pav:importedFrom
+has a broad match dct:isFormatOf"""@en . 
+
+pav:importedBy skos:inScheme pav: ;
+               skos:broadMatch dct:creator ;
+               skos:note """The agent importing is essentially a
+specialized creator of the new resource, hence has broad match dct:creator. """@en ;
+               skos:broadMatch dct:contributor ;
+               skos:note """The agent importing has done a
+transformation, so she is somewhat (skos:broadMatch) a dct:contributor"""@en .
+
+pav:importedOn skos:inScheme pav: ;
+               skos:broadMatch dct:created .
+
+pav:lastRefreshedOn skos:inScheme pav: ;
+                    skos:broadMatch dct:modified ;
+                    skos:note """pav:lastRefreshedOn only applies for
+refresh by import, and so is more specific than dct:modified"""@en .
+
+pav:sourceAccessedAt skos:inScheme pav: ;
+                     skos:relatedMatch dct:source ;
+                     skos:note """pav:sourceAccessedAt does not require
+a derivation when accessing a source, therefore
+this is only a skos:relatedMatch"""@en ;
+                     skos:relatedMatch dct:references ;
+                     skos:note """The source has been used as a
+reference, but is not neccessarily cited or pointed to by the resource,
+therefore only a skos:relatedMatch."""@en .
+
+pav:sourceAccessedBy skos:inScheme pav: ;
+                     skos:relatedMatch dct:contributor ;
+                     skos:note """The agent accessing a source is likely
+to have contributed to the resource, but as this is
+not a requirement in PAV (for instance a source could have
+been found to not be relevant), this is only a
+skos:relatedMatch."""@en .
+
+pav:sourceAccessedOn skos:inScheme pav: ;
+                     skos:broadMatch dct:date ;
+                     skos:note """The date a source was accessed is 'A
+point or period of time associated with an event in
+the lifecycle of the resource.', therefore
+skos:broadMatch"""@en .
+
+pav:sourceLastAccessedOn skos:inScheme pav: ;
+                         skos:broadMatch dct:date .
+
+pav:version skos:inScheme pav: ;
+            skos:note """DC Terms has no equivalent of pav:version"""@en .
+                         
+
+pav:previousVersion skos:inScheme pav: ;
+                    skos:narrowMatch dct:replaces ;
+                    skos:note """dct:replaces is a stronger statement
+(skos:narrowMatch) than pav:previousVersion, as the PAV statement does
+not neccessarily imply authority to supersede the original. For
+instance, a W3C Editors Draft is pav:previousVersion a W3C Working
+Draft, but it does not dct:replaces it as it is not official 
+yet."""@en ;
+                    skos:relatedMatch dct:isVersionOf ;
+                    skos:note """pav:previousVersion is only considered
+to have a related match dct:isVersionOf, as pav:previousVersion does not
+generally cover 'substantive changes in content'."""@en.
+
+pav:derivedFrom skos:inScheme pav: ;
+                skos:broadMatch dct:source ; 
+                skos:note """A related resource from which the described
+resource is derived, but pav:derivedFrom is more specific
+(skos:broadMatch) than dct:source, as it requires further contributions
+to the content, and does not cover say pav:importedFrom or
+pav:retrievedFrom."""@en ;
+                skos:narrowMatch dct:isVersionOf ;
+                skos:note """pav:derivedFrom do point to a resource of
+which the ‘described resource is a version, edition, or adaptation’, but
+also allow further derivations. and so has a narrow match
+dct:isVersionOf.  The pav:derivedFrom does require such contributions to
+be in the form of content and not just representation, which corresponds
+closely to dct:isFormatOf comment 'Changes in version imply substantive
+changes in content rather than differences in format.'"""@en .
+
+pav:lastUpdateOn skos:inScheme pav: ;
+                 skos:broadMatch dct:modified ;
+                 skos:note """pav:lastUpdateOn only applies to smaller
+changes such as fixing a typo, and so dct:modified is a broad
+match."""@en . 
+
+pav:providedBy skos:inScheme pav: ;
+               skos:relatedMatch dct:publisher ;
+               skos:note """dct:publisher defines the publisher of the
+particular resource, while pav:providedBy defines the publisher of the
+data which this resource (indirectly or directly) represents. So for
+instance if ':imported pav:importedFrom :original' and ':original
+dct:publisher :company', then generally ':imported pav:providedBy
+:company'. In many cases the dct:publisher for both resources are the
+same, but as pav:providedBy does not require that, this is a
+skos:relatedMatch only."""@en . 
+
+
+
