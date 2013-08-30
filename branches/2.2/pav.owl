@@ -29,12 +29,12 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.2.0-SNAPSHOT</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-27T15:23:00Z</dcterms:modified>
-        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-xx-xxTxx:xx:xxZ</dcterms:issued>
+        <owl:versionInfo rdf:datatype="&xsd;string">2.2.0</owl:versionInfo>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T13:23:00Z</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T13:30:00Z</dcterms:issued>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
-        <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
+        <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
         <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
@@ -62,15 +62,17 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
+        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <owl:priorVersion rdf:resource="&pav;2.1"/>
-        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
         <owl:versionIRI rdf:resource="&pav;2.2"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
         <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
         <owl:imports rdf:resource="&pav;1.2/"/>
+        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
@@ -96,53 +98,12 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
-    <!-- http://purl.org/dc/terms/creator -->
-
     <owl:AnnotationProperty rdf:about="&dcterms;creator">
-        <rdfs:label xml:lang="en">Creator</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-    <owl:AnnotationProperty rdf:about="&dcterms;description">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:AnnotationProperty rdf:about="&dcterms;contributor">
     </owl:AnnotationProperty>
-    
 
-
-    <!-- http://purl.org/dc/terms/hasVersion -->
-
-    <owl:AnnotationProperty rdf:about="&dcterms;hasVersion">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/issued -->
-
-    <owl:AnnotationProperty rdf:about="&dcterms;issued">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-    <owl:AnnotationProperty rdf:about="&dcterms;modified">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-    <owl:AnnotationProperty rdf:about="&foaf;name"/>
-    
 
 
     <!-- 
@@ -752,71 +713,6 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn -->
-
-    <rdf:Description rdf:about="&pav1;createdOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedLastOn -->
-
-    <rdf:Description rdf:about="&pav1;importedLastOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn -->
-
-    <rdf:Description rdf:about="&pav1;importedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn -->
-
-    <rdf:Description rdf:about="&pav1;lastUpdateOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceFirstAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceFirstAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/sourceLastAccessedOn -->
-
-    <rdf:Description rdf:about="&pav1;sourceLastAccessedOn"/>
-    
-
-
-    <!-- http://swan.mindinformatics.org/ontologies/1.2/pav/versionNumber -->
-
-    <rdf:Description rdf:about="&pav1;versionNumber"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Person -->
-
-    <owl:Class rdf:about="&foaf;Person"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -856,23 +752,9 @@ This property is normally used in a functional way, although PAV does not formal
 
     <owl:NamedIndividual rdf:about="http://purl.org/pav/">
         <pav:authoredBy rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
         <pav:authoredBy rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
-        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <pav:contributedBy rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- http://soiland-reyes.com/stian/#me -->
-
-    <owl:NamedIndividual rdf:about="http://soiland-reyes.com/stian/#me"/>
-    
-
-
-    <!-- http://www.hcklab.org/foaf.rdf#me -->
-
-    <owl:NamedIndividual rdf:about="http://www.hcklab.org/foaf.rdf#me"/>
     
 
 
