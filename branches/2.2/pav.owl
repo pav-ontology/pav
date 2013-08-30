@@ -197,6 +197,7 @@ The date of authoring can be expressed using pav:authoredOn - note however in th
         <rdfs:subPropertyOf rdf:resource="&pav;contributedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;authoredBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -222,6 +223,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;contributedBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -232,6 +234,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:label xml:lang="en">Representation created at</rdfs:label>
         <rdfs:comment xml:lang="en">The geo-location of the agents when creating the resource (pav:createdBy). For instance  a photographer takes a picture of the Eiffel Tower while standing in front of it.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -262,6 +265,7 @@ The location the agent was at when creating the digital resource can be made usi
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -274,6 +278,7 @@ The location the agent was at when creating the digital resource can be made usi
 </rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -293,6 +298,7 @@ The date of curating can be expressed using pav:curatedOn - note however in the 
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedOn"/>
         <owl:equivalentProperty rdf:resource="&pav1;curatedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -304,6 +310,7 @@ The date of curating can be expressed using pav:curatedOn - note however in the 
         <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <rdfs:comment xml:lang="en">Provided for backwards compatibility. Use instead the inverse pav:curatedBy.</rdfs:comment>
         <owl:inverseOf rdf:resource="&pav;curatedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -321,6 +328,7 @@ Details about who performed the derivation (e.g. who did the refining or modific
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -341,6 +349,7 @@ See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedBy"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -366,6 +375,7 @@ To indicate which agent(s) performed the import, use pav:importedBy. Use pav:imp
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedFromSource"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -383,6 +393,7 @@ A version number of this resource can be provided using the data property pav:ve
         <rdfs:seeAlso rdf:resource="&pav;version"/>
         <owl:equivalentProperty rdf:resource="&pav1;previousVersion"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasRevisionOf"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -395,6 +406,7 @@ A version number of this resource can be provided using the data property pav:ve
 
 The provider might not coincide with the dct:publisher, which would describe the current publisher of the resource. For instance if the resource was retrieved, imported or derived from a source, that source was published by the original provider. pav:providedBy provides a shortcut to indicate that original provider on the new resource.  </rdfs:comment>
         <rdfs:seeAlso rdf:resource="&dcterms;publisher"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -412,6 +424,7 @@ The source that was retrieved should be given with pav:retrievedFrom. The time o
 See pav:importedFrom for a discussion of import vs. retrieve vs. derived.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasAttributedTo"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -430,6 +443,7 @@ The time of the retrieval should be indicated using pav:retrievedOn. The agent m
         <rdfs:seeAlso rdf:resource="&pav;retrievedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedOn"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -449,6 +463,7 @@ Another example: I can access the page for tomorrow weather in Boston (http://ww
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;sourceLastAccessedOn"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasInfluencedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -462,6 +477,7 @@ by the given agent. The source(s) should be specified using pav:sourceAccessedAt
 
 For instance, the given agent could be a curator (also pav:curatedBy) which consulted figures in a published paper to confirm that a dataset was correctly pav:importedFrom the paper&apos;s supplementary CSV file.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedAt"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
 
@@ -536,6 +552,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <rdfs:seeAlso rdf:resource="&pav;createdOn"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -551,6 +568,7 @@ pav:contributedBy provides the agent(s) that contributed.
 The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="&pav;contributedBy"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -569,6 +587,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;createdBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;createdOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -586,6 +605,7 @@ This property is normally used in a functional way, indicating the last curation
 The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&quot;^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use &quot;1983-09-01T00:00:00Z&quot;^^xsd:dateTime.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&pav;contributedOn"/>
         <rdfs:seeAlso rdf:resource="&pav;curatedBy"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -609,6 +629,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;importedFrom"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -628,6 +649,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <owl:equivalentProperty rdf:resource="&pav1;importedLastOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -645,6 +667,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <owl:equivalentProperty rdf:resource="&pav1;lastUpdateOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -663,6 +686,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;retrievedBy"/>
         <rdfs:seeAlso rdf:resource="&pav;retrievedFrom"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -687,6 +711,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <owl:equivalentProperty rdf:resource="&pav1;sourceAccessedOn"/>
         <owl:equivalentProperty rdf:resource="&pav1;sourceFirstAccessedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -707,6 +732,7 @@ The value is of type xsd:dateTime, for instance &quot;2013-03-26T14:49:00+01:00&
         <rdfs:seeAlso rdf:resource="&pav;sourceAccessedBy"/>
         <owl:equivalentProperty rdf:resource="&pav1;sourceLastAccessedOn"/>
         <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
@@ -721,6 +747,7 @@ This property is normally used in a functional way, although PAV does not formal
         <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <owl:equivalentProperty rdf:resource="&pav1;versionNumber"/>
         <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:DatatypeProperty>
     
 
