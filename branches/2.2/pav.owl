@@ -71,17 +71,19 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
         <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
-        <owl:imports rdf:resource="&pav;1.2/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <dcterms:publisher rdf:resource="http://swan.mindinformatics.org/"/>
+        <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
+        <!--
+        <owl:imports rdf:resource="&pav;1.2/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        -->
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
     
