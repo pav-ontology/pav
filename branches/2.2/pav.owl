@@ -103,9 +103,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:ObjectProperty rdf:about="&dcterms;contributor">
-        <rdfs:label xml:lang="en">Contributor</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
-        <dcterms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service.</dcterms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:ObjectProperty>
     
@@ -114,13 +111,31 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:ObjectProperty rdf:about="&dcterms;creator">
-        <rdfs:label xml:lang="en">Creator</rdfs:label>
-        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
-        <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
     </owl:ObjectProperty>
+
+    <!-- Mini-import from http://www.w3.org/ns/prov-o# -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    </owl:ObjectProperty>    
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    </owl:ObjectProperty>
     
+
+
+    <!-- The PAV properties: -->
 
 
     <!-- http://purl.org/pav/authoredBy -->
@@ -170,6 +185,7 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
+
 
 
     <!-- http://purl.org/pav/createdAt -->
@@ -274,6 +290,7 @@ Details about who performed the derivation (e.g. who did the refining or modific
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
+    
     
 
 
