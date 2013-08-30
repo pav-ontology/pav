@@ -30,8 +30,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.2.0</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T13:23:00Z</dcterms:modified>
-        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T13:30:00Z</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T15:06:22Z</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T15:30:00Z</dcterms:issued>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
