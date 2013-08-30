@@ -87,23 +87,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <owl:AnnotationProperty rdf:about="&dcterms;creator">
-    </owl:AnnotationProperty>
-    
-    <owl:AnnotationProperty rdf:about="&dcterms;contributor">
-    </owl:AnnotationProperty>
-
 
 
     <!-- 
@@ -731,7 +714,11 @@ This property is normally used in a functional way, although PAV does not formal
         <rdf:type rdf:resource="&foaf;Person"/>
         <rdfs:label>Stian Soiland-Reyes</rdfs:label>
         <foaf:name>Stian Soiland-Reyes</foaf:name>
-        <owl:sameAs rdf:resource="http://soiland-reyes.com/stian/#me"/>
+        <owl:sameAs>
+            <rdf:Resource rdf:about="http://soiland-reyes.com/stian/#me">
+                <rdfs:label>Stian Soiland-Reyes</rdfs:label>
+            </rdf:Resource>
+        </owl:sameAs>
     </owl:NamedIndividual>
     
 
@@ -743,17 +730,11 @@ This property is normally used in a functional way, although PAV does not formal
         <rdf:type rdf:resource="&foaf;Person"/>
         <rdfs:label>Paolo Ciccarese</rdfs:label>
         <foaf:name>Paolo Ciccarese</foaf:name>
-        <owl:sameAs rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://purl.org/pav/ -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/pav/">
-        <pav:authoredBy rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
-        <pav:authoredBy rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
-        <pav:contributedBy rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
+        <owl:sameAs>
+            <rdf:Resource rdf:about="http://www.hcklab.org/foaf.rdf#me">
+                <rdfs:label>Paolo Ciccarese</rdfs:label>
+            </rdf:Resource>
+        </owl:sameAs>
     </owl:NamedIndividual>
     
 
