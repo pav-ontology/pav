@@ -33,8 +33,6 @@
         <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T13:23:00Z</dcterms:modified>
         <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T13:30:00Z</dcterms:issued>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
-        <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
-        <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
         <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
@@ -61,8 +59,10 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <rdfs:seeAlso rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+        <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
+        <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
         <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
