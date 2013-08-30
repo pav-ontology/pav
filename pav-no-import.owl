@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="owl2html.xslt"?>
+
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY pav "http://purl.org/pav/" >
@@ -30,8 +30,8 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.2.0</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T15:06:22Z</dcterms:modified>
-        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T15:30:00Z</dcterms:issued>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2013-08-30T13:23:00Z</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;dateTime">2013-08-30T13:30:00Z</dcterms:issued>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
@@ -76,14 +76,10 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
+        <dcterms:publisher rdf:resource="http://swan.mindinformatics.org/"/>
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
-        <!--
-        <owl:imports rdf:resource="&pav;1.2/"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        -->
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
     
@@ -105,6 +101,9 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:ObjectProperty rdf:about="&dcterms;contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service.</dcterms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:ObjectProperty>
     
@@ -113,31 +112,13 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:ObjectProperty rdf:about="&dcterms;creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <dcterms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service.</dcterms:description>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
     </owl:ObjectProperty>
-
-    <!-- Mini-import from http://www.w3.org/ns/prov-o# -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-    </owl:ObjectProperty>    
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasAttributedTo">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
-    </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
-    </owl:ObjectProperty>
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasRevisionOf">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
-    </owl:ObjectProperty>
     
-
-
-    <!-- The PAV properties: -->
 
 
     <!-- http://purl.org/pav/authoredBy -->
@@ -187,7 +168,6 @@ The date of contribution can be expressed using pav:contributedOn - note however
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
     
-
 
 
     <!-- http://purl.org/pav/createdAt -->
@@ -292,7 +272,6 @@ Details about who performed the derivation (e.g. who did the refining or modific
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
     </owl:ObjectProperty>
-    
     
 
 
