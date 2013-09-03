@@ -9,7 +9,7 @@
 @prefix dct:  <http://purl.org/dc/terms/> .
 @prefix : <http://purl.org/pav/provenance.ttl#> .
 
-<> a owl:Ontology, prov:Bundle ;
+<http://purl.org/pav/provenance.ttl> a owl:Ontology, prov:Bundle ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:createdWith :gvim73 ;
     foaf:primaryTopic <http://purl.org/pav/> .
@@ -289,10 +289,7 @@
     pav:importedFrom <http://purl.org/pav/2.2.0> ;
     pav:importedBy <http://www.essepuntato.it/lode/> ;
     pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.2> ;
-    pav:retrievedOn ""^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
-    pav:createdOn ""^^xsd:dateTime ;
-    pav:lastUpdateOn ""^^xsd:dateTime ;
     pav:previousVersion <http://purl.org/pav/2.1.2/html> ;
     pav:version "2.2.0" .
 
@@ -315,7 +312,7 @@
     pav:createdOn "2013-03-26T15:47:21Z"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:createdWith :vim ;
-    pav:lastUpdateOn "2013-03-26Z16:12:15Z"^^xsd:dateTime ;
+    pav:lastUpdateOn "2013-03-26T16:12:15Z"^^xsd:dateTime ;
     pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.1> ;
     pav:previousVersion <http://purl.org/pav/2.1.0/html> ;
     pav:version "2.1.1" .
@@ -328,10 +325,7 @@
         pav:importedFrom <http://purl.org/pav/2.1.0> ;
         pav:importedBy <http://www.essepuntato.it/lode/> ;
         pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.1> ;
-        pav:retrievedOn ""^^xsd:dateTime ;
         pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
-        pav:createdOn ""^^xsd:dateTime ;
-        pav:lastUpdateOn ""^^xsd:dateTime ;
         pav:previousVersion <http://purl.org/pav/2.0/html> ;
         pav:version "2.1.0" .
 
@@ -549,7 +543,7 @@
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     pav:importedOn "2013-08-26T17:00:00Z"^^xsd:dateTime ;
     pav:importedFrom <http://www.jbiomedsem.com/imedia/1858276535979415_article.pdf> ;
-    pav:createdOn "2013-04X-26T12:27:43+05:00"^^xsd:dateTime ;
+    pav:createdOn "2013-04-26T12:27:43+05:00"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:lastUpdateOn "2013-04-26T12:48:15+05:00"^^xsd:dateTime ;
     dct:issued "2013-04-29T00:00:00Z"^^xsd:dateTime ;
