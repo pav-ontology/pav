@@ -3,17 +3,17 @@ The latest version of the OWL ontology of PAV is always available from the *PAV 
 || *Namespace* / *OWL* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/html ||
 
-*Current version* (v2.1):
+*Current version* (v2.2):
 
 || *Namespace* || *versionIRI* / *OWL* || *Documentation* ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.1 || http://purl.org/pav/2.1/html ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.2 || http://purl.org/pav/2.2/html ||
 
 == Versioning ===
 
-PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, we consider that:
+PAV follows the [http://semver.org/ Semantic versioning] rules. In particular, for say v2.1.0, we consider that:
  * The _major_ number (2.x.x) will increase if a change is breaking (such as removing or renaming a term). This will typically mean a new namespace.
- * The _minor_ number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term)
- * The _patch_ number (x.x.1) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
+ * The _minor_ number (x.1.x) will increase if a change is non-breaking, but adds new functionality (such as a new term or OWL import)
+ * The _patch_ number (x.x.0) will increase if a change is a superficial bug-fix, such as changing typos or avoiding broken links.
 
 Browse the [https://code.google.com/p/pav-ontology/source/browse/#svn%2Ftags SVN tags] for individual patch releases.
 
@@ -25,18 +25,36 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pav: <http://purl.org/pav/> .
 <> a owl:Ontology ;
-    # Lock down import to 2.1
-    owl:imports <http://purl.org/pav/2.1> .
+    # Lock down import to minor version 2.2
+    owl:imports <http://purl.org/pav/2.2> .
 }}}
 
 
-You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version, or a particular versionIRI, as above, in order to lock down the version. 
+You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version, or a particular (minor or patch) versionIRI, as above, in order to lock down the version. 
 
 _Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RDF/XML, but with {{{Content-Type: application/xml}}} in order to present a human-readable version (by XSLT) for browsers accessing the namespace URI. Some OWL tools might not accept this media type, in such cases the versionIRI like http://purl.org/pav/2.1 should be used instead, which return the ontology with {{{Content-Type: application/rdf+xml}}}_
 
 
-The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.1) - the idea being that for most cases you would want patch updates.
+The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.2) - the idea being that for most cases you would want patch updates.
 
+
+== PAV ontology v2.2.0 (2013-08-30) ==
+
+|| *Namespace* || *OWL* || *Documentation* ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.2.0 || http://purl.org/pav/2.2.0/html ||
+
+Changes since v2.2.0:
+ * DC Terms subproperties introduced:
+   * pav:authoredBy subproperty of dcterms:creator        (creation of content)
+   * pav:createdBy subproperty of dcterms:creator         (creation of representation)
+   * pav:contributedBy subproperty of dcterms:contributor (contribution of content)
+   * Avoids OWL import of http://purl.org/dc/terms/ - instead includes property definitions of the above
+   * Remaining properties still [http://purl.org/pav/mapping/dcterms mapped to DCTerms in SKOS]
+ * Description for date properties like pav:createdOn explain how to form an xsd:dateTime when time is  unknown
+ * Descriptions have clarified intended functionality, e.g. [pav:authoredBy http://pav- ontology.googlecode.com/svn/tags/2.2.0/pav.html#d4e149] indicate the *last* authoring date.
+ * Examples in descriptions further clarify the distinction between creation of representation and  authoring of content.
+ * added owl:isDefinedBy <http://purl.org/pav/> for PAV terms
+ * HTML documentation includes hierarchy of referenced PROV and DCTerms superproperties, but not their  labels (making it clear that they are not defined by PAV), see for example [http://pav-ontology.googlecode.com/svn/tags/2.2.0/pav.html#d4e137 prov:wasRevisionOf]
 
 == PAV ontology v2.1.2 (2013-08-16) ==
 
