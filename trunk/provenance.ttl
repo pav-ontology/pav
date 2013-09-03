@@ -16,6 +16,8 @@
 
 # Agents
 
+## The authors
+
 <http://orcid.org/0000-0001-9842-9718>
       a foaf:Person, prov:Person ;
       rdfs:label "Stian Soiland-Reyes" ;
@@ -36,6 +38,22 @@
       foaf:mbox <mailto:paolo.ciccarese@gmail.com> ;
       owl:sameAs <http://www.hcklab.org/foaf.rdf#me> .
 
+<http://orcid.org/0000-0003-1219-2137>
+      a foaf:Person , prov:Person ;
+      rdfs:label "Carole Goble" ;
+      foaf:name "Carole Goble" ;
+      foaf:title "Professor" ;
+      foaf:familyName "Goble" ;
+      foaf:givenName "Carole" .
+
+<http://orcid.org/0000-0002-5711-4872>
+      a       foaf:Person , prov:Person ;
+      rdfs:label "Alasdair J G Gray" ;
+      foaf:familyName "Gray" ;
+      foaf:givenName "Alasdair " ;
+      foaf:name "Alasdair J G Gray" ;
+      foaf:homepage <http://www.cs.man.ac.uk/~graya/> .
+
 <http://www.paolociccarese.info/foaf.rdf#marco-ocana> 
       a foaf:Person, prov:Person ;
       foaf:name "Marco Ocana" .
@@ -49,18 +67,62 @@
     a foaf:Person, prov:Person ;
     foaf:name "Tim Clark" .
 
+
+## Reviewers (mostly anonymous)    
+
 :reviewer1 a foaf:Person, prov:Person ;
-    rdfs:label "Reviewer #1 of PAV paper" .
+    prov:actedOnBehalfOf :jbiomedsemReviewers ;
+    rdfs:label "Reviewer #1 of PAV paper submitted to JBiomedSem" .
 
 :reviewer2 a foaf:Person, prov:Person ;
-    rdfs:label "Reviewer #2 of PAV paper" .
+    prov:actedOnBehalfOf :jbiomedsemReviewers ;
+    rdfs:label "Reviewer #2 of PAV paper submitted to JBiomedSem" .
 
 :reviewer3 a foaf:Person, prov:Person ;
+    foaf:name "Sarven Capadisli" ;
+    prov:actedOnBehalfOf :jbiomedsemReviewers ;
     prov:specializationOf <http://csarven.ca/#i> ;
-    rdfs:label "Reviewer #3 of PAV paper" .
+    rdfs:label "Reviewer #3 of PAV paper submitted to JBiomedSem" ;
+    rdfs:comment "Note: Reviewer #3 willingly made his identity public" .
 
 <http://csarven.ca/#i> a foaf:Person, prov:Person ;
     foaf:name "Sarven Capadisli" .
+
+
+## Editors
+
+:editor1 a foaf:Person, prov:Person ;
+    rdfs:label "An editor responding for JBiomedSem" ;
+    foaf:name "Robert Hoehndorf" ;
+    prov:specializationOf <http://orcid.org/0000-0001-8149-5890> ;
+    prov:actedOnBehalfOf :editorialBoard ;
+
+
+<http://orcid.org/0000-0001-8149-5890>
+      a foaf:Person , prov:Person ;
+      foaf:name "Robert Hoehndorf" ;
+      rdfs:label "Robert Hoehndorf" ;
+      foaf:familyName "Hoehndorf" ;
+      foaf:givenName "Robert" .
+
+## Journal organization
+
+:reviewers a prov:Agent, foaf:Group ;
+    foaf:name "Reviewers for Journal of Biomedical Semantics" ;
+    prov:actedOnBehalfOf :journal ;
+    foaf:page <http://www.jbiomedsem.com/about/reviewers> ;
+    foaf:member :reviewer1, :reviewer2, :reviewer3 .
+
+:editorialBoard a prov:Organization, foaf:Organization ;
+    foaf:name "Editorial Board for Journal of Biomedical Semantics" ;
+    prov:actedOnBehalfOf  <http://www.jbiomedsem.com/> ;
+    foaf:homepage <http://www.jbiomedsem.com/about/edboard> .
+
+:journal a prov:Organization, foaf:Organization, prov:Entity ;
+    foaf:name "Journal of Biomedical Semantics" ;
+    foaf:homepage <http://www.jbiomedsem.com/>  .
+
+## Software
 
 :vim a prov:SoftwareAgent ;
     rdfs:label "vim" ;
@@ -94,7 +156,9 @@
 <https://docs.google.com/document/> a prov:SoftwareAgent ;
     rdfs:label "Google Docs" .
 
-# The PAV ontology
+
+
+# The PAV ontology and its versions
 
 <http://purl.org/pav> a prov:Entity, owl:Ontology ;
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
@@ -276,6 +340,7 @@
     owl:sameAs <http://www.essepuntato.it/lode/http://purl.org/pav/1.2/> ;
     pav:version "1.2" .
 
+
 # The PAV paper   
 
 :paper a prov:Entity, foaf:Document .    
@@ -357,6 +422,28 @@
     pav:importedFrom :paperDraftv24submit ;
     prov:specializationOf <http://arxiv.org/abs/1304.7224> .
 
+
+<http://arxiv.org/abs/1304.7224v2> a prov:Entity, foaf:Document ;
+    pav:version "2" ;
+    pav:previousVersion <http://arxiv.org/abs/1304.7224v1> ;
+    pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
+        <http://orcid.org/0000-0001-9842-9718> ,
+        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ,
+        <http://orcid.org/0000-0002-5711-4872>,
+        <http://orcid.org/0000-0003-1219-2137> ;
+    pav:contributedBy :reviewer1, :reviewer2, :reviewer3; editor1 ;
+    pav:contributedOn "2013-07-23T00:00:00Z"^^xsd:dateTime ;
+    pav:authoredOn "2013-08-30T14:26:00Z"^^xsd:dateTime ;
+    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:createdOn "2013-08-30T16:18:14Z"^^xsd:dateTime ;
+    pav:createdWith :word2013 ;
+    dct:issued "2013-04-29T00:00:00Z"^^xsd:dateTime ;
+    dct:publisher <http://arxiv.org/> ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+    prov:specializationOf <http://arxiv.org/abs/1304.7224> .
+
+
+# The reviews
 :review1 a prov:Entity, foaf:Document
     pav:authoredBy :reviewer1 ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
@@ -369,18 +456,7 @@
     pav:authoredBy :reviewer3 ;
     owl:sameAs <http://www.jbiomedsem.com/imedia/1619184689101981_comment.pdf> ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
+    
 
-<http://arxiv.org/abs/1304.7224v2> a prov:Entity, foaf:Document ;
-    pav:version "2" ;
-    pav:previousVersion <http://arxiv.org/abs/1304.7224v1> ;
-    pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
-        <http://orcid.org/0000-0001-9842-9718> ,
-        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ,
-        <http://orcid.org/0000-0002-5711-4872>,
-        <http://orcid.org/0000-0003-1219-2137> ;
-    pav:contributedBy :reviewer1, :reviewer2, :reviewer3 ;
-    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
-    pav:createdWith :word2013 ;
-    prov:specializationOf <http://arxiv.org/abs/1304.7224> .
-
+# TODO: The review process and roles using SPAR PSO/PRO ontologies?
 
