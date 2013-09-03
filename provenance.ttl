@@ -191,6 +191,9 @@
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me>, :reviewer1 ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:createdWith :protege43, :gvim73 ;
+    pav:sourceAccessedAt :paperv08 ;
+    pav:sourceAccessedBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:sourceAccessedOn "2013-08-30T14:00:00Z"^^xsd:dateTime ;
     pav:createdOn "2013-08-30T14:06:22Z"^^xsd:dateTime ;
     pav:authoredOn "2013-08-30T14:05:32Z"^^xsd:dateTime ;
     pav:lastUpdateOn "2013-08-30T15:39:59Z"^^xsd:dateTime ;
@@ -230,6 +233,12 @@
     pav:authoredOn "2013-03-26T12:16:57Z"^^xsd:dateTime ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ; 
+    pav:createdOn "2013-03-26T16:12:15Z"^^xsd:dateTime ;
+    pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
+        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ; 
+    pav:sourceAccessedAt :paperv08 ;
+    pav:sourceAccessedBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:sourceAccessedOn "2013-03-26T12:00:00Z"^^xsd:dateTime ;
     pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
     pav:previousVersion <http://purl.org/pav/2.1.0> .
 
@@ -346,7 +355,7 @@
 # The PAV paper   
 
 :paper a prov:Entity, foaf:Document .    
-    pav:derivedFrom <http://sdrv.ms/1dCMJ8N> .
+    pav:derivedFrom :oldPaper .
 
 
 :paperDraft a prov:Entity, foaf:Document ;
@@ -358,7 +367,7 @@
         <http://orcid.org/0000-0003-1219-2137> ;
     pav:derivedFrom :previousDraft 
 
-:paperDraftv24 a prov:Entity ;
+:paperv24 a prov:Entity ;
     prov:specializationOf :paperDraft ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:version "24" ;
@@ -473,7 +482,7 @@
     prov:specializationOf :paperDraft ;
     pav:version "1"; 
     pav:previousVersion :paperGoogleDoc ;
-    pav:createdOn "2013-03-20T15:32"^^xsd:dateTime ;
+    pav:createdOn "2013-03-20T15:32:00Z"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0002-5156-2703> .
 
 :paperGoogleDoc a prov:Entity, foaf:Document ;
@@ -487,7 +496,8 @@
     pav:authoredOn "2013-02-20T14:15:00Z"^^xsd:dateTime;
     pav:createdWith <https://docs.google.com/document/> .
 
-<http://sdrv.ms/1dCMJ8N> a prov:Entity, foaf:Document ;
+:oldPaper a prov:Entity, foaf:Document ;
+    owl:sameAs <https://skydrive.live.com/view.aspx?cid=37935FEEE4DF1087&resid=37935FEEE4DF1087%21578&app=WordPdf> ;
     rdfs:label "ipaw12_preprint-pav_ontology.pdf" ;
     pav:importedFrom [ rdfs:label "PAV ontology v.26.docx" ;
                        pav:version "26" ] ;
@@ -497,7 +507,7 @@
     pav:authoredOn "2012-03-28T00:00:00Z"^^xsd:dateTime;
     pav:contributedBy <http://orcid.org/0000-0003-0454-7145> .
 
-:paperDraftv24submit a prov:Entity, foaf:Document ;
+:paperv24submit a prov:Entity, foaf:Document ;
     rdfs:label "PAV new v.24 - without references labels.pdf" ;
     rdfs:comment "PDF submitted to Journal of Biomedical Semantics on 2013-04-26"@en ;
     prov:specializationOf :paperDraft ;
@@ -510,7 +520,7 @@
     pav:createdOn "2013-04-26T15:37:54+05:00"^^xsd:dateTime ;    
     pav:createdWith :word ;
     pav:createdBy <http://orcid.org/0000-0002-5156-2703> ;
-    pav:importedFrom :paperDraftv24 .
+    pav:importedFrom :paperv24 .
 
 ## The preprints of the paper, submitted to Journal of Biomedical
 ## Semantics
@@ -536,14 +546,14 @@
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0003-1219-2137> ;
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-    pav:retrievedOn "2013-08-26T17:00:00Z"^^xsd:dateTime ;
-    pav:retrievedFrom <http://www.jbiomedsem.com/imedia/1858276535979415_article.pdf> ;
+    pav:importedOn "2013-08-26T17:00:00Z"^^xsd:dateTime ;
+    pav:importedFrom <http://www.jbiomedsem.com/imedia/1858276535979415_article.pdf> ;
     pav:createdOn "2013-04X-26T12:27:43+05:00"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:lastUpdateOn "2013-04-26T12:48:15+05:00"^^xsd:dateTime ;
     dct:issued "2013-04-29T00:00:00Z"^^xsd:dateTime ;
     dct:publisher <http://arxiv.org/> ;
-    pav:importedFrom :paperDraftv24submit ;
+    pav:importedFrom :paperv24submit ;
     prov:specializationOf <http://arxiv.org/abs/1304.7224> .
 
 
@@ -561,11 +571,104 @@
     pav:authoredOn "2013-08-30T14:26:00Z"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:createdOn "2013-08-30T16:18:14Z"^^xsd:dateTime ;
+    pav:importedFrom :prettyPDF ;
     pav:createdWith :word2013 ;
     dct:issued "2013-09-02T00:00:00Z"^^xsd:dateTime ;
     dct:publisher <http://arxiv.org/> ;
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     prov:specializationOf <http://arxiv.org/abs/1304.7224> .
+
+:prettyPDF a prov:Entity, foaf:Document ;
+    prov:specializationOf :paper ;
+    owl:sameAs <https://skydrive.live.com/view.aspx?resid=37935FEEE4DF1087!504&app=WordPdf> ;
+    prov:importedFrom :prettyDocx ;
+    pav:previousVersion :finalDocx .
+
+:prettyDocx a prov:Entity, foaf:Document ;
+    prov:specializationOf :paper ;
+    owl:sameAs <https://skydrive.live.com/view.aspx?resid=37935FEEE4DF1087%21502&app=Word> ;
+    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:previousVersion :finalDocx .
+
+:finalDocx a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:createdBy <http://orcid.org/0000-0002-5156-2703> ;
+    pav:previousVersion :draftv42 ;
+    owl:sameAs <https://skydrive.live.com/view.aspx?resid=37935FEEE4DF1087!573&app=Word> .
+
+:draftv42 a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "42" .
+    pav:previousVersion :paperv41 .
+:paperv41  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "41";
+    pav:previousVersion :paperv40 .
+:paperv40  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "40";
+    pav:previousVersion :paperv39 .
+:paperv39  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "39";
+    pav:previousVersion :paperv38 .
+:paperv38  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "38";
+    pav:previousVersion :paperv37 .
+:paperv37  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "37";
+    pav:previousVersion :paperv36 .
+:paperv36  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "36";
+    pav:previousVersion :paperv35 .
+:paperv35  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "35";
+    pav:previousVersion :paperv34 .
+:paperv34  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "34";
+    pav:previousVersion :paperv33 .
+:paperv33  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "33";
+    pav:previousVersion :paperv32 .
+:paperv32  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "32";
+    pav:previousVersion :paperv31 .
+:paperv31  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "31";
+    pav:previousVersion :paperv30 .
+:paperv30  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "30";
+    pav:previousVersion :paperv29 .
+:paperv29  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "29";
+    pav:previousVersion :paperv28 .
+:paperv28  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "28";
+    pav:previousVersion :paperv27 .
+:paperv27  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "27";
+    pav:previousVersion :paperv26 .
+:paperv26  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "26";
+    pav:previousVersion :paperv25 .
+:paperv25  a prov:Entity, foaf:Document ;
+    prov:specializationOf :paperDraft ;
+    pav:version "25";
+    pav:createdOn "2013-07-02T20:15:00Z"^^xsd:dateTime ;
+    pav:previousVersion :paperv24 .
 
 
 # The reviews
@@ -585,6 +688,4 @@
     owl:sameAs <http://www.jbiomedsem.com/imedia/1619184689101981_comment.pdf> ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
     
-
-# TODO: The review process and roles using SPAR PSO/PRO ontologies?
 
