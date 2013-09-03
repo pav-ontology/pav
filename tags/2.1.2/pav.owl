@@ -38,7 +38,7 @@
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
         <dct:format rdf:datatype="&xsd;string">application/rdf+xml</dct:format>
         <dct:language rdf:datatype="&xsd;language">en</dct:language>
-        <dct:issued rdf:datatype="&xsd;dateTime">2013-03-27T16:03:24Z</dct:issued>
+        <dct:issued rdf:datatype="&xsd;dateTime">2013-08-16T11:15:08Z</dct:issued>
         <dct:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dct:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
 
