@@ -32,7 +32,7 @@
         <prov:has_provenance rdf:resource="provenance.ttl" />
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.1.2</owl:versionInfo>
-        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-16T12:09:00Z</dct:modified>
+        <dct:modified rdf:datatype="&xsd;dateTime">2013-08-16T11:09:00Z</dct:modified>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:contributor>
