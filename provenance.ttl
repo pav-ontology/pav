@@ -361,6 +361,14 @@
     pav:authoredBy :reviewer1 ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
 
+:review2 a prov:Entity, foaf:Document
+    pav:authoredBy :reviewer2 ;
+    foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
+
+:review3 a prov:Entity, foaf:Document
+    pav:authoredBy :reviewer3 ;
+    owl:sameAs <http://www.jbiomedsem.com/imedia/1619184689101981_comment.pdf> ;
+    foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
 
 <http://arxiv.org/abs/1304.7224v2> a prov:Entity, foaf:Document ;
     pav:version "2" ;
