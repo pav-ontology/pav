@@ -6,6 +6,7 @@
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix owl:  <http://www.w3.org/2002/07/owl#>.
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#>.
+@prefix dct:  <http://purl.org/dc/terms/> .
 @prefix : <http://purl.org/pav/provenance.ttl#> .
 
 <> a owl:Ontology, prov:Bundle ;
@@ -98,11 +99,11 @@
     rdfs:label "An editor responding for JBiomedSem"@en ;
     foaf:name "Robert Hoehndorf" ;
     prov:specializationOf <http://orcid.org/0000-0001-8149-5890> ;
-    prov:actedOnBehalfOf :editorialBoard ;
+    prov:actedOnBehalfOf :editorialBoard .
 
 
 <http://orcid.org/0000-0001-8149-5890>
-      a foaf:Person , prov:Person ;
+      a foaf:Person, prov:Person ;
       foaf:name "Robert Hoehndorf" ;
       rdfs:label "Robert Hoehndorf" ;
       foaf:familyName "Hoehndorf" ;
@@ -152,7 +153,7 @@
 
 :word2013 a prov:SoftwareAgent ;
     rdfs:Label "Microsoft Word 2013" ;
-    pav:version "2013"
+    pav:version "2013" ;
     foaf:homepage <http://www.microsoftstore.com/store/msuk/en_GB/pdp/Word-2013/productID.260257700> ;
     pav:specializationOf :word .
 
@@ -169,7 +170,7 @@
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, :reviewer1;
     pav:version "2" ;
     pav:previousVersion <http://purl.org/pav/1.2/> ;
-    dcterms:hasVersion <http://purl.org/pav/2.2.0> .
+    dct:hasVersion <http://purl.org/pav/2.2.0> .
 
 <http://purl.org/pav/2.2> a prov:Entity, owl:Ontology ;
     pav:version "2.2" ;
@@ -178,7 +179,7 @@
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me>, :reviewer1;
     pav:specializationOf <http://purl.org/pav/> ;
-    dcterms:hasVersion <http://purl.org/pav/2.2.0> ;
+    dct:hasVersion <http://purl.org/pav/2.2.0> ;
     pav:previousVersion <http://purl.org/pav/2.1> .
 
 
@@ -205,9 +206,9 @@
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
         <http://orcid.org/0000-0001-9842-9718> ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
-        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> .
+        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ;
     pav:specializationOf <http://purl.org/pav/> ;
-    dcterms:hasVersion <http://purl.org/pav/2.1.2> ;
+    dct:hasVersion <http://purl.org/pav/2.1.2> ;
     pav:previousVersion <http://purl.org/pav/2.0/> .
 
 
@@ -279,7 +280,7 @@
     foaf:primaryTopic <http://purl.org/pav/> ;
     pav:importedFrom <http://purl.org/pav/> ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
-    dcterms:hasVersion <http://purl.org/pav/2.2.0/html> .
+    dct:hasVersion <http://purl.org/pav/2.2.0/html> .
 
 <http://purl.org/pav/2.2.0/html> a prov:Entity, foaf:Document ;
     prov:specializationOf <http://purl.org/pav/html> ;
@@ -299,7 +300,7 @@
     prov:alternateOf <http://purl.org/pav/2.1.2> ;
     foaf:primaryTopic <http://purl.org/pav/2.1.2> ;
     prov:specializationOf <http://purl.org/pav/html> ;
-    pav:previousVersion <http://purl.org/pav/2.1.1/html> ;
+    pav:previousVersion <http://purl.org/pav/2.1.1/html> .
 
 <http://purl.org/pav/2.1.1/html> a prov:Entity, foaf:Document ;
     prov:specializationOf <http://purl.org/pav/html> ;
@@ -310,7 +311,7 @@
     pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.1> ;
     pav:retrievedOn "2013-03-26T15:45:53Z"^^xsd:dateTime ;
     pav:retrievedBy <http://orcid.org/0000-0001-9842-9718> ;
-    pav:importedBy <http://www.essepuntato.it/lode/> .
+    pav:importedBy <http://www.essepuntato.it/lode/> ;
     pav:createdOn "2013-03-26T15:47:21Z"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:createdWith :vim ;
@@ -320,41 +321,41 @@
     pav:version "2.1.1" .
 
 
-<http://purl.org/pav/2.1.0/html> a prov:Entity, foaf:Document ;
-    prov:specializationOf <http://purl.org/pav/html> ;
-    prov:alternateOf <http://purl.org/pav/2.1.0> ;
-    foaf:primaryTopic <http://purl.org/pav/2.1.0> ;
-    pav:importedFrom <http://purl.org/pav/2.1.0> ;
-    pav:importedBy <http://www.essepuntato.it/lode/> ;
-    pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.1> ;
-    pav:retrievedOn ""^^xsd:dateTime ;
-    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
-    pav:createdOn ""^^xsd:dateTime ;
-    pav:lastUpdateOn ""^^xsd:dateTime ;
-    pav:previousVersion <http://purl.org/pav/2.0/html> ;
-    pav:version "2.1.0" .
+    <http://purl.org/pav/2.1.0/html> a prov:Entity, foaf:Document ;
+        prov:specializationOf <http://purl.org/pav/html> ;
+        prov:alternateOf <http://purl.org/pav/2.1.0> ;
+        foaf:primaryTopic <http://purl.org/pav/2.1.0> ;
+        pav:importedFrom <http://purl.org/pav/2.1.0> ;
+        pav:importedBy <http://www.essepuntato.it/lode/> ;
+        pav:retrievedFrom <http://www.essepuntato.it/lode/http://purl.org/pav/2.1> ;
+        pav:retrievedOn ""^^xsd:dateTime ;
+        pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
+        pav:createdOn ""^^xsd:dateTime ;
+        pav:lastUpdateOn ""^^xsd:dateTime ;
+        pav:previousVersion <http://purl.org/pav/2.0/html> ;
+        pav:version "2.1.0" .
 
-<http://purl.org/pav/2.0/html> a prov:Entity, foaf:Document ;
-    prov:alternateOf <http://purl.org/pav/2.0/> ;
-    foaf:primaryTopic <http://purl.org/pav/2.0/> ;
-    pav:importedFrom <http://purl.org/pav/2.0/> ;
-    pav:importedBy <http://www.essepuntato.it/lode/> ;
-    owl:sameAs <http://www.essepuntato.it/lode/http://purl.org/pav/2.0/> ;
-    pav:previousVersion <http://purl.org/pav/1.2/html> ;
-    pav:version "2.0" .
+    <http://purl.org/pav/2.0/html> a prov:Entity, foaf:Document ;
+        prov:alternateOf <http://purl.org/pav/2.0/> ;
+        foaf:primaryTopic <http://purl.org/pav/2.0/> ;
+        pav:importedFrom <http://purl.org/pav/2.0/> ;
+        pav:importedBy <http://www.essepuntato.it/lode/> ;
+        owl:sameAs <http://www.essepuntato.it/lode/http://purl.org/pav/2.0/> ;
+        pav:previousVersion <http://purl.org/pav/1.2/html> ;
+        pav:version "2.0" .
 
-<http://purl.org/pav/1.2/html> a prov:Entity, foaf:Document ;
-    prov:alternateOf <http://purl.org/pav/1.2/> ;
-    foaf:primaryTopic <http://purl.org/pav/1.2/> ;
-    pav:importedFrom <http://purl.org/pav/1.2/> ;
-    pav:importedBy <http://www.essepuntato.it/lode/> ;
-    owl:sameAs <http://www.essepuntato.it/lode/http://purl.org/pav/1.2/> ;
-    pav:version "1.2" .
+    <http://purl.org/pav/1.2/html> a prov:Entity, foaf:Document ;
+        prov:alternateOf <http://purl.org/pav/1.2/> ;
+        foaf:primaryTopic <http://purl.org/pav/1.2/> ;
+        pav:importedFrom <http://purl.org/pav/1.2/> ;
+        pav:importedBy <http://www.essepuntato.it/lode/> ;
+        owl:sameAs <http://www.essepuntato.it/lode/http://purl.org/pav/1.2/> ;
+        pav:version "1.2" .
 
 
 # The PAV paper   
 
-:paper a prov:Entity, foaf:Document .    
+:paper a prov:Entity, foaf:Document ;    
     pav:derivedFrom :oldPaper .
 
 
@@ -365,7 +366,7 @@
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ,
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0003-1219-2137> ;
-    pav:derivedFrom :previousDraft 
+    pav:derivedFrom :oldPaper.
 
 :paperv24 a prov:Entity ;
     prov:specializationOf :paperDraft ;
@@ -534,7 +535,7 @@
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0003-1219-2137> ;
     foaf:primaryTopic <http://purl.org/pav/> ;    
-    dcterms:hasVersion <http://arxiv.org/abs/1304.7224v2> .
+    dct:hasVersion <http://arxiv.org/abs/1304.7224v2> .
 
 <http://arxiv.org/abs/1304.7224v1> a prov:Entity, foaf:Document ;
     rdfs:label "PAV paper"@en ;
@@ -564,9 +565,9 @@
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
         <http://orcid.org/0000-0001-9842-9718> ,
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ,
-        <http://orcid.org/0000-0002-5711-4872>,
+        <http://orcid.org/0000-0002-5711-4872> ,
         <http://orcid.org/0000-0003-1219-2137> ;
-    pav:contributedBy :reviewer1, :reviewer2, :reviewer3; editor1 ;
+    pav:contributedBy :reviewer1, :reviewer2, :reviewer3, :editor1 ;
     pav:contributedOn "2013-07-23T00:00:00Z"^^xsd:dateTime ;
     pav:authoredOn "2013-08-30T14:26:00Z"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
@@ -598,8 +599,9 @@
 
 :draftv42 a prov:Entity, foaf:Document ;
     prov:specializationOf :paperDraft ;
-    pav:version "42" .
+    pav:version "42" ;
     pav:previousVersion :paperv41 .
+
 :paperv41  a prov:Entity, foaf:Document ;
     prov:specializationOf :paperDraft ;
     pav:version "41";
@@ -672,17 +674,17 @@
 
 
 # The reviews
-:review1 a prov:Entity, foaf:Document
+:review1 a prov:Entity, foaf:Document ;
     pav:authoredBy :reviewer1 ;
     pav:authoredOn "2013-05-30T00:00:00Z"^^xsd:dateTime ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
 
-:review2 a prov:Entity, foaf:Document
+:review2 a prov:Entity, foaf:Document ;
     pav:authoredBy :reviewer2 ;
     pav:authoredOn "2013-05-30T00:00:00Z"^^xsd:dateTime ;
     foaf:primaryTopic <http://arxiv.org/abs/1304.7224v1> .
 
-:review3 a prov:Entity, foaf:Document
+:review3 a prov:Entity, foaf:Document ;
     pav:authoredBy :reviewer3 ;
     pav:authoredOn "2013-06-17T00:00:00Z"^^xsd:dateTime ;
     owl:sameAs <http://www.jbiomedsem.com/imedia/1619184689101981_comment.pdf> ;
