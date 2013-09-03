@@ -43,7 +43,7 @@ The versionIRI stated in the OWL files always return the latest patch version (i
 || *Namespace* || *OWL* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/2.2.0 || http://purl.org/pav/2.2.0/html ||
 
-Changes since v2.2.0:
+Changes since v2.1.2:
  * DC Terms subproperties introduced:
    * pav:authoredBy subproperty of dcterms:creator        (creation of content)
    * pav:createdBy subproperty of dcterms:creator         (creation of representation)
