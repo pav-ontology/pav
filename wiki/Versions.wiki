@@ -51,7 +51,7 @@ Changes since v2.1.2:
    * Avoids OWL import of http://purl.org/dc/terms/ - instead includes property definitions of the above
    * Remaining properties still [http://purl.org/pav/mapping/dcterms mapped to DCTerms in SKOS]
  * Description for date properties like pav:createdOn explain how to form an xsd:dateTime when time is  unknown
- * Descriptions have clarified intended functionality, e.g. [pav:authoredBy http://pav- ontology.googlecode.com/svn/tags/2.2.0/pav.html#d4e149] indicate the *last* authoring date.
+ * Descriptions have clarified intended functionality, e.g. [http://pav-ontology.googlecode.com/svn/tags/2.2.0/pav.html#d4e149 pav:authoredBy] indicate the *last* authoring date.
  * Examples in descriptions further clarify the distinction between creation of representation and  authoring of content.
  * added owl:isDefinedBy <http://purl.org/pav/> for PAV terms
  * HTML documentation includes hierarchy of referenced PROV and DCTerms superproperties, but not their  labels (making it clear that they are not defined by PAV), see for example [http://pav-ontology.googlecode.com/svn/tags/2.2.0/pav.html#d4e137 prov:wasRevisionOf]
