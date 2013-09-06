@@ -486,7 +486,7 @@
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
         <http://orcid.org/0000-0001-9842-9718> ,
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ;
-    pav:derivedFrom <http://sdrv.ms/1dCMJ8N> ;
+    pav:derivedFrom :oldPaper ;
     pav:createdOn "2012-11-28T13:55:00Z"^^xsd:dateTime ;
     pav:authoredOn "2013-02-20T14:15:00Z"^^xsd:dateTime;
     pav:createdWith <https://docs.google.com/document/> .
