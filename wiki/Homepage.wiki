@@ -50,3 +50,7 @@ The ontology IRI http://purl.org/pav/ always resolve to the latest version of PA
  * Namespace: http://purl.org/pav/
  * [http://purl.org/pav OWL ontology]
  * [http://purl.org/pav/html Ontology documentation]
+
+== Support ==
+
+Feel free use the [https://groups.google.com/d/forum/pav-ontology PAV Google Group] where you can post a Question or join a Discussion.
