@@ -1,0 +1,136 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<> a owl:Ontology ;
+   owl:imports <http://purl.org/pav/2.1>, <http://www.w3.org/2004/02/skos/core>, prov: ;
+   dct:isFormatOf <http://purl.org/pav/mapping/skos> ;
+   prov:specializationOf <http://purl.org/pav/mapping/skos> ; 
+   # PROV-AQ self-declaring provenance
+   prov:has_provenance <> ;
+   prov:has_anchor <http://purl.org/pav/mapping/skos> .
+
+<http://purl.org/pav/mapping/skos> a void:Dataset ;
+    rdfs:label "SKOS relations internal to PAV"@en ; 
+    dct:title "SKOS relations internal to PAV"@en ; 
+    dct:subject pav: ;
+    rdfs:comment """Internal SKOS relations between PAV concept, in
+particular as needed by other SKOS mappings.  Note that this is
+just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
+    dct:description """Internal SKOS relations between PAV concept, in
+particular as needed by other SKOS mappings.  Note that this is
+just a minimal mapping and does not declare skos:prefLabels, etc."""@en ;
+    pav:authoredBy <http://soiland-reyes.com/stian/#me> ;
+    pav:derivedFrom <http://purl.org/pav/2.1> ;
+    pav:sourceAccessedAt <http://purl.org/pav/2.1> ;
+    pav:sourceAccessedOn "2013-02-19T11:55:27+00:00"^^xsd:dateTime ;
+    pav:createdBy <http://soiland-reyes.com/stian/#me> ;
+    pav:authoredOn "2013-02-19T14:41:36+00:00"^^xsd:dateTime ;
+    pav:createdOn "2013-03-01T13:53:00+00:00"^^xsd:dateTime ;
+    pav:version "0.1.1" .
+
+pav:authoredBy skos:inScheme pav: ;
+               skos:broader pav:contributedBy ;
+               skos:related pav:authoredOn .
+
+pav:authoredOn skos:inScheme pav: ;
+               skos:broader pav:contributedOn .
+
+pav:curatedBy skos:inScheme pav: ;
+              skos:broader pav:contributedBy ;
+              skos:related pav:curatedOn .
+
+pav:curatedOn skos:inScheme pav: ;
+              skos:broader pav:contributedOn .
+
+pav:contributedBy skos:inScheme pav: ;
+    skos:related pav:contributedOn .
+
+pav:contributedOn skos:inScheme pav: .
+
+pav:createdBy skos:inScheme pav: ;
+              skos:related pav:contributedBy, pav:createdOn .
+
+pav:createdOn skos:inScheme pav: ;
+              skos:related pav:contributedOn .
+
+pav:createdWith skos:inScheme pav: ;
+                skos:related pav:createdBy .
+
+pav:createdAt skos:inScheme pav: ;
+              skos:related pav:createdBy, pav:createdOn .
+
+pav:retrievedFrom skos:inScheme pav: .
+
+pav:retrievedBy skos:inScheme pav: ;
+                skos:related pav:createdBy, pav:retrievedFrom ;
+                skos:note """Although the pav:retrievedBy agent is
+generally also the pav:createdBy of the resource, this
+is not a strict requirement, therefore they are only
+skos:related."""@en .
+
+pav:retrievedOn skos:inScheme pav: ;
+                skos:related pav:retrievedFrom ;
+                skos:note """The pav:retrievedOn does not have broader
+pav:createdOn, as the property indicates the time the
+original was retrieved rather than when the new resource
+was created."""@en .
+
+pav:importedFrom skos:inScheme pav: .
+
+pav:importedBy skos:inScheme pav: ;
+               skos:related pav:createdBy, pav:importedFrom ;
+               skos:note """Although the pav:importedBy agent is
+generally also the pav:createdBy of the resource, this
+is not a strict requirement, therefore they are only
+skos:related."""@en .
+
+pav:importedOn skos:inScheme pav: ;
+               skos:related pav:importedFrom ;
+               skos:note """The pav:importedOn does not have broader
+pav:createdOn, although they are often the same value. If both
+properties are specified, this indicates the time of accessing and
+transforming the original rather than the time the
+new resource was created."""@en .
+
+pav:lastRefreshedOn skos:inScheme pav: ;
+                    skos:related pav:importedFrom ;
+                    skos:broader pav:importedOn ;
+                    skos:note """The last refresh is the last
+date resource was (re)imported, but these are not sub-properties in the
+OWL as pav:lastRefreshedOn does not imply pav:importedOn."""@en .
+
+pav:sourceAccessedAt skos:inScheme pav: ;
+                     skos:related pav:derivedFrom ;
+                     skos:note """The resource might also be derived
+from the accessed source, but this is not a PAV requirement. """@en .
+
+pav:sourceAccessedBy skos:inScheme pav: ;
+                     skos:related pav:sourceAccessedAt .
+
+pav:sourceAccessedOn skos:inScheme pav: ;
+                     skos:related pav:sourceAccessedAt .
+
+pav:sourceLastAccessedOn skos:inScheme pav: ;
+                         skos:broader pav:sourceAccessedOn .
+
+pav:version skos:related pav:previousVersion .
+
+pav:previousVersion skos:inScheme pav: ;
+                    skos:related pav:derivedFrom .
+
+pav:derivedFrom skos:inScheme pav: .
+
+pav:lastUpdateOn skos:inScheme pav: ;
+    skos:related pav:previousVersion .
+
+pav:providedBy skos:inScheme pav: .
+
+
+
