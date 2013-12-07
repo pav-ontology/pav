@@ -56,3 +56,9 @@ The ontology IRI http://purl.org/pav/ always resolve to the latest version of PA
 == Support ==
 
 Feel free use the [https://groups.google.com/d/forum/pav-ontology PAV Google Group] where you can post a Question or join a Discussion.
+
+== Citing ==
+
+To site PAV, please use:
+
+Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble and Tim Clark: *PAV ontology: Provenance, Authoring and Versioning*. _Journal of Biomedical Semantics_ 2013, *4*:37. [http://dx.doi.org/10.1186/2041-1480-4-37 doi:10.1186/2041-1480-4-37]
