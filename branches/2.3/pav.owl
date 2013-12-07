@@ -349,7 +349,7 @@ To order the versions, use pav:previousVersion:
 
 Note that it might be confusing to also indicate pav:previousVersion from a resource that has pav:hasVersion relations, as such a resource is intended to be a long-living &quot;unversioned&quot; resource. The PAV ontology does however not formally restrict this, to cater for more complex scenarios with multiple abstraction levels. 
 
-pav:hasVersion is a subproperty of dcterms:hasVersion to more strongly define this hierarchical pattern. It is therefore also a subproperty of pav:generalizationOf (inverse of pav:specializationOf). 
+pav:hasVersion is a subproperty of dcterms:hasVersion to more strongly define this hierarchical pattern. It is therefore also a subproperty of pav:generalizationOf (inverse of prov:specializationOf). 
 
 To indicate the existence of other, non-hierarchical kind of editions and adaptations of this resource that are not versioned snapshots (e.g. Powerpoint slides has a video recording version) , use instead dcterms:hasVersion or prov:alternateOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;hasVersion"/>
