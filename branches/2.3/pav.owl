@@ -328,6 +328,33 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
+    <!-- http://purl.org/pav/hasEarlierVersion -->
+
+    <owl:ObjectProperty rdf:about="&pav;hasEarlierVersion">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:comment>This versioned resource has an earlier version.
+
+Any earlier version of this resource can be indicated with pav:hasEarlierVersion, e.g.:
+
+&lt;http://example.com/v4&gt; pav:hasEarlierVersion &lt;http://example.com/v2&gt; ;
+    pav:hasEarlierVersion &lt;http://example.com/v1&gt; .
+
+
+The subproperty pav:previousVersion SHOULD be used if the earlier version is the direct ancestor of this version. 
+
+&lt;http://example.com/v4&gt; pav:previousVersion &lt;http://example.com/v3&gt; .
+
+
+This property is transitive, so it should not be necessary to repeat the earlier versions of an earlier version. A chain of previous versions can be declared using the subproperty pav:previousVersion, implying that the previous previous version is also an earlier version. It might however still be useful to declare an earlier version explicitly, for instance because it is an earlier version of high relevance or because the complete chain of pav:previousVersion is not available.
+
+
+To indicate that this version is a snapshot of a more general, non-versioned resource, e.g. &quot;Weather Today&quot; vs. &quot;Weather Today on 2013-12-07&quot;, see pav:hasVersion.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="&prov;alternateOf"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/pav/hasVersion -->
 
     <owl:ObjectProperty rdf:about="&pav;hasVersion">
@@ -409,11 +436,16 @@ To indicate which agent(s) performed the import, use pav:importedBy. Use pav:imp
         <rdfs:label xml:lang="en">Previous version</rdfs:label>
         <rdfs:comment xml:lang="en">The previous version of a resource in a lineage. For instance a news article updated to correct factual information would point to the previous version of the article with pav:previousVersion. If however the content has significantly changed so that the two resources no longer share lineage (say a new article that talks about the same facts), they can instead be related using pav:derivedFrom.
 
-This property is normally used in a functional way, although PAV does not formally restrict this.
+This property is normally used in a functional way, although PAV does not formally restrict this. Earlier versions which are not direct ancestors of this resource may instead be provided using the superproperty pav:hasEarlierVersion.
 
-A version number of this resource can be provided using the data property pav:version.</rdfs:comment>
+A version number of this resource can be provided using the data property pav:version.
+
+To indicate that this version is a snapshot of a more general, non-versioned resource, e.g. &quot;Weather Today&quot; vs. &quot;Weather Today on 2013-12-07&quot;, see pav:hasVersion. 
+
+Note that it might be confusing to indicate pav:previousVersion from a resource that also has pav:hasVersion or pav:hasCurrentVersion relations, as such resources are intended to be a long-living and &quot;unversioned&quot;, while pav:previousVersion is intended for use between permalink-like &quot;snapshots&quot; arranged in a linear history.  </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
         <rdfs:seeAlso rdf:resource="&pav;derivedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="&pav;hasEarlierVersion"/>
         <rdfs:seeAlso rdf:resource="&pav;version"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasRevisionOf"/>
     </owl:ObjectProperty>
