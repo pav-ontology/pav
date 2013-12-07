@@ -14,7 +14,6 @@
     pav:createdWith :gvim73 ;
     foaf:primaryTopic <http://purl.org/pav/> .
 
-
 # Agents
 
 ## The authors
