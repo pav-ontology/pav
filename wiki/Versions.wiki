@@ -43,7 +43,7 @@ The versionIRI stated in the OWL files always return the latest patch version (i
 || http://purl.org/pav/ || http://purl.org/pav/2.3.0 || http://purl.org/pav/2.3.0/html ||
 
 Changes since v2.2.0:
- * Added more versioning properties: [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasVersion pav:hasVersion], [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasCurrentVersion pav:hasCurrentVersion], [pav:hasEarlierVersion http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasEarlierVersion]
+ * Added more versioning properties: [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasVersion pav:hasVersion], [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasCurrentVersion pav:hasCurrentVersion], [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasEarlierVersion pav:hasEarlierVersion]
  ** Subproperty relations to [http://www.w3.org/TR/prov-o/#alternateOf prov:alternateOf], [http://www.w3.org/TR/prov-o/#specializationOf prov:specializationOf], [#inverse-names-table prov:generalizationOf], [http://purl.org/dc/terms/hasVersion dct:hasVersion]
  ** pav:previousVersion subproperty of pav:hasEarlierVersion
  * Ontology metadata adds owl:priorVersion and contributor Alasdair J G Gray.
