@@ -31,9 +31,12 @@
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <dcterms:issued rdf:datatype="&xsd;dateTime">---</dcterms:issued>
         <owl:versionInfo rdf:datatype="&xsd;string">2.3-SNAPSHOT</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-05T15:15:00Z</dcterms:modified>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-06T17:10:00Z</dcterms:modified>
+        <dc:contributor rdf:datatype="&xsd;string">Alasdair J G Gray</dc:contributor>
+        <dc:contributor rdf:datatype="&xsd;string">Khalid Belhajjame</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
+        <dc:contributor rdf:datatype="&xsd;string">Simon Jupp</dc:contributor>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
         <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
@@ -61,7 +64,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
-        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.1/images/pav-overview.svg"/>
+        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
