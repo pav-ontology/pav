@@ -64,6 +64,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
@@ -80,6 +81,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
+        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
@@ -94,6 +96,22 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;contributor">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dcterms;creator">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -852,6 +870,16 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
+    <!-- http://orcid.org/0000-0001-6938-0820 -->
+
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-6938-0820">
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Khalid Belhajjame</rdfs:label>
+        <foaf:name>Khalid Belhajjame</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://orcid.org/0000-0001-9842-9718 -->
 
     <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-9842-9718">
@@ -864,6 +892,16 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
+    <!-- http://orcid.org/0000-0002-0643-3144 -->
+
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0002-0643-3144">
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Simon Jupp</rdfs:label>
+        <foaf:name>Simon Jupp</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://orcid.org/0000-0002-5156-2703 -->
 
     <owl:NamedIndividual rdf:about="http://orcid.org/0000-0002-5156-2703">
@@ -872,6 +910,16 @@ This property is normally used in a functional way, although PAV does not formal
         <rdfs:label>Paolo Ciccarese</rdfs:label>
         <foaf:name>Paolo Ciccarese</foaf:name>
         <owl:sameAs rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://orcid.org/0000-0002-5711-4872 -->
+
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0002-5711-4872">
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Alasdair J G Gray</rdfs:label>
+        <foaf:name>Alasdair J G Gray</foaf:name>
     </owl:NamedIndividual>
     
 
