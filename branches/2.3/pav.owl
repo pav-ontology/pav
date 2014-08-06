@@ -32,12 +32,21 @@
         <dcterms:issued rdf:datatype="&xsd;dateTime">---</dcterms:issued>
         <owl:versionInfo rdf:datatype="&xsd;string">2.3-SNAPSHOT</owl:versionInfo>
         <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-06T17:10:00Z</dcterms:modified>
-        <dc:contributor rdf:datatype="&xsd;string">Alasdair J G Gray</dc:contributor>
-        <dc:contributor rdf:datatype="&xsd;string">Khalid Belhajjame</dc:contributor>
-        <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
+
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
-        <dc:contributor rdf:datatype="&xsd;string">Simon Jupp</dc:contributor>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
+
+        <dc:contributor rdf:datatype="&xsd;string">Alasdair J G Gray</dc:contributor>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-5711-4872"/>
+        <dc:contributor rdf:datatype="&xsd;string">Khalid Belhajjame</dc:contributor>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-6938-0820"/>
+        <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
+        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
+        <dc:contributor rdf:datatype="&xsd;string">Simon Jupp</dc:contributor>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
+
         <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
@@ -64,7 +73,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
@@ -81,7 +89,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
-        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
