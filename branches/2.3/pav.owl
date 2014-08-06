@@ -142,14 +142,6 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     
 
 
-    <!-- http://purl.org/dc/terms/isVersionOf -->
-
-    <owl:ObjectProperty rdf:about="&dcterms;isVersionOf">
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/pav/authoredBy -->
 
     <owl:ObjectProperty rdf:about="&pav;authoredBy">
@@ -591,7 +583,6 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
 
     <owl:ObjectProperty rdf:about="&prov;wasRevisionOf">
-        <rdfs:subPropertyOf rdf:resource="&dcterms;isVersionOf"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
