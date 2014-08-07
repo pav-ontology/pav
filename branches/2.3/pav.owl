@@ -45,7 +45,7 @@
 
           This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.
 
-          Cite as: Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble, Tim Clark (2014): PAV ontology: provenance, authoring and versioning Journal of biomedical semantics 4 (1), 37. doi:10.1186/2041-1480-4-37
+          Cite as: Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble, Tim Clark (2014): PAV ontology: provenance, authoring and versioning. Journal of biomedical semantics 4 (1), 37. doi:10.1186/2041-1480-4-37
         </rdfs:comment>
         <dc:description xml:lang="en">PAV supplies terms for distinguishing between the different roles of the agents contributing content in current web based systems: contributors, authors, curators and digital artifact creators. The ontology also provides terms for tracking provenance of digital entities that are published on the web and then accessed, transformed and consumed. In order to support broader interoperability, PAV specializes the general purpose W3C PROV provenance model (PROV-O).
 
@@ -57,8 +57,7 @@ These provenance aspects can be detailed with dates using pav:curatedOn, pav:aut
 
 For resources based on other resources, PAV allows specification of direct retrieval (pav:retrievedFrom), import through transformations (pav:importedFrom) and sources that were merely consulted (pav:sourceAccessedAt). These aspects can also define the agents responsible using pav:retrievedBy, pav:importedBy and pav:sourceAccessedBy. 
 
-Version number of a resource can be given with pav:version, the previous version of the resource with pav:previousVersion, and any other earlier versions with pav:hasEarlierVersion. Unversioned, 'mutable' resources can specify their current version as a snapshot
-resource using pav:hasCurrentVersion and list the earlier versions using pav:hasVersion.
+Version number of a resource can be given with pav:version, the previous version of the resource with pav:previousVersion, and any other earlier versions with pav:hasEarlierVersion. Unversioned, 'mutable' resources can specify their current version as a snapshot resource using pav:hasCurrentVersion and list the earlier versions using pav:hasVersion.
 
 The creation of the digital representation (e.g. an RDF graph or a .docx file) can in many cases be different from the authorship of the content/knowledge, and in PAV this digital creation is specified using pav:createdBy, pav:createdWith and pav:createdOn. 
 
@@ -70,20 +69,15 @@ The ontology IRI http://purl.org/pav/ always resolve to the latest version of PA
 
 The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.
 
+--
 
 Copyright 2008-2014 Massachusetts General Hospital; Harvard Medical School; Balboa Systems; University of Manchester
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at
 
     http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
 </dc:description>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
@@ -99,11 +93,11 @@ limitations under the License.
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
         <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
-        <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
-        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
+        <owl:versionIRI rdf:resource="&pav;2.3.0"/>
         <owl:priorVersion rdf:resource="&pav;2.2"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.2"/>
-        <owl:versionIRI rdf:resource="&pav;2.3.0"/>
+        <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
+        <owl:backwardCompatibleWith rdf:resource="&pav;2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
