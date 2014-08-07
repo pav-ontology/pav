@@ -96,7 +96,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
         <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
-        <owl:versionIRI rdf:resource="&pav;2.3.0"/>
+        <owl:versionIRI rdf:resource="&pav;2.3"/>
         <owl:priorVersion rdf:resource="&pav;2.2"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.2"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
