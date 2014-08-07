@@ -89,9 +89,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-5711-4872"/>
         <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
         <!--
-        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
-        -->
         <dc:description rdf:resource="http://htmlpreview.github.io/?https://github.com/stain/pav/blob/2.3/images/pav-overview.svg" />
+        -->
+        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
