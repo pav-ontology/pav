@@ -456,88 +456,8 @@
         <http://orcid.org/0000-0003-1219-2137> ;
     pav:createdOn "2013-03-27T23:19:00+05:00"^^xsd:dateTime ;
     pav:createdBy <http://orcid.org/0000-0002-5156-2703> ;
-    pav:previousVersion :paperv22 .
+    pav:hasEarlierVersion :paperv02 .
 
-:paperv22  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "22";
-    pav:previousVersion :paperv21 .
-:paperv21  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "21";
-    pav:previousVersion :paperv20 .
-:paperv20  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "20";
-    pav:previousVersion :paperv19 .
-:paperv19  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "19";
-    pav:previousVersion :paperv18 .
-:paperv18  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "18";
-    pav:previousVersion :paperv17 .
-:paperv17  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "17";
-    pav:previousVersion :paperv16 .
-:paperv16  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "16";
-    pav:previousVersion :paperv15 .
-:paperv15  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "15";
-    pav:previousVersion :paperv14 .
-:paperv14  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "14";
-    pav:previousVersion :paperv13 .
-:paperv13  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "13";
-    pav:previousVersion :paperv12 .
-:paperv12  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "12";
-    pav:previousVersion :paperv11 .
-:paperv11  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "11";
-    pav:previousVersion :paperv10 .
-:paperv10  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "10";
-    pav:previousVersion :paperv09 .
-:paperv09  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "9";
-    pav:previousVersion :paperv08 .
-:paperv08  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "8";
-    pav:previousVersion :paperv07 .
-:paperv07  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "7";
-    pav:previousVersion :paperv06 .
-:paperv06  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "6";
-    pav:previousVersion :paperv05 .
-:paperv05  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "5";
-    pav:previousVersion :paperv04 .
-:paperv04  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "4";
-    pav:previousVersion :paperv03 .
-:paperv03  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "3";
-    pav:previousVersion :paperv02 .
 :paperv02  a prov:Entity, foaf:Document ;
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
         <http://orcid.org/0000-0001-9842-9718> ,
@@ -547,6 +467,7 @@
     prov:specializationOf :paperDraft ;
     pav:version "2";
     pav:previousVersion :paperv01 .
+
 :paperv01  a prov:Entity, foaf:Document ;
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
             <http://orcid.org/0000-0001-9842-9718> ,
@@ -606,7 +527,15 @@
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0003-1219-2137> ;
     foaf:primaryTopic <http://purl.org/pav/> ;    
-    dct:hasVersion <http://arxiv.org/abs/1304.7224v2> .
+    pav:hasVersion 
+      <http://arxiv.org/abs/1304.7224v1>,
+      <http://arxiv.org/abs/1304.7224v2>,
+      <http://arxiv.org/abs/1304.7224v3>,
+      <http://arxiv.org/abs/1304.7224v4>,
+      <http://arxiv.org/abs/1304.7224v5>,
+      <http://arxiv.org/abs/1304.7224v6> ;
+    pav:hasCurrentVersion  
+      <http://arxiv.org/abs/1304.7224v6> .
 
 <http://arxiv.org/abs/1304.7224v1> a prov:Entity, foaf:Document ;
     rdfs:label "PAV paper"@en ;
@@ -650,6 +579,9 @@
     dct:license <http://creativecommons.org/licenses/by/3.0/> ;
     prov:specializationOf <http://arxiv.org/abs/1304.7224> .
 
+# TODO: Add remaining versions and versions at jbiomedsem.com
+
+
 :prettyPDF a prov:Entity, foaf:Document ;
     prov:specializationOf :paper ;
     owl:sameAs <https://skydrive.live.com/view.aspx?resid=37935FEEE4DF1087!504&app=WordPdf> ;
@@ -671,72 +603,8 @@
 :draftv42 a prov:Entity, foaf:Document ;
     prov:specializationOf :paperDraft ;
     pav:version "42" ;
-    pav:previousVersion :paperv41 .
+    pav:hasEarlierVersion :paperv25 .
 
-:paperv41  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "41";
-    pav:previousVersion :paperv40 .
-:paperv40  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "40";
-    pav:previousVersion :paperv39 .
-:paperv39  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "39";
-    pav:previousVersion :paperv38 .
-:paperv38  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "38";
-    pav:previousVersion :paperv37 .
-:paperv37  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "37";
-    pav:previousVersion :paperv36 .
-:paperv36  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "36";
-    pav:previousVersion :paperv35 .
-:paperv35  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "35";
-    pav:previousVersion :paperv34 .
-:paperv34  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "34";
-    pav:previousVersion :paperv33 .
-:paperv33  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "33";
-    pav:previousVersion :paperv32 .
-:paperv32  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "32";
-    pav:previousVersion :paperv31 .
-:paperv31  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "31";
-    pav:previousVersion :paperv30 .
-:paperv30  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "30";
-    pav:previousVersion :paperv29 .
-:paperv29  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "29";
-    pav:previousVersion :paperv28 .
-:paperv28  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "28";
-    pav:previousVersion :paperv27 .
-:paperv27  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "27";
-    pav:previousVersion :paperv26 .
-:paperv26  a prov:Entity, foaf:Document ;
-    prov:specializationOf :paperDraft ;
-    pav:version "26";
-    pav:previousVersion :paperv25 .
 :paperv25  a prov:Entity, foaf:Document ;
     prov:specializationOf :paperDraft ;
     pav:version "25";
