@@ -43,32 +43,57 @@
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
 
-This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.</rdfs:comment>
+          This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.
+
+          Cite as: Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble, Tim Clark (2014): PAV ontology: provenance, authoring and versioning Journal of biomedical semantics 4 (1), 37. doi:10.1186/2041-1480-4-37
+        </rdfs:comment>
         <dc:description xml:lang="en">PAV supplies terms for distinguishing between the different roles of the agents contributing content in current web based systems: contributors, authors, curators and digital artifact creators. The ontology also provides terms for tracking provenance of digital entities that are published on the web and then accessed, transformed and consumed. In order to support broader interoperability, PAV specializes the general purpose W3C PROV provenance model (PROV-O).
 
 PAV distinguishes between the data related to the digital artifact - named Provenance - and those related to the actual knowledge creation and therefore to the intellectual property aspects – named Authoring. The Versioning axis describes the evolution of digital entities in time. 
 
-Using PAV, descriptions can define the Authors that originate or gave existence to the work that is expressed in the digital resource (pav:authoredBy); curators (pav:curatedBy) who are content specialists responsible for shaping the expression in an appropriate format, and contributors (super-property pav:contributedBy) that provided some help in conceiving the resource or in the expressed knowledge creation/extraction.
+Using PAV, descriptions can define the authors that originate or gave existence to the work that is expressed in the digital resource (pav:authoredBy); curators (pav:curatedBy) who are content specialists responsible for shaping the expression in an appropriate format, and contributors (super-property pav:contributedBy) that provided some help in conceiving the resource or in the expressed knowledge creation/extraction.
 
 These provenance aspects can be detailed with dates using pav:curatedOn, pav:authoredOn, etc. Further details about the creation activities, such as different authors contributing specific parts of the resource at different dates are out of scope for PAV and should be defined using vocabularies like PROV-O and additional intermediate entities to describe the different states. 
 
-For resources based on other resources, PAV allows specification of direct retrieval (pav:retrievedFrom), import through transformations (pav:importedFrom) and sources that were merely consulted (pav:sourceAccessedAt). These aspects can also define the agents responsible using pav:retrievedBy, pav:importedBy and pav:sourceAccessedBy. Version information can be specified using pav:previousVersion and pav:version. 
+For resources based on other resources, PAV allows specification of direct retrieval (pav:retrievedFrom), import through transformations (pav:importedFrom) and sources that were merely consulted (pav:sourceAccessedAt). These aspects can also define the agents responsible using pav:retrievedBy, pav:importedBy and pav:sourceAccessedBy. 
 
-The creation of the digital representation, for instance an RDF graph, can in many cases be different from the authorship of the knowledge, and in PAV this digital creation is specified using pav:createdBy, pav:createdWith and pav:createdOn. 
+Version number of a resource can be given with pav:version, the previous version of the resource with pav:previousVersion, and any other earlier versions with pav:hasEarlierVersion. Unversioned, 'mutable' resources can specify their current version as a snapshot
+resource using pav:hasCurrentVersion and list the earlier versions using pav:hasVersion.
 
-PAV 2.1 updates PAV 2.0 with PROV-O specializations and more detailed descriptions of the defined terms. Note that PROV-O is not imported directly by this ontology as PAV can be used independent of PROV. PAV 2 is based on PAV 1.2 but in a new namespace ( http://purl.org/pav/ ). Terms compatible with 1.2 are indicated in this ontology using owl:equivalentProperty. 
+The creation of the digital representation (e.g. an RDF graph or a .docx file) can in many cases be different from the authorship of the content/knowledge, and in PAV this digital creation is specified using pav:createdBy, pav:createdWith and pav:createdOn. 
+
+PAV specializes terms from W3C PROV-O (prov:) and DC Terms (dcterms:), however these ontologies are not OWL imported as PAV can be used independently. The "is defined by" links indicate where those terms are included from. See http://www.w3.org/TR/prov-o and http://dublincore.org/documents/2012/06/14/dcmi-terms/ for more details. See http://purl.org/pav/mapping/dcterms For a comprehensive SKOS mapping to DC Terms.
+
+PAV 2 is based on PAV 1.2 but in a different namespace ( http://purl.org/pav/ ). Terms compatible with 1.2 are indicated in this ontology using owl:equivalentProperty. 
 
 The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.
 
-The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</dc:description>
+The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.
+
+
+Copyright 2008-2014 Massachusetts General Hospital; Harvard Medical School; Balboa Systems; University of Manchester
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</dc:description>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-6938-0820"/>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
+        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-6938-0820"/>
         <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-5711-4872"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
@@ -123,13 +148,20 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
 
     <!-- http://xmlns.com/foaf/0.1/isPrimaryTopicOf -->
 
-    <owl:AnnotationProperty rdf:about="&foaf;isPrimaryTopicOf"/>
+    <owl:AnnotationProperty rdf:about="&foaf;isPrimaryTopicOf">
+        <rdfs:label xml:lang="en">foaf:isPrimaryTopicOf</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="&foaf;"/>
+    </owl:AnnotationProperty>
+      
     
 
 
     <!-- http://xmlns.com/foaf/0.1/name -->
 
-    <owl:AnnotationProperty rdf:about="&foaf;name"/>
+    <owl:AnnotationProperty rdf:about="&foaf;name">
+        <rdfs:label xml:lang="en">foaf:name</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="&foaf;"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -866,24 +898,6 @@ This property is normally used in a functional way, although PAV does not formal
     
 
 
-    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource -->
-
-    <owl:Class rdf:about="&rdf;Resource"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#Person -->
-
-    <owl:Class rdf:about="&prov;Person"/>
-    
-
-
-    <!-- http://xmlns.com/foaf/0.1/Person -->
-
-    <owl:Class rdf:about="&foaf;Person"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -891,40 +905,6 @@ This property is normally used in a functional way, although PAV does not formal
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
-
-    <!-- http://orcid.org/0000-0001-6938-0820 -->
-
-    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-6938-0820">
-        <rdf:type rdf:resource="&foaf;Person"/>
-        <rdfs:label>Khalid Belhajjame</rdfs:label>
-        <foaf:name>Khalid Belhajjame</foaf:name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://orcid.org/0000-0001-9842-9718 -->
-
-    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-9842-9718">
-        <rdf:type rdf:resource="&prov;Person"/>
-        <rdf:type rdf:resource="&foaf;Person"/>
-        <rdfs:label>Stian Soiland-Reyes</rdfs:label>
-        <foaf:name>Stian Soiland-Reyes</foaf:name>
-        <owl:sameAs rdf:resource="http://soiland-reyes.com/stian/#me"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://orcid.org/0000-0002-0643-3144 -->
-
-    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0002-0643-3144">
-        <rdf:type rdf:resource="&foaf;Person"/>
-        <rdfs:label>Simon Jupp</rdfs:label>
-        <foaf:name>Simon Jupp</foaf:name>
-    </owl:NamedIndividual>
-    
 
 
     <!-- http://orcid.org/0000-0002-5156-2703 -->
@@ -936,7 +916,35 @@ This property is normally used in a functional way, although PAV does not formal
         <foaf:name>Paolo Ciccarese</foaf:name>
         <owl:sameAs rdf:resource="http://www.hcklab.org/foaf.rdf#me"/>
     </owl:NamedIndividual>
+
+
+    <!-- http://orcid.org/0000-0001-9842-9718 -->
+
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-9842-9718">
+        <rdf:type rdf:resource="&prov;Person"/>
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Stian Soiland-Reyes</rdfs:label>
+        <foaf:name>Stian Soiland-Reyes</foaf:name>
+        <owl:sameAs rdf:resource="http://soiland-reyes.com/stian/#me"/>
+    </owl:NamedIndividual>
+
+    <!-- http://www.paolociccarese.info/foaf.rdf#marco-ocana -->
+
+    <owl:NamedIndividual rdf:about="http://www.paolociccarese.info/foaf.rdf#marco-ocana">
+        <rdf:type rdf:resource="&prov;Person"/>
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Marco Ocana</rdfs:label>
+        <foaf:name>Marco Ocana</foaf:name>
+    </owl:NamedIndividual>
     
+
+    <!-- http://orcid.org/0000-0001-6938-0820 -->
+
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0001-6938-0820">
+        <rdf:type rdf:resource="&foaf;Person"/>
+        <rdfs:label>Khalid Belhajjame</rdfs:label>
+        <foaf:name>Khalid Belhajjame</foaf:name>
+    </owl:NamedIndividual>
 
 
     <!-- http://orcid.org/0000-0002-5711-4872 -->
@@ -948,42 +956,12 @@ This property is normally used in a functional way, although PAV does not formal
     </owl:NamedIndividual>
     
 
+    <!-- http://orcid.org/0000-0002-0643-3144 -->
 
-    <!-- http://purl.org/pav/ -->
-
-    <owl:NamedIndividual rdf:about="http://purl.org/pav/">
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
-        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://soiland-reyes.com/stian/#me -->
-
-    <owl:NamedIndividual rdf:about="http://soiland-reyes.com/stian/#me">
-        <rdf:type rdf:resource="&rdf;Resource"/>
-        <rdfs:label>Stian Soiland-Reyes</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.hcklab.org/foaf.rdf#me -->
-
-    <owl:NamedIndividual rdf:about="http://www.hcklab.org/foaf.rdf#me">
-        <rdf:type rdf:resource="&rdf;Resource"/>
-        <rdfs:label>Paolo Ciccarese</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.paolociccarese.info/foaf.rdf#marco-ocana -->
-
-    <owl:NamedIndividual rdf:about="http://www.paolociccarese.info/foaf.rdf#marco-ocana">
-        <rdf:type rdf:resource="&prov;Person"/>
+    <owl:NamedIndividual rdf:about="http://orcid.org/0000-0002-0643-3144">
         <rdf:type rdf:resource="&foaf;Person"/>
-        <rdfs:label>Marco Ocana</rdfs:label>
-        <foaf:name>Marco Ocana</foaf:name>
+        <rdfs:label>Simon Jupp</rdfs:label>
+        <foaf:name>Simon Jupp</foaf:name>
     </owl:NamedIndividual>
 </rdf:RDF>
 
