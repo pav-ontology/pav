@@ -29,24 +29,15 @@
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
-        <dcterms:issued rdf:datatype="&xsd;dateTime">---</dcterms:issued>
-        <owl:versionInfo rdf:datatype="&xsd;string">2.3-SNAPSHOT</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-06T17:10:00Z</dcterms:modified>
-
-        <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
-        <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
-        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
-
+        <owl:versionInfo rdf:datatype="&xsd;string">2.3.0</owl:versionInfo>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-07T00:03:00Z</dcterms:modified>
+        <dcterms:issued rdf:datatype="&xsd;dateTime">2014-08-07T12:00:00Z</dcterms:issued>
         <dc:contributor rdf:datatype="&xsd;string">Alasdair J G Gray</dc:contributor>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-5711-4872"/>
         <dc:contributor rdf:datatype="&xsd;string">Khalid Belhajjame</dc:contributor>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-6938-0820"/>
         <dc:contributor rdf:datatype="&xsd;string">Marco Ocana</dc:contributor>
-        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
+        <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:contributor rdf:datatype="&xsd;string">Simon Jupp</dc:contributor>
-        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
-
+        <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
         <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
@@ -73,6 +64,11 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
         <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0001-6938-0820"/>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-0643-3144"/>
+        <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
+        <dcterms:contributor rdf:resource="http://orcid.org/0000-0002-5711-4872"/>
         <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
         <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
@@ -82,13 +78,14 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
         <owl:backwardCompatibleWith rdf:resource="&pav;2.1"/>
         <owl:priorVersion rdf:resource="&pav;2.2"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;2.2"/>
-        <owl:versionIRI rdf:resource="&pav;2.3-SNAPSHOT"/>
+        <owl:versionIRI rdf:resource="&pav;2.3.0"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
         <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
+        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
     </owl:Ontology>
@@ -109,6 +106,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="&dcterms;contributor">
+        <rdfs:label xml:lang="en">dcterms:contributor</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     
@@ -117,6 +115,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="&dcterms;creator">
+        <rdfs:label xml:lang="en">dcterms:creator</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:AnnotationProperty>
     
@@ -148,6 +147,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:ObjectProperty rdf:about="&dcterms;contributor">
+        <rdfs:label xml:lang="en">dcterms:contributor</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:ObjectProperty>
     
@@ -156,6 +156,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:ObjectProperty rdf:about="&dcterms;creator">
+        <rdfs:label xml:lang="en">dcterms:creator</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:subPropertyOf rdf:resource="&dcterms;contributor"/>
     </owl:ObjectProperty>
@@ -165,6 +166,7 @@ The goal of PAV is to provide a lightweight, straight forward way to give the es
     <!-- http://purl.org/dc/terms/hasVersion -->
 
     <owl:ObjectProperty rdf:about="&dcterms;hasVersion">
+        <rdfs:label xml:lang="en">dcterms:hasVersion</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
     </owl:ObjectProperty>
     
@@ -323,6 +325,7 @@ Details about who performed the derivation (e.g. who did the refining or modific
     <!-- http://purl.org/pav/hasCurrentVersion -->
 
     <owl:ObjectProperty rdf:about="&pav;hasCurrentVersion">
+        <rdfs:label xml:lang="en">Has current version</rdfs:label>
         <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource with equivalent content.
 
 This property is intended for relating a non-versioned resource to a single snapshot that can be used as a permalink to indicate the current version of the content.
@@ -343,6 +346,7 @@ Note that it might be confusing to also indicate pav:previousVersion from a reso
 Similarly, it would normally be incorrect to indicate a pav:hasCurrentVersion from an older version; instead the current version would be found by finding the non-versioned resource that the particular resource is a version of, and then its current version.
 
 This property is normally used in a functional way, although PAV does not formally restrict this.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
         <rdfs:subPropertyOf rdf:resource="&pav;hasVersion"/>
     </owl:ObjectProperty>
     
@@ -353,6 +357,7 @@ This property is normally used in a functional way, although PAV does not formal
     <owl:ObjectProperty rdf:about="&pav;hasEarlierVersion">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label xml:lang="en">Has earlier version</rdfs:label>
         <rdfs:comment>This versioned resource has an earlier version.
 
 Any earlier version of this resource can be indicated with pav:hasEarlierVersion, e.g.:
@@ -370,6 +375,7 @@ This property is transitive, so it should not be necessary to repeat the earlier
 
 
 To indicate that this version is a snapshot of a more general, non-versioned resource, e.g. &quot;Weather Today&quot; vs. &quot;Weather Today on 2013-12-07&quot;, see pav:hasVersion.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
         <rdfs:subPropertyOf rdf:resource="&prov;alternateOf"/>
     </owl:ObjectProperty>
     
@@ -378,6 +384,7 @@ To indicate that this version is a snapshot of a more general, non-versioned res
     <!-- http://purl.org/pav/hasVersion -->
 
     <owl:ObjectProperty rdf:about="&pav;hasVersion">
+        <rdfs:label xml:lang="en">Has version</rdfs:label>
         <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource.
 
 This property is intended for relating a non-versioned resource to several versioned resources, e.g. snapshots. For instance, if there are two snapshots of the News page, made on 23rd and 24th of December, then:
@@ -400,6 +407,9 @@ pav:hasVersion is a subproperty of dcterms:hasVersion to more strongly define th
 
 To indicate the existence of other, non-hierarchical kind of editions and adaptations of this resource that are not versioned snapshots (e.g. Powerpoint slides has a video recording version) , use instead dcterms:hasVersion or prov:alternateOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;hasVersion"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
+        <rdfs:seeAlso rdf:resource="&pav;hasCurrentVersion"/>
+        <rdfs:seeAlso rdf:resource="&pav;previousVersion"/>
         <rdfs:subPropertyOf rdf:resource="&prov;generalizationOf"/>
     </owl:ObjectProperty>
     
@@ -466,6 +476,7 @@ Note that it might be confusing to indicate pav:previousVersion from a resource 
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
         <rdfs:seeAlso rdf:resource="&pav;derivedFrom"/>
         <rdfs:subPropertyOf rdf:resource="&pav;hasEarlierVersion"/>
+        <rdfs:seeAlso rdf:resource="&pav;hasVersion"/>
         <rdfs:seeAlso rdf:resource="&pav;version"/>
         <rdfs:subPropertyOf rdf:resource="&prov;wasRevisionOf"/>
     </owl:ObjectProperty>
@@ -560,6 +571,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
 
     <owl:ObjectProperty rdf:about="&prov;alternateOf">
         <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:label xml:lang="en">prov:alternateOf</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
     
@@ -568,6 +580,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#generalizationOf -->
 
     <owl:ObjectProperty rdf:about="&prov;generalizationOf">
+        <rdfs:label xml:lang="en">prov:generalizationOf</rdfs:label>
         <owl:inverseOf rdf:resource="&prov;specializationOf"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o-inverses#"/>
     </owl:ObjectProperty>
@@ -577,6 +590,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#specializationOf -->
 
     <owl:ObjectProperty rdf:about="&prov;specializationOf">
+        <rdfs:label xml:lang="en">prov:specializationOf</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
     
@@ -585,6 +599,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
 
     <owl:ObjectProperty rdf:about="&prov;wasAttributedTo">
+        <rdfs:label xml:lang="en">prov:wasAttributedTo</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&prov;wasInfluencedBy"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
@@ -594,6 +609,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
 
     <owl:ObjectProperty rdf:about="&prov;wasDerivedFrom">
+        <rdfs:label xml:lang="en">prov:wasDerivedFrom</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&prov;wasInfluencedBy"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
@@ -603,6 +619,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
 
     <owl:ObjectProperty rdf:about="&prov;wasInfluencedBy">
+        <rdfs:label xml:lang="en">prov:wasInfluencedBy</rdfs:label>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
     
@@ -611,6 +628,7 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     <!-- http://www.w3.org/ns/prov#wasRevisionOf -->
 
     <owl:ObjectProperty rdf:about="&prov;wasRevisionOf">
+        <rdfs:label xml:lang="en">prov:wasRevisionOf</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&prov;wasDerivedFrom"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
     </owl:ObjectProperty>
