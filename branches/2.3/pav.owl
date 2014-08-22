@@ -357,7 +357,7 @@ Details about who performed the derivation (e.g. who did the refining or modific
         <rdfs:label xml:lang="en">Has current version</rdfs:label>
         <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource with equivalent content.
 
-This property is intended for relating a non-versioned resource to a single snapshot that can be used as a permalink to indicate the current version of the content.
+This property is intended for relating a non-versioned or abstract resource to a single snapshot that can be used as a permalink to indicate the current version of the content. 
 
 For instance, if today is 2013-12-25, then a News page can indicate a corresponding snapshot resource which will refer to the news as they were of 2013-12-25.
 
@@ -416,12 +416,12 @@ To indicate that this version is a snapshot of a more general, non-versioned res
         <rdfs:label xml:lang="en">Has version</rdfs:label>
         <rdfs:comment xml:lang="en">This resource has a more specific, versioned resource.
 
-This property is intended for relating a non-versioned resource to several versioned resources, e.g. snapshots. For instance, if there are two snapshots of the News page, made on 23rd and 24th of December, then:
+This property is intended for relating a non-versioned or abstract resource to several versioned resources, e.g. snapshots. For instance, if there are two snapshots of the News page, made on 23rd and 24th of December, then:
 
     &lt;http://news.example.com/&gt; pav:hasVersion &lt;http://news.example.com/2013-12-23/&gt; ;
         pav:hasVersion &lt;http://news.example.com/2013-12-24/&gt; .
 
-If one of the versions has equivalent content to this resource (e.g. can be used as a permalink for this resource), then it should instead be indicated with the subproperty pav:hasCurrentVersion:
+If one of the versions has somewhat the equivalent content to this resource (e.g. can be used as a permalink for this resource), then it should instead be indicated with the subproperty pav:hasCurrentVersion:
 
     &lt;http://news.example.com/&gt; pav:hasCurrentVersion &lt;http://news.example.com/2013-12-25/&gt; .
 
@@ -434,7 +434,7 @@ Note that it might be confusing to also indicate pav:previousVersion from a reso
 
 pav:hasVersion is a subproperty of dcterms:hasVersion to more strongly define this hierarchical pattern. It is therefore also a subproperty of pav:generalizationOf (inverse of prov:specializationOf). 
 
-To indicate the existence of other, non-hierarchical kind of editions and adaptations of this resource that are not versioned snapshots (e.g. Powerpoint slides has a video recording version) , use instead dcterms:hasVersion or prov:alternateOf.</rdfs:comment>
+To indicate the existence of other, non-hierarchical kind of editions and adaptations of this resource that are not versioned snapshots (e.g. Powerpoint slides has a video recording version), use instead dcterms:hasVersion or prov:alternateOf.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&dcterms;hasVersion"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/pav/"/>
         <rdfs:seeAlso rdf:resource="&pav;hasCurrentVersion"/>
