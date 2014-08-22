@@ -3,10 +3,10 @@ The latest version of the OWL ontology of PAV is always available from the *PAV 
 || *Namespace* / *OWL* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/html ||
 
-*Current version* (v2.2):
+*Current version* (v2.3):
 
 || *Namespace* || *versionIRI* / *OWL* || *Documentation* ||
-|| http://purl.org/pav/ || http://purl.org/pav/2.2 || http://purl.org/pav/2.2/html ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.3 || http://purl.org/pav/2.3/html ||
 
 == Versioning ===
 
@@ -25,19 +25,19 @@ Please note that the namespace is always http://purl.org/pav/ no matter which ve
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pav: <http://purl.org/pav/> .
 <> a owl:Ontology ;
-    # Lock down import to minor version 2.2
-    owl:imports <http://purl.org/pav/2.2> .
+    # Lock down import to minor version 2.3
+    owl:imports <http://purl.org/pav/2.3> .
 }}}
 
 
-You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version, or a particular (minor or patch) versionIRI, as above, in order to lock down the version. 
+You may want to *owl:imports* either the namespace, http://purl.org/pav/, to always get the latest version (2.x.x), or a particular (minor or patch) versionIRI, as above, in order to lock down the version. 
 
 _Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RDF/XML, but with {{{Content-Type: application/xml}}} in order to present a human-readable version (by XSLT) for browsers accessing the namespace URI. Some OWL tools might not accept this media type, in such cases the versionIRI like http://purl.org/pav/2.1 should be used instead, which return the ontology with {{{Content-Type: application/rdf+xml}}}_
 
 
 The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.2) - the idea being that for most cases you would want patch updates.
 
-== PAV ontology v2.3.0 (2014-08-06) ==
+== PAV ontology v2.3.0 (2014-08-22) ==
 
 || *Namespace* || *OWL* || *Documentation* ||
 || http://purl.org/pav/ || http://purl.org/pav/2.3.0 || http://purl.org/pav/2.3.0/html ||
@@ -46,8 +46,8 @@ Changes since v2.2.0:
  * Added more versioning properties: [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasVersion pav:hasVersion], [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasCurrentVersion pav:hasCurrentVersion], [http://pav-ontology.googlecode.com/svn/branches/2.3/pav.html#http://purl.org/pav/hasEarlierVersion pav:hasEarlierVersion]
  ** Subproperty relations to [http://www.w3.org/TR/prov-o/#alternateOf prov:alternateOf], [http://www.w3.org/TR/prov-o/#specializationOf prov:specializationOf], [#inverse-names-table prov:generalizationOf], [http://purl.org/dc/terms/hasVersion dct:hasVersion]
  ** pav:previousVersion subproperty of pav:hasEarlierVersion
- * Ontology metadata adds owl:priorVersion and contributor Alasdair J G Gray.
-
+ * Ontology metadata adds owl:priorVersion and new contributors.
+ * HTML: Updated [http://pav-ontology.googlecode.com/svn/tags/2.3.0/images/pav-overview.png diagram] to show versioning
 
 
 == PAV ontology v2.2.0 (2013-08-30) ==
