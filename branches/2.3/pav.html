@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>PAV - Provenance, Authoring and Versioning</title>
-    <title>Provenance, Authoring and Versioning (PAV)</title>
-    <title>PAV - Provenance, Authoring and Versioning</title>
-    <link href="http://eelst.cs.unibo.it/apps/LODE/owl.css" rel="stylesheet" type="text/css"/>
-    <link href="http://eelst.cs.unibo.it/apps/LODE/Primer.css" rel="stylesheet" type="text/css"/>
-    <link href="http://eelst.cs.unibo.it/apps/LODE/rec.css" rel="stylesheet" type="text/css"/>
-    <link href="http://eelst.cs.unibo.it/apps/LODE/extra.css" rel="stylesheet" type="text/css"/>
-    <link rel="shortcut icon" href="http://eelst.cs.unibo.it/apps/LODE/favicon.ico"/>
-    <script src="http://eelst.cs.unibo.it/apps/LODE/jquery.js"/>
-    <script src="http://eelst.cs.unibo.it/apps/LODE/jquery.scrollTo.js"/>
-    <script>
-                $(document).ready(
-                    function () {
-                        var list = $('a[name="http://purl.org/pav/2.3"]');
-                        if (list.size() != 0) {
-                        	var element = list.first();
-                        	$.scrollTo(element);
-                        }
-                    });
-        </script>
+    <link href="LODE/owl.css" rel="stylesheet" type="text/css"/>
+    <link href="LODE/Primer.css" rel="stylesheet" type="text/css"/>
+    <link href="LODE/rec.css" rel="stylesheet" type="text/css"/>
+    <link href="LODE/extra.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" href="LODE/favicon.ico"/>
+    <script src="LODE/jquery.js" type="text/javascript"></script>
+    <script src="LODE/jquery.scrollTo.js" type="text/javascript"></script>
   </head>
   <body>
     <div class="head">
@@ -54,33 +45,22 @@
       </dl>
       <dl>
         <dt>Authors:</dt>
-        <dd>Paolo Ciccarese</dd>
-        <dd>Stian Soiland-Reyes</dd>
-        <dd>
-          <a href="http://orcid.org/0000-0001-9842-9718">http://orcid.org/0000-0001-9842-9718</a>
-        </dd>
-        <dd>
+        <dd>Paolo Ciccarese,
           <a href="http://orcid.org/0000-0002-5156-2703">http://orcid.org/0000-0002-5156-2703</a>
         </dd>
+        <dd>Stian Soiland-Reyes,
+          <a href="http://orcid.org/0000-0001-9842-9718">http://orcid.org/0000-0001-9842-9718</a>
+        </dd>
         <dt>Contributors:</dt>
-        <dd>Alasdair J G Gray</dd>
-        <dd>Khalid Belhajjame</dd>
         <dd>Marco Ocana</dd>
-        <dd>Simon Jupp</dd>
-        <dd>
+        <dd>Khalid Belhajjame
           <a href="http://orcid.org/0000-0001-6938-0820">http://orcid.org/0000-0001-6938-0820</a>
         </dd>
-        <dd>
-          <a href="http://orcid.org/0000-0002-0643-3144">http://orcid.org/0000-0002-0643-3144</a>
-        </dd>
-        <dd>
+        <dd>Alasdair J G Gray
           <a href="http://orcid.org/0000-0002-5711-4872">http://orcid.org/0000-0002-5711-4872</a>
         </dd>
-        <dd>
-          <a href="http://www.paolociccarese.info/foaf.rdf#marco-ocana">http://www.paolociccarese.info/foaf.rdf#marco-ocana</a>
-        </dd>
-        <dd>
-          <a href="http://www.paolociccarese.info/foaf.rdf#marco-ocana">http://www.paolociccarese.info/foaf.rdf#marco-ocana</a>
+        <dd>Simon Jupp
+          <a href="http://orcid.org/0000-0002-0643-3144">http://orcid.org/0000-0002-0643-3144</a>
         </dd>
       </dl>
       <dl>
@@ -141,9 +121,11 @@
     <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at</p>
     <p>    http://www.apache.org/licenses/LICENSE-2.0</p>
     <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.</p>
-    <p class="image">
-      <object data="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
-    </p>
+    <div class="image">
+      <object data="images/pav-overview.svg">
+        <img src="images/pav-overview.png" alt="PAV overview" style="width: 85%" />
+      </object>
+    </div>
     <div id="objectproperties">
       <h2>Object Properties</h2>
       <ul class="hlist">
