@@ -46,13 +46,18 @@
         <dd><a href="http://purl.org/pav/versioning/2.0/">http://purl.org/pav/versioning/2.0/</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://purl.org/pav/versioning/2.0/">visualise it with LODE</a>)</dd>
         <dt>Incompatible with:</dt>
         <dd><a href="http://swan.mindinformatics.org/ontologies/1.2/pav.owl">http://swan.mindinformatics.org/ontologies/1.2/pav.owl</a> (<a href="http://www.essepuntato.it/lode/owlapi/http://swan.mindinformatics.org/ontologies/1.2/pav.owl">visualise it with LODE</a>)</dd>
+<dt>See also</dt>
+<dd><a href="http://purl.org/pav/home">PAV homepage</a></dd>
+<dd><a href="https://code.google.com/p/pav-ontology/wiki/Versions">Version history</a></dd>
+<dd><a href="http://dx.doi.org/10.1186/2041-1480-4-37">PAV paper</a> doi:10.1186/2041-1480-4-37</dd>            
+        
       </dl>
       <dl>
         <dt>Authors:</dt>
-        <dd>Paolo Ciccarese,
+        <dd>Paolo Ciccarese
           <a href="http://orcid.org/0000-0002-5156-2703">http://orcid.org/0000-0002-5156-2703</a>
         </dd>
-        <dd>Stian Soiland-Reyes,
+        <dd>Stian Soiland-Reyes
           <a href="http://orcid.org/0000-0001-9842-9718">http://orcid.org/0000-0001-9842-9718</a>
         </dd>
         <dt>Contributors:</dt>
@@ -84,7 +89,11 @@
     <h2>Abstract</h2>
     <p>PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.</p>
     <p>          This ontology describes the defined PAV properties and their usage. Note that PAV does not define any explicit classes or domain/ranges, as every property is meant to be used directly on the described online resource.</p>
-    <p>          Cite as: Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble, Tim Clark (2014): PAV ontology: provenance, authoring and versioning. Journal of biomedical semantics 4 (1), 37. doi:10.1186/2041-1480-4-37</p>
+    <p> <strong>Cite as:</strong><br /> Paolo 
+Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, 
+Carole Goble, Tim Clark (2014): <strong>PAV ontology: provenance, authoring and 
+  versioning</strong>. <em>Journal of biomedical semantics</em> <strong>4</strong>:37. 
+doi:<a href="http://dx.doi.org/10.1186/2041-1480-4-37">10.1186/2041-1480-4-37</a></p>
     <div id="toc">
       <h2>Table of Content</h2>
       <ol>
@@ -96,12 +105,6 @@
         </li>
         <li>
           <a href="#dataproperties">Data Properties</a>
-        </li>
-        <li>
-          <a href="#namedindividuals">Named Individuals</a>
-        </li>
-        <li>
-          <a href="#annotationproperties">Annotation Properties</a>
         </li>
         <li>
           <a href="#namespacedeclarations">Namespace Declarations</a>
@@ -120,16 +123,16 @@
     <p>PAV 2 is based on PAV 1.2 but in a different namespace ( http://purl.org/pav/ ). Terms compatible with 1.2 are indicated in this ontology using owl:equivalentProperty. </p>
     <p>The ontology IRI http://purl.org/pav/ always resolve to the latest version of PAV 2. Particular versionIRIs such as http://purl.org/pav/2.1 can be used by clients to force imports of a particular version - note however that all terms are defined directly in the http://purl.org/pav/ namespace.</p>
     <p>The goal of PAV is to provide a lightweight, straight forward way to give the essential information about authorship, provenance and versioning, and therefore these properties are described directly on the published resource. As such, PAV does not define any classes or restrict domain/ranges, as all properties are applicable to any online resource.</p>
-    <p>--</p>
-    <p>Copyright 2008-2014 Massachusetts General Hospital; Harvard Medical School; Balboa Systems; University of Manchester</p>
-    <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at</p>
-    <p>    http://www.apache.org/licenses/LICENSE-2.0</p>
-    <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.</p>
     <div class="image">
       <object data="images/pav-overview.svg">
         <img src="images/pav-overview.png" alt="PAV overview" style="width: 85%" />
       </object>
     </div>
+    <hr />
+    <p>&copy; Copyright 2008-2014 Massachusetts General Hospital; Harvard Medical School; Balboa Systems; University of Manchester</p>
+    <p>Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at</p>
+    <p>    <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+    <p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.</p>
     <div id="objectproperties">
       <h2>Object Properties</h2>
       <ul class="hlist">
@@ -1276,189 +1279,6 @@
             </dd>
           </dl>
         </div>
-      </div>
-    </div>
-    <div id="namedindividuals">
-      <h2>Named Individuals</h2>
-      <ul class="hlist">
-        <li>
-          <a href="#d4e954" title="http://orcid.org/0000-0002-5711-4872">Alasdair J G Gray</a>
-        </li>
-        <li>
-          <a href="#d4e940" title="http://orcid.org/0000-0001-6938-0820">Khalid Belhajjame</a>
-        </li>
-        <li>
-          <a href="#d4e925" title="http://www.paolociccarese.info/foaf.rdf#marco-ocana">Marco Ocana</a>
-        </li>
-        <li>
-          <a href="#d4e890" title="http://orcid.org/0000-0002-5156-2703">Paolo Ciccarese</a>
-        </li>
-        <li>
-          <a href="#d4e967" title="http://orcid.org/0000-0002-0643-3144">Simon Jupp</a>
-        </li>
-        <li>
-          <a href="#d4e908" title="http://orcid.org/0000-0001-9842-9718">Stian Soiland-Reyes</a>
-        </li>
-      </ul>
-      <div id="d4e954" class="entity">
-        <a name="http://orcid.org/0000-0002-5711-4872"/>
-        <h3>Alasdair J G Gray<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://orcid.org/0000-0002-5711-4872</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e940" class="entity">
-        <a name="http://orcid.org/0000-0001-6938-0820"/>
-        <h3>Khalid Belhajjame<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://orcid.org/0000-0001-6938-0820</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e925" class="entity">
-        <a name="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
-        <h3>Marco Ocana<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://www.paolociccarese.info/foaf.rdf#marco-ocana</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/prov#Person">person</span>
-          </dd>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e890" class="entity">
-        <a name="http://orcid.org/0000-0002-5156-2703"/>
-        <h3>Paolo Ciccarese<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://orcid.org/0000-0002-5156-2703</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/prov#Person">person</span>
-          </dd>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-          <dt>is same as</dt>
-          <dd>
-            <span class="dotted" title="http://www.hcklab.org/foaf.rdf#me">me</span>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e967" class="entity">
-        <a name="http://orcid.org/0000-0002-0643-3144"/>
-        <h3>Simon Jupp<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://orcid.org/0000-0002-0643-3144</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e908" class="entity">
-        <a name="http://orcid.org/0000-0001-9842-9718"/>
-        <h3>Stian Soiland-Reyes<sup title="named individual" class="type-ni">ni</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://orcid.org/0000-0001-9842-9718</p>
-        <dl class="description">
-          <dt>belongs to</dt>
-          <dd>
-            <span class="dotted" title="http://www.w3.org/ns/prov#Person">person</span>
-          </dd>
-          <dd>
-            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
-          </dd>
-          <dt>is same as</dt>
-          <dd>
-            <span class="dotted" title="http://soiland-reyes.com/stian/#me">me</span>
-          </dd>
-        </dl>
-      </div>
-    </div>
-    <div id="annotationproperties">
-      <h2>Annotation Properties</h2>
-      <ul class="hlist">
-        <li>
-          <a href="#d4e120" title="http://purl.org/dc/terms/contributor">dcterms:contributor</a>
-        </li>
-        <li>
-          <a href="#d4e131" title="http://purl.org/dc/terms/creator">dcterms:creator</a>
-        </li>
-        <li>
-          <a href="#d4e141" title="http://xmlns.com/foaf/0.1/isPrimaryTopicOf">foaf:isPrimaryTopicOf</a>
-        </li>
-        <li>
-          <a href="#d4e151" title="http://xmlns.com/foaf/0.1/name">foaf:name</a>
-        </li>
-      </ul>
-      <div id="d4e120" class="entity">
-        <a name="http://purl.org/dc/terms/contributor"/>
-        <h3>dcterms:contributor<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
-        <dl class="definedBy">
-          <dt>is defined by</dt>
-          <dd>
-            <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-          </dd>
-        </dl>
-        <div class="description">
-          <dl>
-            <dt>is also defined as</dt>
-            <dd>
-              <a href="#d4e164">object property</a>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="d4e131" class="entity">
-        <a name="http://purl.org/dc/terms/creator"/>
-        <h3>dcterms:creator<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
-        <dl class="definedBy">
-          <dt>is defined by</dt>
-          <dd>
-            <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
-          </dd>
-        </dl>
-        <div class="description">
-          <dl>
-            <dt>is also defined as</dt>
-            <dd>
-              <a href="#d4e174">object property</a>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div id="d4e141" class="entity">
-        <a name="http://xmlns.com/foaf/0.1/isPrimaryTopicOf"/>
-        <h3>foaf:isPrimaryTopicOf<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/isPrimaryTopicOf</p>
-        <dl class="definedBy">
-          <dt>is defined by</dt>
-          <dd>
-            <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
-          </dd>
-        </dl>
-      </div>
-      <div id="d4e151" class="entity">
-        <a name="http://xmlns.com/foaf/0.1/name"/>
-        <h3>foaf:name<sup title="annotation property" class="type-ap">ap</sup><span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a></span></h3>
-        <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
-        <dl class="definedBy">
-          <dt>is defined by</dt>
-          <dd>
-            <a href="http://xmlns.com/foaf/0.1/">http://xmlns.com/foaf/0.1/</a>
-          </dd>
-        </dl>
       </div>
     </div>
     <div id="namespacedeclarations">
