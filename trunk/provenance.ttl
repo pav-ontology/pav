@@ -340,7 +340,7 @@
 
 
 <http://purl.org/pav/1.2/> a prov:Entity, owl:Ontology ;
-    owl:sameAs <http://swan.mindinformatics.org/ontologies/1.2/pav/>, <http://pav-ontology.googlecode.com/svn/tags/2.1.0/pav.owl> ;
+    owl:sameAs <http://swan.mindinformatics.org/ontologies/1.2/pav/>, <http://pav-ontology.googlecode.com/svn/tags/1.2/pav.owl> ;
     pav:version "1.2" ;
     pav:authoredOn "2009-01-13T00:00:00Z"^^xsd:dateTime ;
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ; 
