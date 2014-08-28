@@ -162,9 +162,19 @@
     pav:retrievedFrom <http://uk.archive.ubuntu.com/ubuntu/pool/main/v/vim/vim-gnome_7.4.052-1ubuntu3_amd64.deb> ;
     prov:specializationOf :vim, <http://packages.ubuntu.com/trusty/vim-gnome> .
 
+:atom0107 a prov:SoftwareAgent ;
+    rdfs:label "atom" ;
+    pav:version "0.107.0-7179bc5" ;
+    pav:derivedFrom <https://github.com/atom/atom/tree/7179bc5af1a6b2730e97a1fd8aacc44bd5439472> ;
+    prov:specializationOf :atom, <https://github.com/atom/atom/> .
+
+:atom a prov:SoftwareAgent ;
+    rdfs:label "atom" ;
+    foaf:homepage <https://atom.io/> .
+
 :protege a prov:SoftwareAgent ;
     rdfs:label "Protégé" ;
-    foaf:homePage <http://protege.stanford.edu/> .
+    foaf:homepage <http://protege.stanford.edu/> .
 
 :protege43 a prov:SoftwareAgent ;
     rdfs:label "Protégé Desktop 4.3" ;
@@ -224,10 +234,30 @@
         <http://orcid.org/0000-0001-6938-0820>, 
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0002-0643-3144>;
-    pav:hasCurrentVersion <http://purl.org/pav/2.3.0> ;
+    pav:hasCurrentVersion <http://purl.org/pav/2.3.1> ;
     prov:specializationOf <http://purl.org/pav/> ;
     pav:previousVersion <http://purl.org/pav/2.2> ;
     pav:hasEarlierVersion <http://purl.org/pav/2.1>, <http://purl.org/pav/2.0/> .
+
+<http://purl.org/pav/2.3.1> a prov:Entity, owl:Ontology ;
+    owl:sameAs <http://pav-ontology.googlecode.com/svn/tags/2.3.1/pav.owl> ;
+    pav:version "2.3.1" ;
+    pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
+        <http://orcid.org/0000-0001-9842-9718> ;
+    pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
+        <http://semanticweb.org/wiki/Khalid_Belhajjame/#me>, 
+        :reviewer1,
+        <http://orcid.org/0000-0001-6938-0820>, 
+        <http://orcid.org/0000-0002-5711-4872>,
+        <http://orcid.org/0000-0002-0643-3144>;
+    pav:createdBy <http://orcid.org/0000-0001-9842-9718> ;
+    pav:createdWith :gvim74, :atom0107;
+    pav:createdOn "2014-08-28T14:46:30Z"^^xsd:dateTime ;
+    pav:authoredOn "2014-08-06T16:05:54Z"^^xsd:dateTime ;
+    pav:lastUpdateOn "2014-08-28T14:52:15Z"^^xsd:dateTime ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.3> ;
+    pav:previousVersion <http://purl.org/pav/2.2.0> .
+
 
 <http://purl.org/pav/2.3.0> a prov:Entity, owl:Ontology ;
     owl:sameAs <http://pav-ontology.googlecode.com/svn/tags/2.3.0/pav.owl> ;
@@ -244,7 +274,7 @@
     pav:createdWith :protege50b, :gvim74 ;
     pav:createdOn "2014-08-06T22:25:00Z"^^xsd:dateTime ;
     pav:authoredOn "2014-08-06T16:05:54Z"^^xsd:dateTime ;
-    pav:lastUpdateOn "2013-08-06T16:22:43Z"^^xsd:dateTime ;
+    pav:lastUpdateOn "2014-08-28T14:46:30Z"^^xsd:dateTime ;
     prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.3> ;
     pav:previousVersion <http://purl.org/pav/2.2.0> .
 
