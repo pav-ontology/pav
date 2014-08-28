@@ -154,13 +154,13 @@
     rdfs:label "gvim" ;
     pav:version "7.3.46" ;
     pav:retrievedFrom <ftp://ftp.vim.org/pub/vim/pc/gvim73_46.exe> ;
-    pav:specializationOf :vim .
+    prov:specializationOf :vim .
 
 :gvim74 a prov:SoftwareAgent ;
     rdfs:label "gvim" ;
     pav:version "7.4.52" ;
     pav:retrievedFrom <http://uk.archive.ubuntu.com/ubuntu/pool/main/v/vim/vim-gnome_7.4.052-1ubuntu3_amd64.deb> ;
-    pav:specializationOf :vim, <http://packages.ubuntu.com/trusty/vim-gnome> .
+    prov:specializationOf :vim, <http://packages.ubuntu.com/trusty/vim-gnome> .
 
 :protege a prov:SoftwareAgent ;
     rdfs:label "Protégé" ;
@@ -186,7 +186,7 @@
     rdfs:Label "Microsoft Word 2013" ;
     pav:version "2013" ;
     foaf:homepage <http://www.microsoftstore.com/store/msuk/en_GB/pdp/Word-2013/productID.260257700> ;
-    pav:specializationOf :word .
+    prov:specializationOf :word .
 
 <https://docs.google.com/document/> a prov:SoftwareAgent ;
     rdfs:label "Google Docs" .
@@ -225,7 +225,7 @@
         <http://orcid.org/0000-0002-5711-4872>,
         <http://orcid.org/0000-0002-0643-3144>;
     pav:hasCurrentVersion <http://purl.org/pav/2.3.0> ;
-    pav:specializationOf <http://purl.org/pav/> ;
+    prov:specializationOf <http://purl.org/pav/> ;
     pav:previousVersion <http://purl.org/pav/2.2> ;
     pav:hasEarlierVersion <http://purl.org/pav/2.1>, <http://purl.org/pav/2.0/> .
 
@@ -245,7 +245,7 @@
     pav:createdOn "2014-08-06T22:25:00Z"^^xsd:dateTime ;
     pav:authoredOn "2014-08-06T16:05:54Z"^^xsd:dateTime ;
     pav:lastUpdateOn "2013-08-06T16:22:43Z"^^xsd:dateTime ;
-    pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.3> ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.3> ;
     pav:previousVersion <http://purl.org/pav/2.2.0> .
 
 <http://purl.org/pav/2.2> a prov:Entity, owl:Ontology ;
@@ -254,7 +254,7 @@
         <http://orcid.org/0000-0001-9842-9718> ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me>, :reviewer1;
-    pav:specializationOf <http://purl.org/pav/> ;
+    prov:specializationOf <http://purl.org/pav/> ;
     pav:hasCurrentVersion <http://purl.org/pav/2.2.0> ;
     pav:previousVersion <http://purl.org/pav/2.1> .
 
@@ -273,7 +273,7 @@
     pav:createdOn "2013-08-30T14:06:22Z"^^xsd:dateTime ;
     pav:authoredOn "2013-08-30T14:05:32Z"^^xsd:dateTime ;
     pav:lastUpdateOn "2013-08-30T15:39:59Z"^^xsd:dateTime ;
-    pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.2> ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.2> ;
     pav:previousVersion <http://purl.org/pav/2.1.2> .
 
 <http://purl.org/pav/2.1> a prov:Entity, owl:Ontology ;
@@ -282,7 +282,7 @@
         <http://orcid.org/0000-0001-9842-9718> ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ;
-    pav:specializationOf <http://purl.org/pav/> ;
+    prov:specializationOf <http://purl.org/pav/> ;
     pav:hasCurrentVersion <http://purl.org/pav/2.1.2> ;
     pav:hasVersion <http://purl.org/pav/2.1.1> ,
                    <http://purl.org/pav/2.1.0> ;
@@ -299,7 +299,7 @@
     pav:createdOn "2013-08-16T11:15:08Z"^^xsd:dateTime ;
     pav:authoredOn "2013-08-16T11:09:00Z"^^xsd:dateTime ;
     pav:lastUpdateOn "2013-09-03T09:04:19Z"^^xsd:dateTime ;
-    pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
     pav:previousVersion <http://purl.org/pav/2.1.1> ;
     pav:hasEarlierVersion <http://purl.org/pav/2.1.0> .
 
@@ -317,7 +317,7 @@
     pav:sourceAccessedAt :paperv08 ;
     pav:sourceAccessedBy <http://orcid.org/0000-0001-9842-9718> ;
     pav:sourceAccessedOn "2013-03-26T12:00:00Z"^^xsd:dateTime ;
-    pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
     pav:previousVersion <http://purl.org/pav/2.1.0> .
 
 <http://purl.org/pav/2.1.0> a prov:Entity, owl:Ontology ;
@@ -327,7 +327,7 @@
         <http://orcid.org/0000-0001-9842-9718> ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana>, 
         <http://semanticweb.org/wiki/Khalid_Belhajjame/#me> ; 
-    pav:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
+    prov:specializationOf <http://purl.org/pav/>, <http://purl.org/pav/2.1> ;
     pav:previousVersion <http://purl.org/pav/2.0/> .
 
 <http://purl.org/pav/2.0/> a prov:Entity, owl:Ontology ;
@@ -335,7 +335,7 @@
     pav:authoredBy <http://orcid.org/0000-0002-5156-2703> ,
         <http://orcid.org/0000-0001-9842-9718> ;
     pav:contributedBy <http://www.paolociccarese.info/foaf.rdf#marco-ocana> ; 
-    pav:specializationOf <http://purl.org/pav/> ; 
+    prov:specializationOf <http://purl.org/pav/> ; 
     pav:previousVersion <http://purl.org/pav/1.2/> .
 
 
