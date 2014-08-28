@@ -37,6 +37,16 @@ _Note that for compatibility reasons, http://purl.org/pav/ returns the OWL as RD
 
 The versionIRI stated in the OWL files always return the latest patch version (ie. http://purl.org/pav/2.1 might serve 2.1.2) - the idea being that for most cases you would want patch updates.
 
+
+== PAV ontology v2.3.1 (2014-08-28) ==
+
+|| *Namespace* || *OWL* || *Documentation* ||
+|| http://purl.org/pav/ || http://purl.org/pav/2.3.1 || http://purl.org/pav/2.3.1/html ||
+
+Changes since v2.3.0:
+ * Re-added owl:equivalentProperty to PAV 1.2 properties (which where unintentionally removed in 2.3.0)
+
+
 == PAV ontology v2.3.0 (2014-08-22) ==
 
 || *Namespace* || *OWL* || *Documentation* ||
