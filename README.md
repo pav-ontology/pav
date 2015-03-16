@@ -33,10 +33,10 @@ https://code.google.com/p/pav-ontology/wiki/Versions
 
 How to cite PAV:
 
-Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble and Tim Clark: 
+Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble and Tim Clark:
 **PAV ontology: Provenance, Authoring and Versioning.** 
 *Journal of Biomedical Semantics* 2013, **4**:37. [doi:10.1186/2041-1480-4-37](http://dx.doi.org/10.1186/2041-1480-4-37)
 
 Other related publications:
 
-    Ciccarese P, Wu E, Wong G, Ocana M, Kinoshita J, Ruttenberg A, Clark T. **The SWAN biomedical discourse ontology.** *J Biomed Inform.* 2008 Oct; **41**(5):739-51. Epub 2008 May 4. [doi:10.1016/j.jbi.2008.04.010](10.1016/j.jbi.2008.04.010) (PubMed) 
+ * Ciccarese P, Wu E, Wong G, Ocana M, Kinoshita J, Ruttenberg A, Clark T. **The SWAN biomedical discourse ontology.** *J Biomed Inform.* 2008 Oct; **41**(5):739-51. Epub 2008 May 4. [doi:10.1016/j.jbi.2008.04.010](10.1016/j.jbi.2008.04.010) (PubMed) 
