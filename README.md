@@ -5,7 +5,6 @@ AlzSWAN and projects such as the Annotation Ontology where provenance
 has to provide features for supporting scientific content and its curation.
 
 
-
 Authors:
 
 * Paolo Ciccarese, MIND Informatics, Mass General Hospital, Harvard Medical School 
@@ -19,7 +18,7 @@ Contributors:
 
 ## Documentation
 
-http://code.google.com/p/pav-ontology/wiki/Homepage
+See the [https://github.com/pav-ontology/pav/wiki/]
 
 ## Version
 
@@ -27,7 +26,7 @@ Current version: http://purl.org/pav/
 
 ## All versions:
 
-https://code.google.com/p/pav-ontology/wiki/Versions
+https://github.com/pav-ontology/pav/wiki/Versions
 
 ## Publications
 
