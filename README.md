@@ -25,7 +25,7 @@ full details of the PAV ontology and its use.
 
 ## Versioning
 
-Current version: http://purl.org/pav/ should redirect to [pav.owl.xml](http://pav-ontology.github.io/pav/pav.rdf.xml) from this repository.
+Current version: http://purl.org/pav/ should redirect to [pav.rdf](http://pav-ontology.github.io/pav/pav.rdf) from this repository.
 
 See also [versions and namespaces](https://github.com/pav-ontology/pav/wiki/Versions) for details on referencing the ontology.
 
@@ -33,7 +33,7 @@ See also [versions and namespaces](https://github.com/pav-ontology/pav/wiki/Vers
 
 If you have any questions or issues, feel free to raise a [issue](https://github.com/pav-ontology/pav/issues) or post on the [PAV forum](https://groups.google.com/forum/#!forum/pav-ontology). 
 
-To suggest improvements to the ontology and its documentation, you may raise a [pull request](https://github.com/pav-ontology/pav/pulls) (note that the text of `index.html` is generated from `pav.rdf.xml`).
+To suggest improvements to the ontology and its documentation, you may raise a [pull request](https://github.com/pav-ontology/pav/pulls) (note that the text of [index.html](index.html) is generated from [pav.rdf](pav.html)).
 
 If you are using PAV, feel free to add it to the [PAV in use](https://github.com/pav-ontology/pav/wiki/PAV-in-use).
 
@@ -41,10 +41,10 @@ If you are using PAV, feel free to add it to the [PAV in use](https://github.com
 
 How to cite PAV:
 
-Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble and Tim Clark:
-**PAV ontology: Provenance, Authoring and Versioning.** 
-*Journal of Biomedical Semantics* 2013, **4**:37. [doi:10.1186/2041-1480-4-37](http://dx.doi.org/10.1186/2041-1480-4-37)
+> Paolo Ciccarese, Stian Soiland-Reyes, Khalid Belhajjame, Alasdair JG Gray, Carole Goble and Tim Clark:
+> **PAV ontology: Provenance, Authoring and Versioning.** 
+> *Journal of Biomedical Semantics* 2013, **4**:37. 
+> [doi:10.1186/2041-1480-4-37](http://dx.doi.org/10.1186/2041-1480-4-37)
 
-Other related publications:
+See also the [full list of publications](https://github.com/pav-ontology/pav/wiki/Publications)
 
- * Ciccarese P, Wu E, Wong G, Ocana M, Kinoshita J, Ruttenberg A, Clark T. **The SWAN biomedical discourse ontology.** *J Biomed Inform.* 2008 Oct; **41**(5):739-51. Epub 2008 May 4. [doi:10.1016/j.jbi.2008.04.010](10.1016/j.jbi.2008.04.010) ([pubMed:18583197](http://www.ncbi.nlm.nih.gov/pubmed/18583197)) 
