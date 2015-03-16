@@ -1,7 +1,10 @@
-# PAV - Provenance Authoring and Versioning ontology
+# PAV ontology
+## Provenance Authoring and Versioning ontology
 
 
+## Attribution and license
 
+The PAV ontology is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 Authors:
 
