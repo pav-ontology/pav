@@ -20,11 +20,11 @@ Contributors:
 ## Documentation
 
 See the [documentation in the wiki](https://github.com/pav-ontology/pav/wiki/), and the 
-[vocabulary](http://purl.org/pav/html).
+[vocabulary definitions](http://pav-ontology.github.io/pav/pav.html).
 
 ## Version
 
-Current version: http://purl.org/pav/
+Current version: http://purl.org/pav/ -- which should redirect to [pav.owl.xml](http://pav-ontology.github.io/pav/pav.rdf.xml) from this repository.
 
 See also [versions and namespaces](https://github.com/pav-ontology/pav/wiki/Versions)
 
