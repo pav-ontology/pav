@@ -17,7 +17,7 @@ Contributors:
 ## Documentation
 
 See the [documentation](https://github.com/pav-ontology/pav/wiki/), and the 
-[ontology documentation](http://pav-ontology.github.io/pav/pav.html).
+[ontology documentation](http://pav-ontology.github.io/pav/).
 
 The blog post [Recording authorship, curation and digital creation with the PAV ontology](https://practicalprovenance.wordpress.com/2013/03/28/pav/) gives a brief introduction to PAV, while
 the paper [PAV ontology: provenance, authoring and versioning](http://www.jbiomedsem.com/content/4/1/3) gives
@@ -33,7 +33,7 @@ See also [versions and namespaces](https://github.com/pav-ontology/pav/wiki/Vers
 
 If you have any questions or issues, feel free to raise a [issue](https://github.com/pav-ontology/pav/issues) or post on the [PAV forum](https://groups.google.com/forum/#!forum/pav-ontology). 
 
-To suggest improvements to the ontology and its documentation, you may raise a [pull request](https://github.com/pav-ontology/pav/pulls) (note that the text of [index.html](index.html) is generated from [pav.rdf](pav.html)).
+To suggest improvements to the ontology and its documentation, you may raise a [pull request](https://github.com/pav-ontology/pav/pulls) (note that the text of [index.html](index.html) is generated from [pav.rdf](pav.rdf)).
 
 If you are using PAV, feel free to add it to the [PAV in use](https://github.com/pav-ontology/pav/wiki/PAV-in-use).
 
@@ -46,5 +46,5 @@ How to cite PAV:
 > *Journal of Biomedical Semantics* 2013, **4**:37. 
 > [doi:10.1186/2041-1480-4-37](http://dx.doi.org/10.1186/2041-1480-4-37)
 
-See also the [full list of publications](https://github.com/pav-ontology/pav/wiki/Publications)
+See also the [full list of publications](https://github.com/pav-ontology/pav/wiki/Publications).
 
