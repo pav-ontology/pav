@@ -16,6 +16,7 @@ Contributors:
 * Marco Ocana, Balboa Systems
 * Alasdair J G Gray,  Heriot-Watt University, Edinburgh http://orcid.org/0000-0002-5711-4872
 * Khalid Belhajjame, Université Paris Dauphine http://orcid.org/0000-0001-6938-0820
+* Simon Jupp, EMBL-EBI http://orcid.org/0000-0002-0643-3144
 
 ## Documentation
 
