@@ -18,7 +18,7 @@
 
     <dt>Version IRI</dt>
     <dd><xsl:value-of select="rdf:RDF/owl:Ontology/owl:versionIRI/@rdf:resource"/></dd>
-    
+
     <dt>Creator</dt>
     <xsl:for-each select="//dc:creator">
        <dd><xsl:value-of select="." /></dd>
@@ -28,7 +28,7 @@
     <xsl:for-each select="//dc:contributor">
        <dd><xsl:value-of select="." /></dd>
     </xsl:for-each>
-    
+
     <dt>Issued</dt>
     <xsl:for-each select="//dct:issued">
        <dd><xsl:value-of select="." /></dd>
@@ -37,14 +37,14 @@
     <dt>Last modified</dt>
     <xsl:for-each select="//dct:modified">
        <dd><xsl:value-of select="." /></dd>
-    </xsl:for-each>    
-  
+    </xsl:for-each>
+
    </dl>
-   <p><strong>Please see the <a href="./">documentation for 
+   <p><strong>Please see the <a href="./">documentation for
 <xsl:value-of select="rdf:RDF/owl:Ontology/dct:title"/>
 </a>.</strong></p>
 
-   <p>This HTML is meant to show a simple browser introduction to the ontology and has been 
+   <p>This HTML is meant to show a simple browser introduction to the ontology and has been
 automatically created using XSLT. To see the
       source OWL as RDF/XML, either use "Save As" or "View Source".
    </p>
@@ -55,7 +55,7 @@ automatically created using XSLT. To see the
     <xsl:for-each select="//owl:Class">
        <dt>
            <em>
-               <a href="pav.html#{@rdf:about}">
+               <a href="index.html#{@rdf:about}">
                    <xsl:value-of select="rdfs:label" />
                </a>
            </em>
@@ -65,13 +65,13 @@ automatically created using XSLT. To see the
     </xsl:for-each>
   </dl>
   -->
-  
+
   <h3>Defined object properties</h3>
   <dl>
     <xsl:for-each select="//owl:ObjectProperty">
        <dt>
            <em>
-               <a href="pav.html#{@rdf:about}">
+               <a href="index.html#{@rdf:about}">
                    <xsl:value-of select="rdfs:label" />
                </a>
            </em>
@@ -87,7 +87,7 @@ automatically created using XSLT. To see the
     <xsl:for-each select="//owl:DatatypeProperty">
         <dt>
            <em>
-               <a href="pav.html#{@rdf:about}">
+               <a href="index.html#{@rdf:about}">
                    <xsl:value-of select="rdfs:label" />
                </a>
            </em>
@@ -101,4 +101,3 @@ automatically created using XSLT. To see the
   </html>
 </xsl:template>
 </xsl:stylesheet>
-
