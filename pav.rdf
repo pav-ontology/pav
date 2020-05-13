@@ -30,7 +30,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.3.1</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-28T14:41:00Z</dcterms:modified>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2020-05-13T07:15:00Z</dcterms:modified>
         <dcterms:issued rdf:datatype="&xsd;dateTime">2014-08-28T15:00:00Z</dcterms:issued>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
@@ -80,7 +80,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
 </dc:description>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
-        
+
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
