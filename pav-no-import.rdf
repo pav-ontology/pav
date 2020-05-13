@@ -29,7 +29,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.3.1</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2020-05-13T07:15:00Z</dcterms:modified>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2020-05-13T07:50:00Z</dcterms:modified>
         <dcterms:issued rdf:datatype="&xsd;dateTime">2014-08-28T15:00:00Z</dcterms:issued>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
@@ -103,7 +103,6 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
         <dcterms:publisher rdf:resource="https://github.com/pav-ontology/pav"/>
 
