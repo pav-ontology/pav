@@ -80,7 +80,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
 </dc:description>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
-        <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+        
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
