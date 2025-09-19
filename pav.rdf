@@ -30,7 +30,7 @@
     <owl:Ontology rdf:about="http://purl.org/pav/">
         <rdfs:label xml:lang="en">Provenance, Authoring and Versioning (PAV)</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">2.3.1</owl:versionInfo>
-        <dcterms:modified rdf:datatype="&xsd;dateTime">2014-08-28T14:41:00Z</dcterms:modified>
+        <dcterms:modified rdf:datatype="&xsd;dateTime">2020-05-13T07:50:00Z</dcterms:modified>
         <dcterms:issued rdf:datatype="&xsd;dateTime">2014-08-28T15:00:00Z</dcterms:issued>
         <dc:creator rdf:datatype="&xsd;string">Paolo Ciccarese</dc:creator>
         <dc:creator rdf:datatype="&xsd;string">Stian Soiland-Reyes</dc:creator>
@@ -38,7 +38,6 @@
         <dc:contributor rdf:datatype="&xsd;string">Alasdair J G Gray</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Khalid Belhajjame</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Simon Jupp</dc:contributor>
-        <dcterms:format rdf:datatype="&xsd;string">application/rdf+xml</dcterms:format>
         <dcterms:language rdf:datatype="&xsd;language">en</dcterms:language>
         <dcterms:title xml:lang="en">PAV - Provenance, Authoring and Versioning</dcterms:title>
         <rdfs:comment xml:lang="en">PAV is a lightweight ontology for tracking Provenance, Authoring and Versioning. PAV specializes the W3C provenance ontology PROV-O in order to describe authorship, curation and digital creation of online resources.
@@ -80,7 +79,7 @@ Licensed under the Apache License, Version 2.0 (the "License"); you may not use 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.
 </dc:description>
         <foaf:isPrimaryTopicOf rdf:resource="http://arxiv.org/abs/1304.7224"/>
-        <rdfs:seeAlso rdf:resource="http://code.google.com/p/pav-ontology/"/>
+
         <foaf:isPrimaryTopicOf rdf:resource="http://dx.doi.org/10.1186/2041-1480-4-37"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0002-5156-2703"/>
         <dcterms:creator rdf:resource="http://orcid.org/0000-0001-9842-9718"/>
@@ -91,8 +90,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <!--
         <dc:description rdf:resource="http://htmlpreview.github.io/?https://github.com/stain/pav/blob/2.3/images/pav-overview.svg" />
         -->
-        <dc:description rdf:resource="http://pav-ontology.googlecode.com/svn/branches/2.3/images/pav-overview.svg"/>
-        <rdfs:seeAlso rdf:resource="http://pav-ontology.googlecode.com/svn/trunk/1.2/pav.owl"/>
+
+
         <rdfs:seeAlso rdf:resource="&pav;doc"/>
         <foaf:homepage rdf:resource="&pav;home"/>
         <prov:has_provenance rdf:resource="&pav;provenance.ttl"/>
@@ -104,12 +103,11 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <owl:backwardCompatibleWith rdf:resource="&pav;authoring/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;provenance/2.0/"/>
         <owl:backwardCompatibleWith rdf:resource="&pav;versioning/2.0/"/>
-        <owl:incompatibleWith rdf:resource="http://swan.mindinformatics.org/ontologies/1.2/pav.owl"/>
         <dcterms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <dcterms:publisher rdf:resource="http://www.mindinformatics.org/"/>
-        <dcterms:contributor rdf:resource="http://www.paolociccarese.info/foaf.rdf#marco-ocana"/>
+        <dcterms:publisher rdf:resource="https://github.com/pav-ontology/pav"/>
+
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#"/>
-        <rdfs:seeAlso rdf:resource="https://code.google.com/p/pav-ontology/wiki/Versions"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/pav-ontology/pav/wiki/Versions"/>
     </owl:Ontology>
 
 
